@@ -1,7 +1,6 @@
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Optional
 
-from .ai.explainer import build_explainer_context, generate_ai_explanation
 from .matchup_engine import MatchupResult
 from .qb_production_engine import QBComparisonResult
 
@@ -193,6 +192,8 @@ def generate_report(
     }
 
     # Attach AI Statistician explanation (template or Phi-4, depending on config)
+    from .ai.explainer import build_explainer_context, generate_ai_explanation
+
     ctx = build_explainer_context(
         matchup_result,
         base_report,

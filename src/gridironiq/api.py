@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, HTTPException
@@ -158,8 +159,10 @@ class DraftReportRequest(BaseModel):
 app = FastAPI(title="GridironIQ Backend", version="0.1.0")
 
 # Serve generated report images (heatmaps, charts) for frontend display.
-# Only mounts the reports output folder.
-app.mount("/report-assets", StaticFiles(directory="outputs/reports"), name="report-assets")
+# StaticFiles raises if the directory is missing; PaaS deploys often have no outputs/ yet.
+_report_assets_dir = Path("outputs/reports")
+_report_assets_dir.mkdir(parents=True, exist_ok=True)
+app.mount("/report-assets", StaticFiles(directory=str(_report_assets_dir)), name="report-assets")
 
 # CORS: local dev + optional production origins (comma-separated) + Vercel previews via regex.
 _cors_default = [
