@@ -1,12 +1,16 @@
 from __future__ import annotations
 
+import logging
 import re
 from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
 import pandas as pd
 
+logger = logging.getLogger(__name__)
+
 from .cfb_client import cfbd_api_key
+from .player_model import espn_scouts_2026_production_bridge
 from .cfb_stats import build_cfbd_scores_for_combine_class
 from .consensus import aggregate_market_consensus, build_simulation_board_order, compute_reach_risk
 from .draft_board import final_draft_score
@@ -70,6 +74,11 @@ def _prepare_prospect_frame(
         "hint": "Set CFBD_API_KEY (CollegeFootballData.com) for college production/efficiency.",
     }
     k = cfbd_api_key()
+    if not k:
+        logger.warning(
+            "CFBD_API_KEY / GRIDIRONIQ_CFBD_API_KEY not set — college production scores "
+            "default to neutral (50). Register at https://collegefootballdata.com for a free key."
+        )
     if k:
         try:
             cfb_scores, cfb_meta = build_cfbd_scores_for_combine_class(merged, cfb_year, k)
@@ -130,6 +139,12 @@ def _prepare_prospect_frame(
                 p = 50.0
                 e = combine_movement_efficiency_score(row, g)
                 src = "combine_only_pending_nfl_career_stats"
+            p_adj, src_adj = espn_scouts_2026_production_bridge(
+                str(row.get("player_name") or ""), float(p), str(src)
+            )
+            if src_adj is not None:
+                p = float(p_adj)
+                src = str(src_adj)
             prod_scores[idx] = p
             eff_scores[idx] = e
             sources[idx] = src
@@ -351,7 +366,7 @@ def run_availability_and_recommendations(
         n_simulations=n_simulations,
         temperature=temperature,
     )
-    avail = sim["availability"]
+    avail: Dict[str, float] = dict(sim["availability"])
     prospects = board["prospects"]
     if available_ids is None:
         pool = prospects
@@ -371,7 +386,7 @@ def _cli_main() -> None:
     from pathlib import Path
 
     p = argparse.ArgumentParser(description="GridironIQ draft board (nflverse-backed).")
-    p.add_argument("--team", required=True, help="NFL team abbreviation, e.g. KC")
+    p.add_argument("--team", default=None, help="NFL team abbreviation, e.g. KC (not used with --prewarm)")
     p.add_argument("--season", type=int, required=True, help="NFL eval season (e.g. 2025 for 2025 PBP/stats)")
     p.add_argument(
         "--combine-season",
@@ -403,12 +418,75 @@ def _cli_main() -> None:
     )
     p.add_argument("--n-simulations", type=int, default=800, dest="n_simulations", help="Monte Carlo runs per pick")
     p.add_argument("--temperature", type=float, default=2.0, help="Simulation board temperature")
+    p.add_argument(
+        "--prewarm",
+        action="store_true",
+        help="Run build_draft_board for each --teams entry and write outputs/cache (for deploy-time warming).",
+    )
+    p.add_argument(
+        "--teams",
+        nargs="*",
+        default=[],
+        help="With --prewarm: NFL team abbreviations, e.g. --teams CAR KC BAL",
+    )
+    p.add_argument(
+        "--consensus-dirs",
+        type=str,
+        default="",
+        help="Optional comma-separated consensus board directories (matches API query; affects cache key).",
+    )
+    p.add_argument(
+        "--cfb-season",
+        type=int,
+        default=None,
+        help="College stats season for CFBD merge (default: combine_season - 1). Included in deploy cache key when set.",
+    )
     args = p.parse_args()
     combine_season = int(args.combine_season) if args.combine_season is not None else int(args.season) + 1
+    eval_season = int(args.season)
+    consensus_dirs_str = str(args.consensus_dirs or "").strip()
+    consensus_extra = (
+        [p.strip() for p in consensus_dirs_str.split(",") if p.strip()] if consensus_dirs_str else None
+    )
+
+    if args.prewarm:
+        from gridironiq.cache import draft_board_cache_key, write_cache
+
+        tlist = [str(t).upper() for t in (args.teams or []) if str(t).strip()]
+        if not tlist:
+            raise SystemExit("--prewarm requires at least one team: --teams CAR KC ...")
+        picks = [int(x) for x in (args.picks or [])]
+        cfb_opt = int(args.cfb_season) if args.cfb_season is not None else None
+        for team_code in tlist:
+            board = build_draft_board(
+                team_code,
+                combine_season,
+                eval_season,
+                cfb_season=cfb_opt,
+                draft_pick_positions=picks or None,
+                consensus_extra_directories=consensus_extra,
+            )
+            key = draft_board_cache_key(
+                team_code,
+                combine_season,
+                eval_season,
+                picks=picks or None,
+                consensus_dirs=consensus_dirs_str,
+                cfb_season=cfb_opt,
+            )
+            write_cache(key, board)
+            npros = len(board.get("prospects", []))
+            print(f"Pre-warmed {team_code}: {npros} prospects (cache key={key})")
+        return
+
+    if not args.team:
+        raise SystemExit("--team is required unless --prewarm is set")
+
     board = build_draft_board(
         str(args.team).upper(),
         combine_season,
-        int(args.season),
+        eval_season,
+        cfb_season=int(args.cfb_season) if args.cfb_season is not None else None,
         draft_pick_positions=list(args.picks),
     )
     ranked = sorted(board["prospects"], key=lambda r: (-float(r["final_draft_score"]), r["player_name"]))[: int(args.top_n)]

@@ -7,6 +7,59 @@ import pandas as pd
 
 from .positions import POSITIONAL_VALUE, bucket_for_combine_pos
 
+# ESPN Scouts Inc. 2026 grades (public). Bridges neutral production when CFBD is off.
+# Source: https://www.espn.com/nfl/draft2026/story/_/id/48349812/
+ESPN_SCOUTS_INC_2026: Dict[str, int] = {
+    "Kenyon Sadiq": 89,
+    "Arvell Reese": 94,
+    "Fernando Mendoza": 96,
+    "Francis Mauigoa": 91,
+    "Caleb Downs": 91,
+    "Sonny Styles": 91,
+    "Mansoor Delane": 89,
+    "Rueben Bain Jr.": 89,
+    "Makai Lemon": 89,
+    "Jordyn Tyson": 89,
+    "Carnell Tate": 89,
+    "Monroe Freeling": 88,
+    "Olaivavega Ioane": 88,
+    "Jermod McCoy": 88,
+    "Kadyn Proctor": 88,
+    "Akheem Mesidor": 88,
+    "Spencer Fano": 88,
+    "Dillon Thieneman": 88,
+    "Emmanuel McNeil-Warren": 87,
+    "Avieon Terrell": 87,
+    "Denzel Boston": 87,
+    "Omar Cooper Jr.": 87,
+    "Keldric Faulk": 87,
+    "Kayden McDonald": 87,
+    "Peter Woods": 87,
+    "Jeremiyah Love": 91,
+    "David Bailey": 93,
+}
+
+
+def espn_scouts_2026_production_bridge(
+    player_name: str, production_score: float, production_source: str
+) -> tuple[float, Optional[str]]:
+    """
+    When college/NFL production is unavailable (neutral ~50), map known public
+    Scouts Inc. grades to a production_score band so the board is not flat.
+    """
+    name = str(player_name or "").strip()
+    if name not in ESPN_SCOUTS_INC_2026:
+        return production_score, None
+    src = str(production_source or "")
+    if src not in ("combine_only_pending_nfl_career_stats", "nflverse_pre_rookie_combine_cod"):
+        return production_score, None
+    if float(production_score) > 52.5:
+        return production_score, None
+    g = float(ESPN_SCOUTS_INC_2026[name])
+    mapped = (g - 80.0) * (95.0 - 65.0) / (96.0 - 80.0) + 65.0
+    mapped = max(65.0, min(95.0, mapped))
+    return mapped, "espn_scouts_inc_2026"
+
 
 def _parse_height_inches(ht: Any) -> float:
     if ht is None or (isinstance(ht, float) and math.isnan(ht)):

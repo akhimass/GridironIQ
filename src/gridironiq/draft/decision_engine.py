@@ -2,6 +2,19 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Sequence
 
+from .adp_tiers import adp_discount
+
+
+def _pos_bucket_rank_among_pool(row: Dict[str, Any], pool: Sequence[Dict[str, Any]]) -> int:
+    pb = str(row.get("pos_bucket") or "UNK")
+    peers = [dict(p) for p in pool if str(p.get("pos_bucket")) == pb]
+    peers.sort(key=lambda x: -float(x.get("prospect_score", 0.0)))
+    pid = str(row.get("player_id", ""))
+    for i, p in enumerate(peers, start=1):
+        if str(p.get("player_id")) == pid:
+            return i
+    return 99
+
 
 def recommend_pick(
     team: str,
@@ -25,11 +38,14 @@ def recommend_pick(
         pid = str(row.get("player_id", ""))
         final = float(row.get("final_draft_score", 0.0))
         p_avail = float(availability.get(pid, 0.5))
-        leverage = final * (1.0 - w * p_avail)
+        pr = _pos_bucket_rank_among_pool(row, available_players)
+        adp_m = adp_discount(str(row.get("pos_bucket", "UNK")), int(pick_number), pr)
+        leverage = final * (1.0 - w * p_avail) * adp_m
         item = dict(row)
         item["team_context"] = team
         item["pick_number"] = pick_number
         item["availability_at_pick"] = round(p_avail, 4)
+        item["adp_availability_mult"] = round(adp_m, 4)
         item["leverage_score"] = round(leverage, 3)
         ranked.append(item)
     ranked.sort(key=lambda x: (-x["leverage_score"], -x["final_draft_score"]))

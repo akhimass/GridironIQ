@@ -1,8 +1,19 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List
 
+from .offseason_context import (
+    OffseasonMove,
+    build_division_intel,
+    compute_adjusted_need_scores,
+    load_pick_changes,
+    load_transaction_sources,
+    load_transactions_json,
+    load_transactions_override,
+    need_adjustment_deltas,
+    offseason_summary_payload,
+)
 from .room_production import build_room_need_score, compute_position_share_trend
 from .scheme_fit import build_team_scheme_profile
 from .team_needs import NEED_BUCKETS, compute_team_needs
@@ -28,6 +39,11 @@ class TeamContext:
     shotgun_rate: float
     need_signal_policy: Dict[str, Any]
     draft_pick_positions: List[int] = field(default_factory=list)
+    base_need_scores: Dict[str, float] = field(default_factory=dict)
+    need_adjustments: Dict[str, float] = field(default_factory=dict)
+    division_intel: Dict[str, Any] = field(default_factory=dict)
+    offseason_moves: List[OffseasonMove] = field(default_factory=list)
+    pick_changes: List[Dict[str, Any]] = field(default_factory=list)
 
     def __repr__(self) -> str:
         ranked = sorted(self.needs.items(), key=lambda x: -x[1])[:11]
@@ -59,7 +75,6 @@ def build_team_context(
     needs_payload = compute_team_needs(team_u, int(season))
     layers = needs_payload.get("signal_layers") or {}
     scheme = build_team_scheme_profile(team_u, int(season))
-    raw = scheme.get("raw") or {}
 
     room_scores = {b: float(build_room_need_score(team_u, b, int(season))) for b in NEED_BUCKETS}
     mx_r = max(room_scores.values()) if room_scores else 1.0
@@ -74,6 +89,10 @@ def build_team_context(
     rb_tr = compute_position_share_trend(team_u, "RB", trend_seasons)
     edge_tr = compute_position_share_trend(team_u, "EDGE", trend_seasons)
 
+    # Expose TE target-share slope on scheme raw for TE scheme_fit (BUG 3 / audit JSON).
+    scheme.setdefault("raw", {})["te_target_share_trend"] = float(te_tr)
+    raw = scheme.get("raw") or {}
+
     policy = dict(needs_payload["need_signal_policy"])
     policy["trend_window_seasons"] = trend_seasons
     base_sources = list(policy.get("sources") or [])
@@ -87,10 +106,50 @@ def build_team_context(
 
     picks = list(draft_pick_positions) if draft_pick_positions else []
 
+    base_scores = {b: float(needs_payload["need_scores"].get(b, 0.0)) for b in NEED_BUCKETS}
+    adjusted_scores = compute_adjusted_need_scores(team_u, int(season), base_scores)
+    deltas = need_adjustment_deltas(base_scores, adjusted_scores)
+    txn_bundle = load_transactions_json()
+    all_moves = load_transactions_override()
+    team_moves = [m for m in all_moves if m.to_team == team_u or m.from_team == team_u]
+    moves_applied = 0
+    for t in txn_bundle.get("transactions") or []:
+        di = t.get("draft_need_impact")
+        if isinstance(di, dict) and team_u in di:
+            moves_applied += 1
+            continue
+        if str(t.get("to_team") or "").upper() == team_u or str(t.get("from_team") or "").upper() == team_u:
+            moves_applied += 1
+    if moves_applied == 0:
+        net = txn_bundle.get("net_need_adjustments_by_team") or {}
+        if isinstance(net, dict) and team_u in net and isinstance(net.get(team_u), dict):
+            moves_applied = 1
+    division_intel = build_division_intel(team_u, int(season))
+    pick_changes = load_pick_changes()
+
+    needs_payload["base_need_scores"] = base_scores
+    needs_payload["adjusted_need_scores"] = adjusted_scores
+    needs_payload["need_adjustments"] = deltas
+    needs_payload["need_scores"] = adjusted_scores
+    needs_payload["offseason_moves"] = [asdict(m) for m in team_moves]
+    needs_payload["division_intel"] = division_intel
+    needs_payload["pick_changes"] = pick_changes
+    needs_payload["offseason_transaction_sources"] = load_transaction_sources()
+    needs_payload["net_need_adjustments_by_team"] = txn_bundle.get("net_need_adjustments_by_team") or {}
+    needs_payload["offseason_summary"] = offseason_summary_payload(
+        base_scores, adjusted_scores, moves_applied=moves_applied
+    )
+
+    for s in ("offseason_context", "transactions_2026.json", "division_context.json"):
+        if s not in base_sources:
+            base_sources.append(s)
+    policy["sources"] = base_sources
+    needs_payload["need_signal_policy"] = policy
+
     return TeamContext(
         team=team_u,
         season=int(season),
-        needs=dict(needs_payload["need_scores"]),
+        needs=adjusted_scores,
         needs_detail=needs_payload,
         scheme_profile=scheme,
         room_scores=room_scores,
@@ -104,11 +163,24 @@ def build_team_context(
         shotgun_rate=float(raw.get("off_shotgun_rate", 0.0)),
         need_signal_policy=policy,
         draft_pick_positions=picks,
+        base_need_scores=base_scores,
+        need_adjustments=deltas,
+        division_intel=division_intel,
+        offseason_moves=team_moves,
+        pick_changes=pick_changes,
     )
 
 
 def team_context_summary(ctx: TeamContext) -> Dict[str, Any]:
     top = sorted(ctx.needs.items(), key=lambda x: -x[1])[:5]
+    adj_lines: List[str] = []
+    for b in NEED_BUCKETS:
+        d = float(ctx.need_adjustments.get(b, 0.0))
+        if abs(d) < 0.01:
+            continue
+        base_v = float(ctx.base_need_scores.get(b, 0.0))
+        adj_v = float(ctx.needs.get(b, 0.0))
+        adj_lines.append(f"{b}: {base_v:.1f} → {adj_v:.1f} ({d:+.1f})")
     return {
         "team": ctx.team,
         "season": ctx.season,
@@ -122,4 +194,9 @@ def team_context_summary(ctx: TeamContext) -> Dict[str, Any]:
         },
         "need_signal_policy": ctx.need_signal_policy,
         "draft_pick_positions": ctx.draft_pick_positions,
+        "base_need_scores": {k: round(float(v), 2) for k, v in ctx.base_need_scores.items()},
+        "need_adjustments": {k: round(float(v), 2) for k, v in ctx.need_adjustments.items()},
+        "adjusted_need_scores": {k: round(float(v), 2) for k, v in ctx.needs.items()},
+        "offseason_summary": (ctx.needs_detail or {}).get("offseason_summary") or {},
+        "need_adjustment_lines": adj_lines,
     }

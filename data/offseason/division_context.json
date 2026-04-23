@@ -1,0 +1,37 @@
+{
+  "team": "CAR",
+  "season": 2026,
+  "division": "NFC_South",
+  "division_rivals": ["ATL", "NO", "TB"],
+  "division_analysis": {
+    "ATL": {
+      "offseason_summary": "Lost WR Drake London to IR (torn ACL), signed WR Stefon Diggs (1yr), lost IDL Calais Campbell (retirement)",
+      "needs_created": ["WR", "IDL"],
+      "needs_filled": [],
+      "draft_pick": 16,
+      "competitive_window": "rebuilding",
+      "cap_space_tier": "medium"
+    },
+    "NO": {
+      "offseason_summary": "Signed QB Derek Carr extension, lost WR Chris Olave (trade to PHI)",
+      "needs_created": ["WR"],
+      "needs_filled": ["QB"],
+      "draft_pick": 8,
+      "competitive_window": "win_now",
+      "cap_space_tier": "tight"
+    },
+    "TB": {
+      "offseason_summary": "Signed IDL Christian Wilkins, lost EDGE Shaq Barrett (retirement)",
+      "needs_created": ["EDGE"],
+      "needs_filled": ["IDL"],
+      "draft_pick": 15,
+      "competitive_window": "win_now",
+      "cap_space_tier": "medium"
+    }
+  },
+  "division_gaps": {
+    "comment": "NFC South IDL depth weakened (ATL lost Campbell, CAR is thin). If CAR drafts an elite EDGE, they immediately have the best pass rush in division with Phillips + draftee. Division currently has no elite TE — Sadiq would be unique weapon vs all 3 rivals.",
+    "division_has_no": ["elite_TE", "elite_pass_rush"],
+    "division_has": ["solid_WR_rooms", "avg_QB_play"]
+  }
+}

@@ -1,3 +1,4 @@
+import gc
 import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -24,6 +25,7 @@ from .schedule_engine import (
 )
 from .assets import load_logo_manifest, get_team_logo
 from .ai.schemas import ExplainerContext
+from .cache import CACHE_DIR, cache_file_count, draft_board_cache_key, draft_report_cache_key, read_cache, write_cache
 
 
 class MatchupRequest(BaseModel):
@@ -190,6 +192,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/health")
+def health_root() -> Dict[str, Any]:
+    """Deploy / load-balancer health plus on-disk draft cache stats (prewarm)."""
+    return {
+        "status": "ok",
+        "cached_teams": cache_file_count(),
+        "cache_dir": str(CACHE_DIR.resolve()),
+    }
 
 
 @app.get("/api/health")
@@ -387,14 +399,28 @@ def api_draft_board(
     extra = (
         [p.strip() for p in consensus_dirs.split(",") if p.strip()] if consensus_dirs else None
     )
+    key = draft_board_cache_key(
+        str(team).upper(),
+        int(combine_season),
+        int(eval_season),
+        picks=[],
+        consensus_dirs=(consensus_dirs or "").strip(),
+        cfb_season=int(cfb_season) if cfb_season is not None else None,
+    )
+    cached = read_cache(key)
+    if cached is not None:
+        return cached
     try:
-        return build_draft_board(
+        out = build_draft_board(
             team,
             combine_season,
             eval_season,
             cfb_season=cfb_season,
             consensus_extra_directories=extra,
         )
+        write_cache(key, out)
+        gc.collect()
+        return out
     except Exception as e:  # noqa: BLE001
         raise HTTPException(status_code=400, detail=str(e)) from e
 
@@ -570,8 +596,22 @@ def api_draft_report(req: DraftReportRequest) -> Any:
             },
         )
 
+    team_u = str(req.team).upper()
+    picks_sorted = sorted(int(x) for x in (req.picks or []))
+    report_key = draft_report_cache_key(
+        team_u,
+        int(req.season),
+        picks_sorted,
+        int(req.top_n),
+        rt,
+        bool(req.use_ai),
+        str(req.prospect_name or ""),
+    )
+    cached_report = read_cache(report_key)
+    if cached_report is not None:
+        return cached_report
+
     try:
-        team_u = str(req.team).upper()
         combine_season = int(req.season) + 1
         board = build_draft_board(
             team_u,
@@ -636,11 +676,14 @@ def api_draft_report(req: DraftReportRequest) -> Any:
             return "/report-assets/" + rel.as_posix()
 
         reports_urls = {k: to_url(v) for k, v in out_paths.items()}
-        return {
+        payload = {
             "status": "ok",
             "reports": reports_urls,
             "generated_at": datetime.now(timezone.utc).isoformat(),
         }
+        write_cache(report_key, payload)
+        gc.collect()
+        return payload
     except Exception as e:  # noqa: BLE001
         return JSONResponse(
             status_code=500,

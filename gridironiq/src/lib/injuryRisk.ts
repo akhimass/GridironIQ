@@ -1,0 +1,50 @@
+export type InjuryRisk = "Low" | "Moderate" | "High";
+
+/** Career injury risk designations (independent of grade). Source: SIS methodology framework. */
+export const INJURY_RISK: Record<string, InjuryRisk> = {
+  "fernando-mendoza": "Low",
+  "arvell-reese": "Low",
+  "francis-mauigoa": "Low",
+  "jeremiyah-love": "Low",
+  "caleb-downs": "Low",
+  "makai-lemon": "Low",
+  "sonny-styles": "Low",
+  "david-bailey": "Low",
+  "kenyon-sadiq": "Low",
+  "mansoor-delane": "Low",
+  "carnell-tate": "Low",
+  "jordyn-tyson": "High",
+  "monroe-freeling": "Low",
+  "olaivavega-ioane": "Low",
+  "jermod-mccoy": "Moderate",
+  "kadyn-proctor": "Low",
+  "akheem-mesidor": "Low",
+  "spencer-fano": "Low",
+  "dillon-thieneman": "Low",
+  "emmanuel-mcneil-warren": "Low",
+  "avieon-terrell": "Low",
+  "cashius-howell": "Low",
+  "kc-concepcion": "Low",
+  "ty-simpson": "Low",
+  "garrett-nussmeier": "Low",
+  "chase-bisontis": "Low",
+  "anthony-hill": "Low",
+  "eli-stowers": "Low",
+  "brandon-cisse": "Low",
+  "cj-allen": "Low",
+  "jacob-rodriguez": "Low",
+  "dani-dennis-sutton": "Low",
+  "kyle-louis": "Low",
+  "denzel-boston": "Low",
+  "omar-cooper-jr": "Low",
+  "keldric-faulk": "Low",
+  "kayden-mcdonald": "Low",
+  "peter-woods": "Low",
+  "caleb-lomu": "Low",
+  "zion-young": "Low",
+  "dylan-sampson": "Low",
+};
+
+export function injuryRiskForProspect(id: string): InjuryRisk {
+  return INJURY_RISK[id] ?? "Low";
+}

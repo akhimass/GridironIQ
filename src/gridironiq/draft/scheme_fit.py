@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import math
-from typing import TYPE_CHECKING, Any, Dict, Tuple
+from typing import TYPE_CHECKING, Any, Dict, Sequence, Tuple
 
 import numpy as np
 
@@ -18,6 +18,21 @@ def _unit(v: np.ndarray) -> np.ndarray:
     if n <= 1e-9:
         return v * 0.0
     return v / n
+
+
+def cosine_similarity_normalized(team_vec: np.ndarray | Sequence[float], prospect_vec: np.ndarray | Sequence[float]) -> float:
+    """
+    Cosine similarity after L2-normalizing both vectors (same length slice).
+    Prevents a few high-magnitude team scheme dimensions from dominating the dot product.
+    """
+    tv = np.asarray(team_vec, dtype=float)
+    pv = np.asarray(prospect_vec, dtype=float)
+    m = min(len(tv), len(pv))
+    if m == 0:
+        return 0.0
+    a = _unit(tv[:m])
+    b = _unit(pv[:m])
+    return float(np.clip(np.dot(a, b), -1.0, 1.0))
 
 
 def _lin01(x: float, lo: float, hi: float) -> float:
@@ -66,6 +81,57 @@ def infer_te_archetype(player_profile: Dict[str, Any], team_raw: Dict[str, float
         elif te < 0.12 and arch == "move_te_hybrid":
             arch = "inline_blocker"
     return arch
+
+
+def compute_te_scheme_fit(
+    team_scheme: Dict[str, Any],
+    prospect: Dict[str, Any],
+    *,
+    team_context: Any = None,
+) -> tuple[float, Dict[str, Any]]:
+    """
+    TE-only scheme fit from team usage / trend vs prospect archetype (not cosine shape match).
+
+    Team vector label order for reference (see ``build_team_scheme_profile``):
+    off_pass_rate, off_shotgun, off_pass_epa, off_rush_epa, def_opp_pass_rate,
+    def_pass_epa_allowed, def_rush_epa_allowed, te_target_share, te_air_yards, wr_share.
+    """
+    raw = team_scheme.get("raw") or {}
+
+    te_share = float(raw.get("te_target_share", 0.18))
+    pass_rate = float(raw.get("off_pass_rate", 0.50))
+    te_trend = float(raw.get("te_target_share_trend", 0.0))
+    if team_context is not None:
+        te_trend = float(team_context.te_target_share_trend)
+
+    archetype = infer_te_archetype(prospect, team_raw=raw)
+
+    te_share_score = float(np.clip((te_share - 0.10) / 0.15 * 100.0, 0.0, 100.0))
+
+    detail: Dict[str, Any] = {
+        "te_scheme_fit_method": "direct_te_share_pass_run_archetype",
+        "te_scheme_archetype": archetype,
+    }
+
+    if archetype == "receiving_weapon":
+        trend_bonus = float(np.clip(te_trend * 800.0, 0.0, 15.0))
+        pass_bonus = float(np.clip((pass_rate - 0.40) * 150.0, 0.0, 15.0))
+        score = te_share_score + trend_bonus + pass_bonus
+        detail["te_trend_bonus_applied"] = round(trend_bonus, 4)
+        detail["te_pass_rate_bonus_applied"] = round(pass_bonus, 4)
+        detail["te_share_score_component"] = round(te_share_score, 2)
+        return float(min(100.0, score)), detail
+
+    if archetype == "inline_blocker":
+        run_fit = float(np.clip((0.55 - pass_rate) * 200.0, 0.0, 20.0))
+        score = te_share_score * 0.5 + run_fit
+        detail["te_run_fit_bonus_applied"] = round(run_fit, 4)
+        detail["te_share_score_component"] = round(te_share_score * 0.5, 2)
+        return float(min(100.0, score)), detail
+
+    score = float(min(100.0, te_share_score * 0.90))
+    detail["te_share_score_component"] = round(te_share_score * 0.90, 2)
+    return score, detail
 
 
 def te_share_fit_score(team_raw: Dict[str, float], archetype: str) -> float:
@@ -186,6 +252,7 @@ def build_team_scheme_profile(team: str, season: int) -> Dict[str, Any]:
             "te_air_yards_share": te_air,
             "wr_target_share_of_skill": wr_t,
             "wr_air_yards_share": wr_air_share,
+            "te_target_share_trend": 0.0,
             "personnel_proxy_note": personnel_note,
             "pass_game_shares_meta": shares_meta,
         },
@@ -280,11 +347,9 @@ def compute_scheme_fit(
     team_vec = np.array(team_profile["vector"], dtype=float)
     raw = team_profile.get("raw") or {}
     pvec = _player_archetype_vector(player_profile, raw)
-    m = min(len(team_vec), len(pvec))
-    a = _unit(team_vec[:m])
-    b = _unit(pvec[:m])
-    sim = float(np.dot(a, b))
+    sim = cosine_similarity_normalized(team_vec, pvec)
     score = max(0.0, min(100.0, (sim + 1.0) * 50.0))
+    m = int(min(len(team_vec), len(pvec)))
 
     pos = str(player_profile.get("pos_bucket") or bucket_for_combine_pos(str(player_profile.get("pos", ""))))
     extra: Dict[str, Any] = {
@@ -298,11 +363,15 @@ def compute_scheme_fit(
     edge_trend = float(team_context.edge_pressure_trend) if team_context is not None else 0.0
 
     if pos == "TE":
-        arch = infer_te_archetype(player_profile, team_raw=raw)
+        te_score, te_detail = compute_te_scheme_fit(team_profile, player_profile, team_context=team_context)
+        score = float(te_score)
+        arch = str(te_detail.get("te_scheme_archetype") or infer_te_archetype(player_profile, team_raw=raw))
         ts = te_share_fit_score(raw, arch)
         extra["te_scheme_archetype"] = arch
         extra["te_share_fit_score"] = round(ts, 4)
-        score = min(100.0, max(0.0, score * max(0.38, ts)))
+        for k, v in te_detail.items():
+            if k != "te_scheme_archetype":
+                extra[k] = v
 
     if pos == "EDGE":
         eb = edge_trend_fit_bonus(edge_trend)

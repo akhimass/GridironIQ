@@ -1,0 +1,17 @@
+# Render Blueprint — draft API: prewarm expensive nflverse board builds at deploy time.
+# Set CFBD_API_KEY in the Render dashboard (do not commit secrets).
+services:
+  - type: web
+    name: gridironiq-api
+    runtime: python
+    plan: starter
+    buildCommand: |
+      pip install -e .
+      python -m gridironiq.draft.pipeline --prewarm --teams CAR KC BAL DAL SF NE --season 2025
+    startCommand: uvicorn gridironiq.api:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: CFBD_API_KEY
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"

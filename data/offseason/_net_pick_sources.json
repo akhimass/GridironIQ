@@ -1,0 +1,83 @@
+{
+  "sources": [
+    "nfl.com/transactions/league/trades/2026/4 — scraped live",
+    "nfl.com/transactions/league/signings/2026/4 — scraped live",
+    "nfl.com/transactions/league/waivers/2026/4 — scraped live",
+    "nfl.com/transactions/league/reserve-list/2026/4 — scraped live",
+    "nfl.com/news/2026-nfl-free-agency-tracker — scraped live (March/Feb signings)",
+    "cbssports.com nfl-free-agency-tracker-2026 — scraped (March context)",
+    "pff.com 2026-nfl-offseason-tracker — scraped (March contracts)",
+    "profootballnetwork.com/nfl-transactions — scraped (Feb franchise tags/cuts)",
+    "User-provided March trades table"
+  ],
+  "pick_changes": [
+    {
+      "date": "2026-04-20",
+      "original_team": "NYG",
+      "pick_round": 1,
+      "pick_slot_approx": 10,
+      "now_owned_by": "CIN",
+      "reason": "Dexter Lawrence trade",
+      "draft_order_note": "CIN holds two R1 picks: approx #10 (NYG) and their own ~#11. NYG has only pick #5 in R1."
+    },
+    {
+      "date": "2026-03-11",
+      "original_team": "BUF",
+      "pick_round": 2,
+      "pick_slot_approx": null,
+      "now_owned_by": "CHI",
+      "reason": "DJ Moore trade — BUF sent 2026 R2 to CHI",
+      "draft_order_note": "BUF loses second-round pick. CHI gains R2."
+    },
+    {
+      "date": "2026-03-18",
+      "original_team": "DEN",
+      "pick_round": 2,
+      "pick_slot_approx": null,
+      "now_owned_by": "MIA",
+      "reason": "Jaylen Waddle trade",
+      "draft_order_note": "DEN surrendered R2 equivalent for Waddle. MIA gains future capital."
+    },
+    {
+      "date": "2026-03-11",
+      "original_team": "SF",
+      "pick_round": 3,
+      "pick_slot_approx": null,
+      "now_owned_by": "DAL",
+      "reason": "Osa Odighizuwa trade — SF gave R3 for DAL DT",
+      "draft_order_note": "SF loses R3. DAL gains pick."
+    }
+  ],
+  "net_need_adjustments_by_team": {
+    "_note": "Cumulative Feb+Mar+Apr need delta per position. Negative = need reduced. Positive = need increased.",
+    "CAR": { "EDGE": -22, "LB": -10, "OT": -6, "WR": -4, "TE": 0, "QB": 0 },
+    "CIN": { "IDL": -44, "EDGE": -14 },
+    "NYG": { "IDL": 12, "EDGE": 15, "SAF": 3 },
+    "BUF": { "WR": -20, "EDGE": -18, "IOL": -10, "TE": -12, "SAF": -14, "CB": 8 },
+    "CHI": { "WR": 22, "IOL": -8 },
+    "KC": { "CB": 16, "RB": -18, "OT": -14, "QB": -8 },
+    "MIA": { "WR": 25, "QB": -20, "EDGE": 26, "SAF": 12 },
+    "LAR": { "CB": -18 },
+    "DEN": { "WR": -22, "RB": -12, "SAF": -6 },
+    "SEA": { "CB": 14, "EDGE": 24, "RB": 15 },
+    "BAL": { "EDGE": -28, "IOL": 12 },
+    "PIT": { "WR": -29, "CB": -19 },
+    "SF": { "WR": -18, "IDL": -28, "EDGE": -8, "CB": -5 },
+    "TB": { "WR": 16, "CB": 6 },
+    "ATL": { "SAF": -20, "IDL": -13, "OT": 0, "WR": -6, "IOL": -10 },
+    "NYJ": { "SAF": -26, "IDL": -12, "RB": -12, "QB": 5, "EDGE": 12 },
+    "HOU": { "EDGE": -20, "SAF": -24, "RB": -14, "IOL": 6, "OT": 10 },
+    "LV": { "IOL": -20, "CB": -10, "OT": 5 },
+    "ARI": { "QB": 4 },
+    "MIN": { "QB": -8 },
+    "JAX": { "EDGE": -15, "IDL": 0 },
+    "IND": { "EDGE": -16, "RB": -8, "SAF": -6 },
+    "TEN": { "EDGE": -8, "IDL": -6, "SAF": 5 },
+    "CLE": { "OT": -14 },
+    "WSH": { "IDL": -12, "RB": -5 },
+    "PHI": { "CB": -12, "IOL": 8, "WR": -8 },
+    "DAL": { "EDGE": -16, "WR": -8, "IDL": 12, "RB": 8 },
+    "GB": { "LB": -10, "EDGE": 22, "WR": 9 },
+    "DET": { "IOL": -8, "RB": 12 }
+  }
+}

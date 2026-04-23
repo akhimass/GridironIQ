@@ -5,11 +5,19 @@ from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
 
-from .loaders import load_injuries, load_pbp_reg, load_snap_counts
+from .loaders import load_injuries, load_pbp_reg
 from .positions import bucket_for_snap_pos
 from .room_production import build_room_need_raw_by_team
 
 NEED_BUCKETS: List[str] = ["QB", "RB", "WR", "TE", "OT", "IOL", "EDGE", "IDL", "LB", "CB", "SAF"]
+
+# Layer weights in ``compute_team_needs`` (snap depth disabled until concentration metric ships).
+NEED_SIGNAL_WEIGHTS = {
+    "epa_need": 0.45,
+    "snap_depth": 0.00,
+    "injury_pressure": 0.30,
+    "room_production": 0.25,
+}
 
 # How much each team EPA weakness lifts need at a bucket (sums arbitrary; renormalized).
 EPA_NEED_MAP: Dict[str, Dict[str, float]] = {
@@ -150,10 +158,8 @@ def compute_team_needs(team: str, season: int) -> Dict[str, Any]:
     if row.empty:
         raise ValueError(f"Unknown team {team!r} in PBP for season {season}")
 
-    snaps = load_snap_counts(season)
     inj = load_injuries(season)
 
-    depth = _snap_depth_scores(snaps)
     inj_p = _injury_pressure(inj)
 
     epa_need = _empty_layer()
@@ -178,33 +184,34 @@ def compute_team_needs(team: str, season: int) -> Dict[str, Any]:
             if b in epa_need:
                 epa_need[b] += mag_u * w
 
+    # Snap-depth layer disabled (was degenerate: starters always show high concentration).
     snap_contrib = _empty_layer()
-    drow = depth.loc[depth["team"] == team]
-    for _, dr in drow.iterrows():
-        b = str(dr["bucket"])
-        if b in snap_contrib:
-            snap_contrib[b] += float(dr["depth_need"]) * 0.35
+
+    inj_mult = float(NEED_SIGNAL_WEIGHTS["injury_pressure"])
+    room_mult = 1.25 * (float(NEED_SIGNAL_WEIGHTS["room_production"]) / 0.20)
+    epa_mult = float(NEED_SIGNAL_WEIGHTS["epa_need"]) / 0.35
 
     inj_contrib = _empty_layer()
     irow = inj_p.loc[inj_p["team"] == team]
     for _, ir in irow.iterrows():
         b = str(ir["bucket"])
         if b in inj_contrib:
-            inj_contrib[b] += float(ir["injury_pressure"]) * 0.25
+            inj_contrib[b] += float(ir["injury_pressure"]) * inj_mult
 
     room_by_team, room_meta = build_room_need_raw_by_team(season)
     room_contrib = _empty_layer()
     if room_by_team and team in room_by_team:
         for b, v in room_by_team[team].items():
             if b in room_contrib:
-                room_contrib[b] += float(v)
+                room_contrib[b] += float(v) * room_mult
 
     combined = _empty_layer()
     for b in NEED_BUCKETS:
-        combined[b] = epa_need[b] + snap_contrib[b] + inj_contrib[b] + room_contrib[b]
+        combined[b] = epa_need[b] * epa_mult + snap_contrib[b] + inj_contrib[b] + room_contrib[b]
 
     need_norm = _normalize_need_dict(combined)
-    snap_depth_display = _normalize_need_dict(_layer_from_depth(team, depth))
+    # Snap depth display suppressed while snap contribution is disabled (avoids all-100 normalize).
+    snap_depth_display = {b: 0.0 for b in NEED_BUCKETS}
     injury_display = _normalize_need_dict(_layer_from_injury(team, inj_p))
     room_display = _normalize_need_dict(dict(room_by_team.get(team, _empty_layer())))
     epa_display = _normalize_need_dict(epa_need)
@@ -221,10 +228,17 @@ def compute_team_needs(team: str, season: int) -> Dict[str, Any]:
         },
         "room_production_meta": room_meta,
         "need_signal_policy": {
+            "blend_weights": NEED_SIGNAL_WEIGHTS,
+            "snap_depth_weight_in_blend": float(NEED_SIGNAL_WEIGHTS["snap_depth"]),
+            "snap_depth_weighted_contribution": 0.0,
             "manual_need_priors": False,
+            "snap_depth_layer_disabled": True,
+            "snap_depth_note": (
+                "Snap-depth contribution and normalized display are disabled until a "
+                "concentration-based depth metric replaces starter-only concentration."
+            ),
             "sources": [
                 "nflverse_pbp_epa",
-                "nflverse_snap_counts",
                 "nflverse_injury_reports",
                 "nflverse_player_stats_room_production",
             ],
