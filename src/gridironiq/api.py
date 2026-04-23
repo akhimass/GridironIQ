@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import gc
 import os
 from pathlib import Path
@@ -9,23 +11,11 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from .matchup_engine import MatchupResult, run_matchup
-from .qb_production_engine import QBComparisonResult, compare_qbs
-from .report_generator import generate_report
-from .backtest_engine import BacktestResult, run_backtest
-from .reports.matchup_report import build_matchup_report
-from .reports.broadcast_report import build_broadcast_report
-from .reports.presentation_report import build_presentation_report
-from .schedule_engine import (
-    Phase,
-    build_game_report,
-    list_schedule,
-    run_schedule_predictions,
-    run_schedule_reports,
-)
 from .assets import load_logo_manifest, get_team_logo
-from .ai.schemas import ExplainerContext
 from .cache import CACHE_DIR, cache_file_count, draft_board_cache_key, draft_report_cache_key, read_cache, write_cache
+
+# Heavy stacks (pandas, nflverse, models) load on first request to each area — not at import time.
+# This keeps idle / team-logos-only processes much smaller on low-RAM hosts (e.g. Render).
 
 
 class MatchupRequest(BaseModel):
@@ -225,6 +215,8 @@ def api_schedule(season: int, phase: str = "all") -> Dict[str, Any]:
 
     phase: "all" | "regular" | "postseason"
     """
+    from .schedule_engine import list_schedule
+
     if phase not in {"all", "regular", "postseason"}:
         raise HTTPException(status_code=400, detail="phase must be one of: all, regular, postseason")
     try:
@@ -239,6 +231,8 @@ def api_game_report(season: int, game_id: str) -> Dict[str, Any]:
     """
     Full report for a single historical game (schedule metadata + prediction + reports).
     """
+    from .schedule_engine import build_game_report
+
     try:
         return build_game_report(season=season, game_id=game_id)
     except Exception as e:  # noqa: BLE001
@@ -253,6 +247,8 @@ def api_schedule_build(payload: Dict[str, Any]) -> Dict[str, Any]:
     Body:
       { "season": 2024, "phase": "all", "build_reports": true }
     """
+    from .schedule_engine import Phase, run_schedule_predictions, run_schedule_reports
+
     season = int(payload.get("season", 0))
     phase_raw = str(payload.get("phase", "all"))
     build_reports = bool(payload.get("build_reports", False))
@@ -285,8 +281,11 @@ def api_ai_explain_matchup(req: AIExplainMatchupRequest) -> Dict[str, Any]:
     """
     Run matchup + report pipeline and return only the AI Statistician object.
     """
+    from .matchup_engine import run_matchup
+    from .report_generator import generate_report
+
     try:
-        result: MatchupResult = run_matchup(
+        result = run_matchup(
             season=req.season,
             team_a=req.team_a,
             team_b=req.team_b,
@@ -308,9 +307,12 @@ def api_ai_chat(req: AIChatRequest) -> Dict[str, Any]:
     from .ai.chat import generate_ai_chat_answer
     from .ai.draft_analyst import build_draft_intel_payload
     from .ai.explainer import build_explainer_context
+    from .ai.schemas import ExplainerContext
     from .draft.pipeline import build_draft_board, run_availability_and_recommendations
-    from .reports.matchup_report import build_matchup_report
+    from .matchup_engine import run_matchup
+    from .report_generator import generate_report
     from .reports.broadcast_report import build_broadcast_report
+    from .reports.matchup_report import build_matchup_report
 
     if not req.question or not req.question.strip():
         raise HTTPException(status_code=400, detail="question is required")
@@ -744,6 +746,7 @@ def api_ai_health() -> Dict[str, Any]:
     """
     Lightweight health check for the AI Statistician layer.
     """
+    from .ai.schemas import ExplainerContext
     from .ai.template_provider import TemplateProvider
 
     template_ok = True
@@ -784,8 +787,10 @@ def api_run_matchup(req: MatchupRequest) -> Dict[str, Any]:
     """
     Run team-level matchup prediction using the wrapped SuperBowlEngine logic.
     """
+    from .matchup_engine import run_matchup
+
     try:
-        result: MatchupResult = run_matchup(
+        result = run_matchup(
             season=req.season,
             team_a=req.team_a,
             team_b=req.team_b,
@@ -820,8 +825,11 @@ def api_matchup_report(req: MatchupRequest) -> Dict[str, Any]:
     """
     Run matchup and return a structured scouting report (summary, strengths, profiles, notes).
     """
+    from .matchup_engine import run_matchup
+    from .report_generator import generate_report
+
     try:
-        result: MatchupResult = run_matchup(
+        result = run_matchup(
             season=req.season,
             team_a=req.team_a,
             team_b=req.team_b,
@@ -841,8 +849,10 @@ def api_qb_compare(req: QBCompareRequest) -> Dict[str, Any]:
     """
     Compare two quarterbacks using the QB production engine wrapper.
     """
+    from .qb_production_engine import compare_qbs
+
     try:
-        result: QBComparisonResult = compare_qbs(
+        result = compare_qbs(
             season=req.season,
             qb_a=req.qb_a,
             team_a=req.team_a,
@@ -871,8 +881,10 @@ def api_backtest(req: BacktestRequest) -> Dict[str, Any]:
     """
     Run season-level backtest and return accuracy, score error, and calibration data.
     """
+    from .backtest_engine import run_backtest
+
     try:
-        result: BacktestResult = run_backtest(season=req.season)
+        result = run_backtest(season=req.season)
     except Exception as e:  # noqa: BLE001
         raise HTTPException(status_code=400, detail=str(e)) from e
     return result.to_dict()
@@ -886,6 +898,8 @@ def api_report_matchup(req: ReportMatchupRequest) -> Dict[str, Any]:
     """
     Build full matchup report: prediction, situational edges, offense vs defense, optional asset paths.
     """
+    from .reports.matchup_report import build_matchup_report
+
     try:
         return build_matchup_report(
             season=req.season,
@@ -904,6 +918,8 @@ def api_report_broadcast(req: ReportMatchupRequest) -> Dict[str, Any]:
     """
     Return broadcast-style report: headline stats, talking points, top 3 storylines.
     """
+    from .reports.broadcast_report import build_broadcast_report
+
     try:
         return build_broadcast_report(
             season=req.season,
@@ -921,6 +937,8 @@ def api_report_presentation(req: ReportMatchupRequest) -> Dict[str, Any]:
     """
     Return presentation-style report: slides with bullets, key edges, visual refs.
     """
+    from .reports.presentation_report import build_presentation_report
+
     try:
         return build_presentation_report(
             season=req.season,
@@ -938,6 +956,8 @@ def api_report_situational(req: ReportMatchupRequest) -> Dict[str, Any]:
     """
     Return run/pass and situational tendency outputs for the matchup (no heatmap generation).
     """
+    from .reports.matchup_report import build_matchup_report
+
     try:
         data = build_matchup_report(
             season=req.season,
