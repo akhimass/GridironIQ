@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Loader2, RefreshCw, Send } from "lucide-react";
+import { Loader2, RefreshCw, Search, Send } from "lucide-react";
 import {
   Radar,
   RadarChart,
@@ -28,8 +28,13 @@ import type {
   ApiDraftRecommendResponse,
 } from "@/lib/api.ts";
 import DraftSimulator from "../DraftSimulator.tsx";
-import type { BoardViewTab, DraftModule, PosFilter } from "./draftBoardUtils.ts";
-import { prospectPosPill } from "./draftBoardUtils.ts";
+import type { AnalyticsSubTab, BoardViewTab, DraftRoomTab, PosFilter } from "./draftBoardUtils.ts";
+import {
+  DRAFT_CFB_SEASON,
+  DRAFT_COMBINE_SEASON,
+  DRAFT_EVAL_SEASON,
+  prospectPosPill,
+} from "./draftBoardUtils.ts";
 import type { TableSortKey } from "./draftBoardUtils.ts";
 
 function radarDataFor(p: ApiDraftProspect) {
@@ -80,9 +85,31 @@ function NavBtn({
   );
 }
 
+function RoomTabBtn({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`giq-room-tab ${active ? "giq-room-tab-active" : ""}`}
+    >
+      {label}
+    </button>
+  );
+}
+
 export interface DraftPlatformViewProps {
-  draftModule: DraftModule;
-  setDraftModule: (m: DraftModule) => void;
+  roomTab: DraftRoomTab;
+  setRoomTab: (t: DraftRoomTab) => void;
+  analyticsSub: AnalyticsSubTab;
+  setAnalyticsSub: (s: AnalyticsSubTab) => void;
   posFilter: PosFilter;
   setPosFilter: (f: PosFilter) => void;
   boardViewTab: BoardViewTab;
@@ -91,6 +118,9 @@ export interface DraftPlatformViewProps {
   boardLoading: boolean;
   boardError: Error | null;
   displayRows: ApiDraftProspect[];
+  prospectDbRows: ApiDraftProspect[];
+  prospectSearch: string;
+  setProspectSearch: (s: string) => void;
   selected: ApiDraftProspect | null;
   selectedId: string | null;
   setSelectedId: (id: string | null) => void;
@@ -99,12 +129,6 @@ export interface DraftPlatformViewProps {
   team: string;
   setTeam: (t: string) => void;
   displayTeams: string[];
-  combineSeason: number;
-  setCombineSeason: (n: number) => void;
-  cfbSeason: number;
-  setCfbSeason: (n: number) => void;
-  evalSeason: number;
-  setEvalSeason: (n: number) => void;
   pickNumber: number;
   setPickNumber: (n: number) => void;
   maxTradeTarget: number;
@@ -116,9 +140,7 @@ export interface DraftPlatformViewProps {
   analystPending: boolean;
   tradePending: boolean;
   tradeError: Error | null;
-  tradeScan:
-    | { target_pick: number; ev_delta: number }[]
-    | undefined;
+  tradeScan: { target_pick: number; ev_delta: number }[] | undefined;
   runTrade: () => void;
   compareIdB: string | null;
   setCompareIdB: (id: string | null) => void;
@@ -136,6 +158,14 @@ const BOARD_TABS: { id: BoardViewTab; label: string }[] = [
   { id: "r1_projections_tab", label: "R1_PROJECTIONS" },
   { id: "rmu_predictions", label: "RMU_PREDICTIONS" },
   { id: "by_team_fit", label: "BY_TEAM_FIT" },
+];
+
+const ANALYTICS_PRIMARY: { id: AnalyticsSubTab; label: string }[] = [
+  { id: "model_intel", label: "MODEL_INTEL" },
+  { id: "team_needs", label: "TEAM_NEEDS" },
+  { id: "scheme_fit", label: "SCHEME_FIT" },
+  { id: "combine_lab", label: "COMBINE_LAB" },
+  { id: "trend_signals", label: "TREND_SIGNALS" },
 ];
 
 export default function DraftPlatformView(p: DraftPlatformViewProps) {
@@ -156,89 +186,49 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
     p.board?.prospects?.find((x) => x.player_id === p.compareIdB) ??
     (p.compareIdB ? null : p.board?.prospects?.[1] ?? null);
 
-  const boardTitle =
-    p.draftModule === "prospect_db"
-      ? "// PROSPECT_DB — LIVE nflverse BOARD"
-      : "// 2026 NFL DRAFT — BIG_BOARD";
+  const tableRows = p.roomTab === "prospect_db" ? p.prospectDbRows : p.displayRows;
+  const topScore = tableRows[0]?.final_draft_score ?? p.board?.prospects?.[0]?.final_draft_score;
 
-  const showBoardChrome = p.draftModule === "big_board" || p.draftModule === "prospect_db";
-
-  const topScore = p.displayRows[0]?.final_draft_score ?? p.board?.prospects?.[0]?.final_draft_score;
+  const showBoardLayers = p.roomTab === "board" || p.roomTab === "prospect_db";
+  const layoutMainClass = p.selected ? "giq-draft-layout giq-draft-layout-with-side" : "giq-draft-layout";
 
   return (
-    <main className="giq-draft-layout">
+    <main className={layoutMainClass}>
       {/* LEFT */}
       <aside className="giq-draft-left max-h-[calc(100vh-3.5rem)] overflow-y-auto lg:max-h-none">
         <div className="giq-panel-section">
-          <div className="giq-panel-title">BOARD_MODULES</div>
-          <NavBtn
-            icon="◈"
-            label="BIG_BOARD"
-            badge="32"
-            badgeVariant="count"
-            active={p.draftModule === "big_board"}
-            onClick={() => p.setDraftModule("big_board")}
-          />
-          <NavBtn
-            icon="◎"
-            label="R1_PROJECTIONS"
-            active={p.draftModule === "r1_projections"}
-            onClick={() => p.setDraftModule("r1_projections")}
-          />
-          <NavBtn
-            icon="⊞"
-            label="PROSPECT_DB"
-            active={p.draftModule === "prospect_db"}
-            onClick={() => p.setDraftModule("prospect_db")}
-          />
-          <NavBtn
-            icon="▶"
-            label="SIMULATOR"
-            active={p.draftModule === "simulator"}
-            onClick={() => p.setDraftModule("simulator")}
-          />
-          <NavBtn
-            icon="⇄"
-            label="COMPARE"
-            active={p.draftModule === "compare"}
-            onClick={() => p.setDraftModule("compare")}
-          />
+          <div className="giq-panel-title">TEAM_CONTEXT</div>
+          <div className="space-y-2 px-4 py-3">
+            <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Team</Label>
+            <Select value={p.team} onValueChange={p.setTeam}>
+              <SelectTrigger className="h-8 w-full border-white/10 bg-[#050709] text-xs">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {p.displayTeams.map((t) => (
+                  <SelectItem key={t} value={t}>
+                    {t}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <div className="space-y-1 pt-1">
+              <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Pick #</Label>
+              <Input
+                type="number"
+                className="h-8 border-white/10 bg-[#050709] text-xs"
+                value={p.pickNumber}
+                min={1}
+                max={259}
+                onChange={(e) => p.setPickNumber(Number(e.target.value))}
+              />
+            </div>
+            <p className="pt-1 font-mono text-[9px] leading-relaxed text-[#3d4f66]">
+              2026 cycle · combine {DRAFT_COMBINE_SEASON} · CFB {DRAFT_CFB_SEASON} · eval {DRAFT_EVAL_SEASON}
+            </p>
+          </div>
         </div>
-        <div className="giq-panel-section">
-          <div className="giq-panel-title">ANALYTICS</div>
-          <NavBtn
-            icon="⚙"
-            label="MODEL_INTEL"
-            badge="NEW"
-            badgeVariant="new"
-            active={p.draftModule === "model_intel"}
-            onClick={() => p.setDraftModule("model_intel")}
-          />
-          <NavBtn
-            icon="◉"
-            label="TEAM_NEEDS"
-            active={p.draftModule === "team_needs"}
-            onClick={() => p.setDraftModule("team_needs")}
-          />
-          <NavBtn
-            icon="≋"
-            label="SCHEME_FIT"
-            active={p.draftModule === "scheme_fit"}
-            onClick={() => p.setDraftModule("scheme_fit")}
-          />
-          <NavBtn
-            icon="⬡"
-            label="COMBINE_LAB"
-            active={p.draftModule === "combine_lab"}
-            onClick={() => p.setDraftModule("combine_lab")}
-          />
-          <NavBtn
-            icon="∿"
-            label="TREND_SIGNALS"
-            active={p.draftModule === "trend_signals"}
-            onClick={() => p.setDraftModule("trend_signals")}
-          />
-        </div>
+
         <div className="giq-panel-section">
           <div className="giq-panel-title">POSITION_FILTER</div>
           {(
@@ -261,23 +251,81 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
             />
           ))}
         </div>
+
+        <div className="giq-panel-section">
+          <div className="giq-panel-title">RMU_SAC_MODULE</div>
+          <div className="flex flex-wrap items-center gap-2 px-4 py-2">
+            <span className="text-[#d4a843]">★</span>
+            <span className="font-mono text-[10px] font-bold tracking-wider text-[#dde4ef]">HACKATHON</span>
+            <span className="giq-nav-badge bg-[#29b8e0] text-[#050709]">BETA</span>
+          </div>
+          <NavBtn
+            icon="⊕"
+            label="TRAINING_DATA"
+            active={p.roomTab === "analytics" && p.analyticsSub === "rmu_training"}
+            onClick={() => {
+              p.setRoomTab("analytics");
+              p.setAnalyticsSub("rmu_training");
+            }}
+          />
+          <NavBtn
+            icon="⊗"
+            label="MODEL_RESULTS"
+            active={p.roomTab === "analytics" && p.analyticsSub === "rmu_results"}
+            onClick={() => {
+              p.setRoomTab("analytics");
+              p.setAnalyticsSub("rmu_results");
+            }}
+          />
+          <NavBtn
+            icon="⊘"
+            label="PREDICTIONS"
+            active={p.roomTab === "analytics" && p.analyticsSub === "rmu_predictions"}
+            onClick={() => {
+              p.setRoomTab("analytics");
+              p.setAnalyticsSub("rmu_predictions");
+            }}
+          />
+        </div>
       </aside>
 
       {/* CENTER */}
       <div className="giq-draft-center min-w-0">
-        {p.draftModule === "simulator" && (
+        <div className="giq-room-tab-strip border-b border-white/[0.06] bg-[#0a0d14] px-2 py-2">
+          <div className="flex flex-wrap gap-1">
+            <RoomTabBtn label="BIG_BOARD" active={p.roomTab === "board"} onClick={() => p.setRoomTab("board")} />
+            <RoomTabBtn
+              label="PROSPECT_DB"
+              active={p.roomTab === "prospect_db"}
+              onClick={() => p.setRoomTab("prospect_db")}
+            />
+            <RoomTabBtn
+              label="SIMULATOR"
+              active={p.roomTab === "simulator"}
+              onClick={() => p.setRoomTab("simulator")}
+            />
+            <RoomTabBtn label="COMPARE" active={p.roomTab === "compare"} onClick={() => p.setRoomTab("compare")} />
+            <RoomTabBtn
+              label="ANALYTICS"
+              active={p.roomTab === "analytics"}
+              onClick={() => p.setRoomTab("analytics")}
+            />
+          </div>
+        </div>
+
+        {p.roomTab === "simulator" && (
           <div className="border-b border-white/[0.06] p-3">
             <DraftSimulator />
           </div>
         )}
 
-        {showBoardChrome && (
+        {showBoardLayers && (
           <>
             <div className="giq-kpi-bar">
               <div className="giq-kpi-item">
                 <div className="giq-kpi-label">PICK_SLOT</div>
                 <div className="giq-kpi-value text-[22px]">{p.pickNumber}</div>
-                <div className="giq-kpi-delta">{p.team} · BOARD_ROWS</div>
+                <div className="giq-kpi-delta">{p.team} · 2026 BOARD</div>
               </div>
               <div className="giq-kpi-item">
                 <div className="giq-kpi-label">PROSPECTS</div>
@@ -286,7 +334,7 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
               </div>
               <div className="giq-kpi-item">
                 <div className="giq-kpi-label">FILTERED</div>
-                <div className="giq-kpi-value text-[22px]">{p.displayRows.length}</div>
+                <div className="giq-kpi-value text-[22px]">{tableRows.length}</div>
                 <div className="giq-kpi-delta">POS + TAB</div>
               </div>
               <div className="giq-kpi-item">
@@ -305,63 +353,15 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
 
             <div className="giq-module-header">
               <div className="giq-mh-title">
-                <span>//</span> {boardTitle}
+                <span>//</span>{" "}
+                {p.roomTab === "prospect_db"
+                  ? "PROSPECT_DB — LIVE nflverse BOARD (2026)"
+                  : "2026 NFL DRAFT — BIG_BOARD"}
               </div>
               <div className="giq-mh-sub">LIVE · {p.team}</div>
             </div>
 
-            <div className="flex flex-wrap items-end gap-3 border-b border-white/[0.06] bg-[#0a0d14] px-4 py-3">
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Team</Label>
-                <Select value={p.team} onValueChange={p.setTeam}>
-                  <SelectTrigger className="h-8 w-[120px] border-white/10 bg-[#050709] text-xs">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {p.displayTeams.map((t) => (
-                      <SelectItem key={t} value={t}>
-                        {t}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Combine</Label>
-                <Input
-                  type="number"
-                  className="h-8 w-[88px] border-white/10 bg-[#050709] text-xs"
-                  value={p.combineSeason}
-                  onChange={(e) => p.setCombineSeason(Number(e.target.value))}
-                />
-              </div>
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">CFB</Label>
-                <Input
-                  type="number"
-                  className="h-8 w-[88px] border-white/10 bg-[#050709] text-xs"
-                  value={p.cfbSeason}
-                  onChange={(e) => p.setCfbSeason(Number(e.target.value))}
-                />
-              </div>
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Eval</Label>
-                <Input
-                  type="number"
-                  className="h-8 w-[88px] border-white/10 bg-[#050709] text-xs"
-                  value={p.evalSeason}
-                  onChange={(e) => p.setEvalSeason(Number(e.target.value))}
-                />
-              </div>
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase tracking-wider text-[#7d8fa8]">Pick #</Label>
-                <Input
-                  type="number"
-                  className="h-8 w-[72px] border-white/10 bg-[#050709] text-xs"
-                  value={p.pickNumber}
-                  onChange={(e) => p.setPickNumber(Number(e.target.value))}
-                />
-              </div>
+            <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] bg-[#0a0d14] px-4 py-3">
               <Button
                 className="h-8 bg-[#d4a843] font-mono text-[10px] font-bold uppercase tracking-wider text-[#050709] hover:bg-[#f0c060]"
                 disabled={p.intelBusy || p.boardLoading}
@@ -373,39 +373,6 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
               <Button variant="outline" size="sm" className="h-8 border-white/15 bg-transparent" onClick={p.refetchBoard}>
                 <RefreshCw className="h-3.5 w-3.5" />
               </Button>
-            </div>
-
-            <div className="giq-filter-row">
-              {(
-                [
-                  ["ALL", "ALL"],
-                  ["QB", "QB"],
-                  ["WR", "WR"],
-                  ["RB", "RB"],
-                  ["EDGE", "EDGE_DL"],
-                  ["OT", "OT_IOL"],
-                  ["TE", "TE"],
-                  ["CB", "CB"],
-                  ["S", "S"],
-                  ["LB", "LB"],
-                ] as const
-              ).map(([label, key]) => (
-                <button
-                  key={label}
-                  type="button"
-                  className={`giq-filter-pill ${p.posFilter === key ? "giq-filter-pill-active" : ""}`}
-                  onClick={() => p.setPosFilter(key)}
-                >
-                  {label}
-                </button>
-              ))}
-              <button
-                type="button"
-                className={`giq-filter-pill ${p.boardViewTab === "r1_projections_tab" ? "giq-filter-pill-active" : ""}`}
-                onClick={() => p.setBoardViewTab("r1_projections_tab")}
-              >
-                R1_ONLY
-              </button>
             </div>
 
             <div className="giq-tabs-row">
@@ -420,18 +387,118 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                 </button>
               ))}
             </div>
+
+            <div className="flex flex-wrap items-center gap-2 border-b border-white/[0.06] px-4 py-2">
+              <button
+                type="button"
+                className={`giq-filter-pill ${p.boardViewTab === "r1_projections_tab" ? "giq-filter-pill-active" : ""}`}
+                onClick={() => p.setBoardViewTab("r1_projections_tab")}
+              >
+                R1_ONLY
+              </button>
+            </div>
+
+            {p.roomTab === "prospect_db" && (
+              <div className="flex items-center gap-2 border-b border-white/[0.06] bg-[#0f131e] px-4 py-3">
+                <Search className="h-4 w-4 shrink-0 text-[#7d8fa8]" />
+                <Input
+                  placeholder="Search name, school, position…"
+                  value={p.prospectSearch}
+                  onChange={(e) => p.setProspectSearch(e.target.value)}
+                  className="h-9 border-white/10 bg-[#050709] font-mono text-xs"
+                />
+              </div>
+            )}
           </>
         )}
 
-        {p.draftModule === "r1_projections" && (
-          <div className="space-y-4 p-5">
+        {showBoardLayers && (
+          <div className="giq-board-wrap">
+            {p.boardLoading && (
+              <div className="flex items-center gap-2 p-6 font-mono text-sm text-[#7d8fa8]">
+                <Loader2 className="h-4 w-4 animate-spin" /> Loading board…
+              </div>
+            )}
+            {p.boardError && (
+              <p className="p-6 font-mono text-sm text-red-400">{p.boardError.message || "Board error"}</p>
+            )}
+            {p.board && !p.boardLoading && (
+              <table className="giq-board-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th className={p.sortHeaderClass("player_name")} onClick={() => p.toggleTableSort("player_name")}>
+                      PLAYER
+                    </th>
+                    <th>POS</th>
+                    <th>SCHOOL</th>
+                    <th className={p.sortHeaderClass("final_draft_score")} onClick={() => p.toggleTableSort("final_draft_score")}>
+                      FINAL
+                    </th>
+                    <th className={p.sortHeaderClass("prospect_score")} onClick={() => p.toggleTableSort("prospect_score")}>
+                      PROSPECT
+                    </th>
+                    <th className={p.sortHeaderClass("model_rank")} onClick={() => p.toggleTableSort("model_rank")}>
+                      MDL#
+                    </th>
+                    <th className={p.sortHeaderClass("consensus_rank")} onClick={() => p.toggleTableSort("consensus_rank")}>
+                      CONS
+                    </th>
+                    <th className={p.sortHeaderClass("reach_risk")} onClick={() => p.toggleTableSort("reach_risk")}>
+                      REACH
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableRows.map((row, idx) => {
+                    const rank = row.model_rank ?? idx + 1;
+                    const active = p.selectedId === row.player_id;
+                    return (
+                      <tr
+                        key={row.player_id}
+                        onClick={() => p.setSelectedId(active ? null : row.player_id)}
+                        style={{ background: active ? "rgba(212,168,67,0.08)" : undefined }}
+                      >
+                        <td>
+                          <div className={`giq-rank-num ${rank <= 3 ? "border-[rgba(212,168,67,0.35)] text-[#d4a843]" : ""}`}>
+                            {rank}
+                          </div>
+                        </td>
+                        <td>
+                          <div className="text-[13px] font-semibold text-[#dde4ef]">{row.player_name}</div>
+                          <div className="text-[9px] uppercase tracking-wider text-[#3d4f66]">
+                            {row.pos_bucket} · score breakdown
+                          </div>
+                        </td>
+                        <td>
+                          <span className={prospectPosPill(row.pos)}>{row.pos}</span>
+                        </td>
+                        <td className="text-[10px] text-[#7d8fa8]">{row.school}</td>
+                        <td className="text-[#f0c060]">{row.final_draft_score.toFixed(1)}</td>
+                        <td>{row.prospect_score.toFixed(1)}</td>
+                        <td>{row.model_rank ?? "—"}</td>
+                        <td>{row.consensus_rank != null ? Number(row.consensus_rank).toFixed(1) : "—"}</td>
+                        <td>{row.reach_risk != null ? Number(row.reach_risk).toFixed(2) : "—"}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
+          </div>
+        )}
+
+        {p.roomTab === "board" && (
+          <div className="space-y-4 border-t border-white/[0.06] p-5">
             <div className="giq-module-header border-t-0">
               <div className="giq-mh-title">
                 <span>//</span> R1_PROJECTIONS · LEVERED_INTEL
               </div>
             </div>
             {!topRec && (
-              <p className="font-mono text-xs text-[#7d8fa8]">Run pipeline to populate Monte Carlo availability + modes.</p>
+              <p className="font-mono text-xs text-[#7d8fa8]">
+                Run pipeline to populate Monte Carlo availability + modes.
+              </p>
             )}
             {topRec && (
               <div className="rounded border border-[#d4a843]/30 bg-[#131928] p-4">
@@ -475,7 +542,8 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                       {(fourModes[key] ?? []).slice(0, 10).map((row) => (
                         <li key={String((row as { player_id?: string }).player_id)} className="flex justify-between gap-2">
                           <span className="truncate">
-                            #{(row as { mode_rank?: number }).mode_rank} {String((row as { player_name?: string }).player_name)}
+                            #{(row as { mode_rank?: number }).mode_rank}{" "}
+                            {String((row as { player_name?: string }).player_name)}
                           </span>
                           <span className="shrink-0 text-[#d4a843]">
                             {Number((row as { prospect_score?: number }).prospect_score ?? 0).toFixed(1)}
@@ -490,154 +558,227 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
           </div>
         )}
 
-        {(p.draftModule === "big_board" || p.draftModule === "prospect_db") && (
-          <div className="giq-board-wrap">
-            {p.boardLoading && (
-              <div className="flex items-center gap-2 p-6 font-mono text-sm text-[#7d8fa8]">
-                <Loader2 className="h-4 w-4 animate-spin" /> Loading board…
-              </div>
-            )}
-            {p.boardError && (
-              <p className="p-6 font-mono text-sm text-red-400">{p.boardError.message || "Board error"}</p>
-            )}
-            {p.board && !p.boardLoading && (
-              <table className="giq-board-table">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th className={p.sortHeaderClass("player_name")} onClick={() => p.toggleTableSort("player_name")}>
-                      PLAYER
-                    </th>
-                    <th>POS</th>
-                    <th>SCHOOL</th>
-                    <th className={p.sortHeaderClass("final_draft_score")} onClick={() => p.toggleTableSort("final_draft_score")}>
-                      FINAL
-                    </th>
-                    <th className={p.sortHeaderClass("prospect_score")} onClick={() => p.toggleTableSort("prospect_score")}>
-                      PROSPECT
-                    </th>
-                    <th className={p.sortHeaderClass("model_rank")} onClick={() => p.toggleTableSort("model_rank")}>
-                      MDL#
-                    </th>
-                    <th className={p.sortHeaderClass("consensus_rank")} onClick={() => p.toggleTableSort("consensus_rank")}>
-                      CONS
-                    </th>
-                    <th className={p.sortHeaderClass("reach_risk")} onClick={() => p.toggleTableSort("reach_risk")}>
-                      REACH
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {p.displayRows.map((row, idx) => {
-                    const rank = row.model_rank ?? idx + 1;
-                    const active = p.selectedId === row.player_id;
-                    return (
-                      <tr
-                        key={row.player_id}
-                        onClick={() => p.setSelectedId(row.player_id)}
-                        style={{ background: active ? "rgba(212,168,67,0.08)" : undefined }}
-                      >
-                        <td>
-                          <div className={`giq-rank-num ${rank <= 3 ? "border-[rgba(212,168,67,0.35)] text-[#d4a843]" : ""}`}>
-                            {rank}
-                          </div>
-                        </td>
-                        <td>
-                          <div className="text-[13px] font-semibold text-[#dde4ef]">{row.player_name}</div>
-                          <div className="text-[9px] uppercase tracking-wider text-[#3d4f66]">
-                            {row.pos_bucket} · score breakdown
-                          </div>
-                        </td>
-                        <td>
-                          <span className={prospectPosPill(row.pos)}>{row.pos}</span>
-                        </td>
-                        <td className="text-[10px] text-[#7d8fa8]">{row.school}</td>
-                        <td className="text-[#f0c060]">{row.final_draft_score.toFixed(1)}</td>
-                        <td>{row.prospect_score.toFixed(1)}</td>
-                        <td>{row.model_rank ?? "—"}</td>
-                        <td>{row.consensus_rank != null ? Number(row.consensus_rank).toFixed(1) : "—"}</td>
-                        <td>{row.reach_risk != null ? Number(row.reach_risk).toFixed(2) : "—"}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            )}
-          </div>
-        )}
-
-        {p.draftModule === "model_intel" && (
-          <div className="space-y-4 p-5">
-            <div className="giq-module-header border-t-0">
+        {p.roomTab === "board" && (
+          <div className="border-t border-white/[0.06] p-4">
+            <div className="giq-module-header !border-t-0 !px-0 !pt-0">
               <div className="giq-mh-title">
-                <span>//</span> MODEL_INTEL · ANALYST_CONSOLE
+                <span>//</span> TRADE_DOWN_SCAN
               </div>
             </div>
-            {p.analystPending && (
-              <div className="flex items-center gap-2 font-mono text-sm text-[#7d8fa8]">
-                <Loader2 className="h-4 w-4 animate-spin" /> Generating…
+            <div className="mt-3 flex flex-wrap items-end gap-3">
+              <div className="space-y-1">
+                <Label className="text-[10px] uppercase text-[#7d8fa8]">Max target pick</Label>
+                <Input
+                  type="number"
+                  className="h-8 w-[120px] border-white/10 bg-[#050709] font-mono text-xs"
+                  value={p.maxTradeTarget}
+                  min={p.pickNumber + 1}
+                  onChange={(e) => p.setMaxTradeTarget(Number(e.target.value))}
+                />
               </div>
-            )}
-            {p.analystData && (
-              <div className="space-y-3 rounded border border-white/[0.06] bg-[#131928] p-4 font-mono text-xs text-[#dde4ef]">
-                <div>
-                  <p className="text-[9px] uppercase tracking-wider text-[#d4a843]">Best pick</p>
-                  <p className="mt-1">{p.analystData.best_pick_explanation}</p>
-                </div>
-                <div>
-                  <p className="text-[9px] uppercase tracking-wider text-[#d4a843]">Risk</p>
-                  <p className="mt-1">{p.analystData.risk_analysis}</p>
-                </div>
-              </div>
-            )}
-            <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
-              <p className="mb-2 font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">Ask the analyst</p>
-              <Textarea
-                value={p.chatQ}
-                onChange={(e) => p.setChatQ(e.target.value)}
-                className="min-h-[72px] border-white/10 bg-[#050709] font-mono text-xs"
-              />
               <Button
-                className="mt-2 w-full bg-[#dde4ef] font-mono text-xs font-semibold text-[#050709] hover:bg-white"
-                onClick={p.sendChat}
+                className="h-8 bg-[#dde4ef] font-mono text-xs font-semibold text-[#050709] hover:bg-white"
+                disabled={p.tradePending || p.boardLoading || p.maxTradeTarget <= p.pickNumber}
+                onClick={p.runTrade}
               >
-                <Send className="mr-2 h-3.5 w-3.5" /> Send
+                {p.tradePending && <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />}
+                Run trade scan
               </Button>
-              {p.chatOut && (
-                <div className="mt-3 whitespace-pre-wrap rounded border border-white/[0.06] bg-[#050709] p-3 font-mono text-xs text-[#dde4ef]">
-                  {p.chatOut}
-                </div>
-              )}
             </div>
+            {p.tradeError && <p className="mt-2 font-mono text-xs text-red-400">{p.tradeError.message}</p>}
+            {p.tradeScan && p.tradeScan.length > 0 && (
+              <Table className="mt-4 font-mono text-xs">
+                <TableHeader>
+                  <TableRow className="border-white/[0.06] hover:bg-transparent">
+                    <TableHead className="text-[#7d8fa8]">Target</TableHead>
+                    <TableHead className="text-right text-[#7d8fa8]">EV Δ</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {p.tradeScan.map((r) => (
+                    <TableRow key={r.target_pick} className="border-white/[0.06]">
+                      <TableCell className="text-[#dde4ef]">{r.target_pick}</TableCell>
+                      <TableCell className="text-right text-[#d4a843]">{Number(r.ev_delta).toFixed(3)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            )}
           </div>
         )}
 
-        {p.draftModule === "team_needs" && (
-          <div className="p-5">
-            <div className="giq-module-header border-t-0">
-              <div className="giq-mh-title">
-                <span>//</span> {p.team} — POSITIONAL_NEED_SCORES
-              </div>
-              <div className="giq-mh-sub">SIGNAL_LAYERS · nflverse</div>
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {needEntries.length === 0 && (
-                <p className="font-mono text-xs text-[#7d8fa8]">No need_scores on payload — load board.</p>
-              )}
-              {needEntries.map(([pos, score]) => (
-                <div key={pos} className="rounded border border-white/[0.06] bg-[#131928] p-3">
-                  <div className="font-mono text-[10px] text-[#7d8fa8]">{pos}</div>
-                  <div className="text-2xl font-bold text-[#d4a843]">{score.toFixed(0)}</div>
-                  <div className="giq-signal-track mt-2">
-                    <div className="giq-signal-fill-gold" style={{ width: `${Math.min(100, score)}%` }} />
-                  </div>
-                </div>
+        {p.roomTab === "analytics" && (
+          <div className="min-h-[420px] border-t border-white/[0.06] p-4">
+            <div className="giq-analytics-subrow mb-2 flex flex-wrap gap-1">
+              {ANALYTICS_PRIMARY.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  className={`giq-tab ${p.analyticsSub === t.id ? "giq-tab-active" : ""}`}
+                  onClick={() => p.setAnalyticsSub(t.id)}
+                >
+                  {t.label}
+                </button>
               ))}
             </div>
+            <div className="mb-4 flex flex-wrap items-center gap-2 border-b border-white/[0.06] pb-4">
+              <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-[#3d4f66]">RMU_SAC</span>
+              {(
+                [
+                  ["rmu_training", "⊕", "TRAINING_DATA"],
+                  ["rmu_results", "⊗", "MODEL_RESULTS"],
+                  ["rmu_predictions", "⊘", "PREDICTIONS"],
+                ] as const
+              ).map(([id, sym, lab]) => (
+                <button
+                  key={id}
+                  type="button"
+                  className={`giq-tab text-[9px] ${p.analyticsSub === id ? "giq-tab-active" : ""}`}
+                  onClick={() => p.setAnalyticsSub(id)}
+                >
+                  <span className="mr-1 opacity-80">{sym}</span>
+                  {lab}
+                </button>
+              ))}
+            </div>
+
+            {p.analyticsSub === "model_intel" && (
+              <div className="space-y-4">
+                <div className="giq-module-header border-t-0">
+                  <div className="giq-mh-title">
+                    <span>//</span> MODEL_INTEL · ANALYST_CONSOLE
+                  </div>
+                </div>
+                {p.analystPending && (
+                  <div className="flex items-center gap-2 font-mono text-sm text-[#7d8fa8]">
+                    <Loader2 className="h-4 w-4 animate-spin" /> Generating…
+                  </div>
+                )}
+                {p.analystData && (
+                  <div className="space-y-3 rounded border border-white/[0.06] bg-[#131928] p-4 font-mono text-xs text-[#dde4ef]">
+                    <div>
+                      <p className="text-[9px] uppercase tracking-wider text-[#d4a843]">Best pick</p>
+                      <p className="mt-1">{p.analystData.best_pick_explanation}</p>
+                    </div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-wider text-[#d4a843]">Risk</p>
+                      <p className="mt-1">{p.analystData.risk_analysis}</p>
+                    </div>
+                  </div>
+                )}
+                <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
+                  <p className="mb-2 font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">Ask the analyst</p>
+                  <Textarea
+                    value={p.chatQ}
+                    onChange={(e) => p.setChatQ(e.target.value)}
+                    className="min-h-[72px] border-white/10 bg-[#050709] font-mono text-xs"
+                  />
+                  <Button
+                    className="mt-2 w-full bg-[#dde4ef] font-mono text-xs font-semibold text-[#050709] hover:bg-white"
+                    onClick={p.sendChat}
+                  >
+                    <Send className="mr-2 h-3.5 w-3.5" /> Send
+                  </Button>
+                  {p.chatOut && (
+                    <div className="mt-3 whitespace-pre-wrap rounded border border-white/[0.06] bg-[#050709] p-3 font-mono text-xs text-[#dde4ef]">
+                      {p.chatOut}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {p.analyticsSub === "team_needs" && (
+              <div>
+                <div className="giq-module-header border-t-0">
+                  <div className="giq-mh-title">
+                    <span>//</span> {p.team} — POSITIONAL_NEED_SCORES
+                  </div>
+                  <div className="giq-mh-sub">SIGNAL_LAYERS · nflverse</div>
+                </div>
+                <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {needEntries.length === 0 && (
+                    <p className="font-mono text-xs text-[#7d8fa8]">No need_scores on payload — load board.</p>
+                  )}
+                  {needEntries.map(([pos, score]) => (
+                    <div key={pos} className="rounded border border-white/[0.06] bg-[#131928] p-3">
+                      <div className="font-mono text-[10px] text-[#7d8fa8]">{pos}</div>
+                      <div className="text-2xl font-bold text-[#d4a843]">{score.toFixed(0)}</div>
+                      <div className="giq-signal-track mt-2">
+                        <div className="giq-signal-fill-gold" style={{ width: `${Math.min(100, score)}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {(p.analyticsSub === "scheme_fit" ||
+              p.analyticsSub === "combine_lab" ||
+              p.analyticsSub === "trend_signals") && (
+              <div>
+                <div className="giq-module-header border-t-0">
+                  <div className="giq-mh-title">
+                    <span>//</span>{" "}
+                    {p.analyticsSub === "scheme_fit"
+                      ? "SCHEME_FIT"
+                      : p.analyticsSub === "combine_lab"
+                        ? "COMBINE_LAB"
+                        : "TREND_SIGNALS"}
+                  </div>
+                </div>
+                <p className="mt-4 max-w-lg font-mono text-xs leading-relaxed text-[#7d8fa8]">
+                  Wire-up pending: this rail mirrors the static platform module. Use BIG_BOARD + selected prospect for
+                  scheme and combine context today; full trend layer will attach to team_context signals.
+                </p>
+              </div>
+            )}
+
+            {p.analyticsSub === "rmu_training" && (
+              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
+                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">TRAINING_DATA</p>
+                <p className="mt-3 text-[#7d8fa8]">
+                  RMU / SAC training artifacts (features, labels, walk-forward splits) ship with the repo under{" "}
+                  <code className="text-[#f0c060]">data/rmu_sac/</code>. Export paths from the Python pipeline feed this
+                  view once the training console is wired to the API.
+                </p>
+              </div>
+            )}
+
+            {p.analyticsSub === "rmu_results" && (
+              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
+                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">MODEL_RESULTS</p>
+                <p className="mt-3 text-[#7d8fa8]">
+                  Calibration tables, confusion matrices, and lift curves from the first-round model will render here.
+                  Until the results endpoint is exposed, run <code className="text-[#f0c060]">pytest tests/test_rmu_model.py</code>{" "}
+                  locally for the latest metrics snapshot.
+                </p>
+              </div>
+            )}
+
+            {p.analyticsSub === "rmu_predictions" && (
+              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
+                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">PREDICTIONS</p>
+                <p className="mt-3 text-[#7d8fa8]">
+                  Live first-round probability layers surface on the big board under the{" "}
+                  <span className="text-[#f0c060]">RMU_PREDICTIONS</span> board tab. Select a prospect to open the radar
+                  map on the right — same signal stack as the PDF prospect card layout.
+                </p>
+                <Button
+                  className="mt-4 h-8 bg-[#d4a843] font-mono text-[10px] font-bold uppercase tracking-wider text-[#050709] hover:bg-[#f0c060]"
+                  onClick={() => {
+                    p.setRoomTab("board");
+                    p.setBoardViewTab("rmu_predictions");
+                  }}
+                >
+                  Open RMU board tab
+                </Button>
+              </div>
+            )}
           </div>
         )}
 
-        {p.draftModule === "compare" && p.board && (
+        {p.roomTab === "compare" && p.board && (
           <div className="space-y-4 p-5">
             <div className="giq-module-header border-t-0">
               <div className="giq-mh-title">
@@ -723,97 +864,28 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
             )}
           </div>
         )}
-
-        {(p.draftModule === "scheme_fit" || p.draftModule === "combine_lab" || p.draftModule === "trend_signals") && (
-          <div className="p-8">
-            <div className="giq-module-header border-t-0">
-              <div className="giq-mh-title">
-                <span>//</span>{" "}
-                {p.draftModule === "scheme_fit" ? "SCHEME_FIT" : p.draftModule === "combine_lab" ? "COMBINE_LAB" : "TREND_SIGNALS"}
-              </div>
-            </div>
-            <p className="mt-4 max-w-lg font-mono text-xs leading-relaxed text-[#7d8fa8]">
-              Wire-up pending: this rail mirrors the static platform module. Use BIG_BOARD + selected prospect for scheme
-              and combine context today; full trend layer will attach to team_context signals.
-            </p>
-          </div>
-        )}
-
-        {(p.draftModule === "big_board" || p.draftModule === "prospect_db") && (
-          <div className="border-t border-white/[0.06] p-4">
-            <div className="giq-module-header !border-t-0 !px-0 !pt-0">
-              <div className="giq-mh-title">
-                <span>//</span> TRADE_DOWN_SCAN
-              </div>
-            </div>
-            <div className="mt-3 flex flex-wrap items-end gap-3">
-              <div className="space-y-1">
-                <Label className="text-[10px] uppercase text-[#7d8fa8]">Max target pick</Label>
-                <Input
-                  type="number"
-                  className="h-8 w-[120px] border-white/10 bg-[#050709] font-mono text-xs"
-                  value={p.maxTradeTarget}
-                  min={p.pickNumber + 1}
-                  onChange={(e) => p.setMaxTradeTarget(Number(e.target.value))}
-                />
-              </div>
-              <Button
-                className="h-8 bg-[#dde4ef] font-mono text-xs font-semibold text-[#050709] hover:bg-white"
-                disabled={p.tradePending || p.boardLoading || p.maxTradeTarget <= p.pickNumber}
-                onClick={p.runTrade}
-              >
-                {p.tradePending && <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />}
-                Run trade scan
-              </Button>
-            </div>
-            {p.tradeError && <p className="mt-2 font-mono text-xs text-red-400">{p.tradeError.message}</p>}
-            {p.tradeScan && p.tradeScan.length > 0 && (
-              <Table className="mt-4 font-mono text-xs">
-                <TableHeader>
-                  <TableRow className="border-white/[0.06] hover:bg-transparent">
-                    <TableHead className="text-[#7d8fa8]">Target</TableHead>
-                    <TableHead className="text-right text-[#7d8fa8]">EV Δ</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {p.tradeScan.map((r) => (
-                    <TableRow key={r.target_pick} className="border-white/[0.06]">
-                      <TableCell className="text-[#dde4ef]">{r.target_pick}</TableCell>
-                      <TableCell className="text-right text-[#d4a843]">{Number(r.ev_delta).toFixed(3)}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            )}
-          </div>
-        )}
       </div>
 
-      {/* RIGHT */}
-      <aside className="giq-draft-right max-h-[calc(100vh-3.5rem)] overflow-y-auto lg:max-h-none">
-        <div>
-          <div className="giq-rp-header">SELECTED_PROSPECT</div>
-          <div className="px-4 py-3">
-            {!p.selected && <p className="font-mono text-xs text-[#7d8fa8]">Select a row on the big board.</p>}
-            {p.selected && (
-              <>
-                <div className="text-[22px] font-bold leading-none tracking-tight text-[#dde4ef]">{p.selected.player_name}</div>
-                <div className="mt-1 font-mono text-[10px] text-[#7d8fa8]">
-                  {p.selected.pos} · {p.selected.school}
-                </div>
-                <div className="mt-3 flex items-baseline gap-2">
-                  <div className="text-3xl font-bold text-[#d4a843]">{p.selected.final_draft_score.toFixed(1)}</div>
-                  <div className="font-mono text-[9px] uppercase tracking-wider text-[#3d4f66]">FINAL_SCORE</div>
-                </div>
-              </>
-            )}
+      {/* RIGHT — prospect radar map (only when a row is selected; frees center width otherwise) */}
+      {p.selected && (
+        <aside className="giq-draft-right max-h-[calc(100vh-3.5rem)] overflow-y-auto lg:max-h-none">
+          <div>
+            <div className="giq-rp-header">SELECTED_PROSPECT</div>
+            <div className="px-4 py-3">
+              <div className="text-[22px] font-bold leading-none tracking-tight text-[#dde4ef]">{p.selected.player_name}</div>
+              <div className="mt-1 font-mono text-[10px] text-[#7d8fa8]">
+                {p.selected.pos} · {p.selected.school}
+              </div>
+              <div className="mt-3 flex items-baseline gap-2">
+                <div className="text-3xl font-bold text-[#d4a843]">{p.selected.final_draft_score.toFixed(1)}</div>
+                <div className="font-mono text-[9px] uppercase tracking-wider text-[#3d4f66]">FINAL_SCORE</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <div className="giq-rp-header">PROSPECT_RADAR</div>
-          <div className="px-2 py-2">
-            {p.selected ? (
-              <div className="h-[200px] w-full">
+          <div>
+            <div className="giq-rp-header">PROSPECT_RADAR</div>
+            <div className="px-2 py-2">
+              <div className="h-[220px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={radarDataFor(p.selected)} cx="50%" cy="50%" outerRadius="72%">
                     <PolarGrid stroke="rgba(255,255,255,0.08)" />
@@ -829,60 +901,54 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                   </RadarChart>
                 </ResponsiveContainer>
               </div>
-            ) : (
-              <p className="px-2 pb-4 font-mono text-xs text-[#7d8fa8]">No selection</p>
-            )}
+            </div>
           </div>
-        </div>
-        <div>
-          <div className="giq-rp-header">SIGNAL_BREAKDOWN</div>
-          <div className="space-y-3 px-4 py-3">
-            {p.selected ? (
-              <>
-                {(
-                  [
-                    ["Athleticism", p.selected.radar.athleticism, "gold"],
-                    ["Production", p.selected.radar.production, "cyan"],
-                    ["Efficiency", p.selected.radar.efficiency, "cyan"],
-                    ["Scheme fit", p.selected.radar.scheme_fit, "green"],
-                    ["Team need", p.selected.radar.team_need, "gold"],
-                  ] as const
-                ).map(([label, val, tone]) => (
-                  <div key={label}>
-                    <div className="flex justify-between font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">
-                      <span>{label}</span>
-                      <span className="text-[#f0c060]">{val.toFixed(1)}</span>
-                    </div>
-                    <div className="giq-signal-track mt-1">
-                      <div
-                        className={tone === "gold" ? "giq-signal-fill-gold" : tone === "green" ? "giq-signal-fill-green" : "giq-signal-fill-cyan"}
-                        style={{ width: `${val}%` }}
-                      />
-                    </div>
+          <div>
+            <div className="giq-rp-header">SIGNAL_BREAKDOWN</div>
+            <div className="space-y-3 px-4 py-3">
+              {(
+                [
+                  ["Athleticism", p.selected.radar.athleticism, "gold"],
+                  ["Production", p.selected.radar.production, "cyan"],
+                  ["Efficiency", p.selected.radar.efficiency, "cyan"],
+                  ["Scheme fit", p.selected.radar.scheme_fit, "green"],
+                  ["Team need", p.selected.radar.team_need, "gold"],
+                ] as const
+              ).map(([label, val, tone]) => (
+                <div key={label}>
+                  <div className="flex justify-between font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">
+                    <span>{label}</span>
+                    <span className="text-[#f0c060]">{val.toFixed(1)}</span>
                   </div>
-                ))}
-              </>
-            ) : (
-              <p className="font-mono text-xs text-[#7d8fa8]">—</p>
-            )}
-          </div>
-        </div>
-        <div>
-          <div className="giq-rp-header">MODEL_STATUS</div>
-          <div className="px-4 py-2 font-mono text-[10px]">
-            <div className="flex justify-between border-b border-white/[0.04] py-2 text-[#7d8fa8]">
-              <span>CONSENSUS</span>
-              <span className={p.consensusConfigured ? "text-[#3ecf7a]" : "text-[#e05252]"}>
-                {p.consensusConfigured ? "CONFIGURED" : "MODEL_ONLY"}
-              </span>
-            </div>
-            <div className="flex justify-between py-2 text-[#7d8fa8]">
-              <span>BOARD_ROWS</span>
-              <span className="text-[#dde4ef]">{p.board?.prospects?.length ?? 0}</span>
+                  <div className="giq-signal-track mt-1">
+                    <div
+                      className={
+                        tone === "gold" ? "giq-signal-fill-gold" : tone === "green" ? "giq-signal-fill-green" : "giq-signal-fill-cyan"
+                      }
+                      style={{ width: `${val}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </aside>
+          <div>
+            <div className="giq-rp-header">MODEL_STATUS</div>
+            <div className="px-4 py-2 font-mono text-[10px]">
+              <div className="flex justify-between border-b border-white/[0.04] py-2 text-[#7d8fa8]">
+                <span>CONSENSUS</span>
+                <span className={p.consensusConfigured ? "text-[#3ecf7a]" : "text-[#e05252]"}>
+                  {p.consensusConfigured ? "CONFIGURED" : "MODEL_ONLY"}
+                </span>
+              </div>
+              <div className="flex justify-between py-2 text-[#7d8fa8]">
+                <span>BOARD_ROWS</span>
+                <span className="text-[#dde4ef]">{p.board?.prospects?.length ?? 0}</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      )}
     </main>
   );
 }

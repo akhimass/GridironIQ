@@ -18,13 +18,18 @@
 
 .giq-draft-layout {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) 280px;
+  grid-template-columns: 220px minmax(0, 1fr);
   min-height: calc(100vh - 3.5rem);
   border-top: 1px solid var(--giq-border);
 }
 
+.giq-draft-layout.giq-draft-layout-with-side {
+  grid-template-columns: 220px minmax(0, 1fr) minmax(260px, 300px);
+}
+
 @media (max-width: 1279px) {
-  .giq-draft-layout {
+  .giq-draft-layout,
+  .giq-draft-layout.giq-draft-layout-with-side {
     grid-template-columns: 1fr;
   }
   .giq-draft-left {
@@ -216,6 +221,36 @@
   border-color: rgba(212, 168, 67, 0.45);
   color: var(--giq-gold);
   background: rgba(212, 168, 67, 0.1);
+}
+
+.giq-room-tab-strip {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.giq-room-tab {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 8px 14px;
+  color: var(--giq-text3);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  white-space: nowrap;
+}
+
+.giq-room-tab:hover {
+  color: var(--giq-text2);
+  border-color: var(--giq-border);
+}
+
+.giq-room-tab-active {
+  color: var(--giq-gold);
+  border-color: rgba(212, 168, 67, 0.45);
+  background: rgba(212, 168, 67, 0.08);
 }
 
 .giq-tabs-row {

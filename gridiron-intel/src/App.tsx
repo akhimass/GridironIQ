@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/accuracy" element={<Backtesting />} />
           <Route path="/reports" element={<ReportLibrary />} />
           <Route path="/draft" element={<DraftRoom />} />
-          <Route path="/draft/simulator" element={<Navigate to="/draft?module=simulator" replace />} />
+          <Route path="/draft/simulator" element={<Navigate to="/draft?room=simulator" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

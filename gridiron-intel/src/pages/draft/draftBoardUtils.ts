@@ -1,5 +1,10 @@
 import type { ApiDraftProspect } from "@/lib/api.ts";
 
+/** Fixed 2026 draft cycle for the draft room UI (no season toggles). */
+export const DRAFT_COMBINE_SEASON = 2026;
+export const DRAFT_CFB_SEASON = 2025;
+export const DRAFT_EVAL_SEASON = 2025;
+
 export type TableSortKey =
   | "player_name"
   | "prospect_score"
@@ -49,7 +54,48 @@ export function sortProspects(rows: ApiDraftProspect[], key: TableSortKey, dir: 
   });
 }
 
-export type DraftModule =
+/** Primary draft room surface (tabs in the main column). */
+export type DraftRoomTab = "board" | "prospect_db" | "simulator" | "compare" | "analytics";
+
+export const DRAFT_ROOM_TABS: DraftRoomTab[] = [
+  "board",
+  "prospect_db",
+  "simulator",
+  "compare",
+  "analytics",
+];
+
+export function isDraftRoomTab(s: string | null): s is DraftRoomTab {
+  return s != null && (DRAFT_ROOM_TABS as string[]).includes(s);
+}
+
+export type AnalyticsSubTab =
+  | "model_intel"
+  | "team_needs"
+  | "scheme_fit"
+  | "combine_lab"
+  | "trend_signals"
+  | "rmu_training"
+  | "rmu_results"
+  | "rmu_predictions";
+
+export const ANALYTICS_SUB_TABS: AnalyticsSubTab[] = [
+  "model_intel",
+  "team_needs",
+  "scheme_fit",
+  "combine_lab",
+  "trend_signals",
+  "rmu_training",
+  "rmu_results",
+  "rmu_predictions",
+];
+
+export function isAnalyticsSubTab(s: string | null): s is AnalyticsSubTab {
+  return s != null && (ANALYTICS_SUB_TABS as string[]).includes(s);
+}
+
+/** @deprecated Legacy `?module=` values — migrated to `?room=` + analytics sub-tab. */
+export type LegacyDraftModule =
   | "big_board"
   | "r1_projections"
   | "prospect_db"
@@ -61,7 +107,7 @@ export type DraftModule =
   | "combine_lab"
   | "trend_signals";
 
-export const DRAFT_MODULES: DraftModule[] = [
+const LEGACY_MODULES: string[] = [
   "big_board",
   "r1_projections",
   "prospect_db",
@@ -74,8 +120,8 @@ export const DRAFT_MODULES: DraftModule[] = [
   "trend_signals",
 ];
 
-export function isDraftModule(s: string | null): s is DraftModule {
-  return s != null && (DRAFT_MODULES as string[]).includes(s);
+export function isLegacyDraftModule(s: string | null): s is LegacyDraftModule {
+  return s != null && LEGACY_MODULES.includes(s);
 }
 
 export type PosFilter = "ALL" | "QB" | "WR" | "RB" | "EDGE_DL" | "OT_IOL" | "DB_LB" | "TE" | "CB" | "S" | "LB";

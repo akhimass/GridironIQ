@@ -13,11 +13,17 @@ import {
 import DraftPlatformView from "./draft/DraftPlatformView.tsx";
 import {
   type BoardViewTab,
-  type DraftModule,
+  type AnalyticsSubTab,
+  type DraftRoomTab,
   type PosFilter,
+  DRAFT_CFB_SEASON,
+  DRAFT_COMBINE_SEASON,
+  DRAFT_EVAL_SEASON,
   filterByBoardTab,
   filterByPosition,
-  isDraftModule,
+  isAnalyticsSubTab,
+  isDraftRoomTab,
+  isLegacyDraftModule,
   sortProspects,
   type TableSortKey,
 } from "./draft/draftBoardUtils.ts";
@@ -34,11 +40,9 @@ export default function DraftRoom() {
   const [posFilter, setPosFilter] = useState<PosFilter>("ALL");
   const [boardViewTab, setBoardViewTab] = useState<BoardViewTab>("model_board");
   const [compareIdB, setCompareIdB] = useState<string | null>(null);
+  const [prospectSearch, setProspectSearch] = useState("");
 
   const [team, setTeam] = useState("CAR");
-  const [combineSeason, setCombineSeason] = useState(2025);
-  const [cfbSeason, setCfbSeason] = useState(2024);
-  const [evalSeason, setEvalSeason] = useState(2024);
   const [pickNumber, setPickNumber] = useState(19);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [chatQ, setChatQ] = useState("What happens if we pass on the top levered player?");
@@ -47,42 +51,102 @@ export default function DraftRoom() {
   const [tableSortDir, setTableSortDir] = useState<"asc" | "desc">("desc");
   const [maxTradeTarget, setMaxTradeTarget] = useState(47);
 
-  useEffect(() => {
-    if (searchParams.get("tab") === "mock" && searchParams.get("module") == null) {
-      const n = new URLSearchParams(searchParams);
-      n.delete("tab");
-      n.set("module", "simulator");
-      setSearchParams(n, { replace: true });
-    }
-  }, [searchParams, setSearchParams]);
-
-  const draftModule: DraftModule = useMemo(() => {
-    const m = searchParams.get("module");
-    if (isDraftModule(m)) return m;
-    return "big_board";
+  const roomTab: DraftRoomTab = useMemo(() => {
+    const r = searchParams.get("room");
+    if (isDraftRoomTab(r)) return r;
+    return "board";
   }, [searchParams]);
 
-  const setDraftModule = (mod: DraftModule) => {
+  useEffect(() => {
+    if (roomTab !== "prospect_db") setProspectSearch("");
+  }, [roomTab]);
+
+  const analyticsSub: AnalyticsSubTab = useMemo(() => {
+    const a = searchParams.get("a");
+    if (isAnalyticsSubTab(a)) return a;
+    return "model_intel";
+  }, [searchParams]);
+
+  const setRoomTab = (tab: DraftRoomTab) => {
     const n = new URLSearchParams(searchParams);
     n.delete("tab");
-    if (mod === "big_board") n.delete("module");
-    else n.set("module", mod);
+    n.delete("module");
+    if (tab === "board") n.delete("room");
+    else n.set("room", tab);
+    if (tab !== "analytics") n.delete("a");
     setSearchParams(n);
   };
 
-  const logosQ = useQuery({ queryKey: ["team-logos"], queryFn: getTeamLogos });
+  const setAnalyticsSub = (sub: AnalyticsSubTab) => {
+    const n = new URLSearchParams(searchParams);
+    n.delete("module");
+    n.set("room", "analytics");
+    n.set("a", sub);
+    setSearchParams(n);
+  };
 
   useEffect(() => {
-    setCfbSeason(combineSeason - 1);
-  }, [combineSeason]);
+    const legacy = searchParams.get("module");
+    if (!legacy || searchParams.get("room")) return;
+    if (!isLegacyDraftModule(legacy)) return;
+
+    const n = new URLSearchParams(searchParams);
+    n.delete("module");
+    n.delete("tab");
+
+    if (legacy === "big_board" || legacy === "r1_projections") {
+      n.delete("room");
+      setSearchParams(n, { replace: true });
+      if (legacy === "r1_projections") setBoardViewTab("r1_projections_tab");
+      return;
+    }
+    if (legacy === "prospect_db") {
+      n.set("room", "prospect_db");
+      setSearchParams(n, { replace: true });
+      return;
+    }
+    if (legacy === "simulator") {
+      n.set("room", "simulator");
+      setSearchParams(n, { replace: true });
+      return;
+    }
+    if (legacy === "compare") {
+      n.set("room", "compare");
+      setSearchParams(n, { replace: true });
+      return;
+    }
+
+    const analyticsLegacy: Record<string, AnalyticsSubTab> = {
+      model_intel: "model_intel",
+      team_needs: "team_needs",
+      scheme_fit: "scheme_fit",
+      combine_lab: "combine_lab",
+      trend_signals: "trend_signals",
+    };
+    const sub = analyticsLegacy[legacy] ?? "model_intel";
+    n.set("room", "analytics");
+    n.set("a", sub);
+    setSearchParams(n, { replace: true });
+  }, [searchParams, setSearchParams]);
+
+  useEffect(() => {
+    if (searchParams.get("tab") === "mock" && searchParams.get("room") == null) {
+      const n = new URLSearchParams(searchParams);
+      n.delete("tab");
+      n.delete("module");
+      n.set("room", "simulator");
+      setSearchParams(n, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   useEffect(() => {
     setMaxTradeTarget(pickNumber + 28);
   }, [pickNumber]);
 
   const boardQ = useQuery({
-    queryKey: ["draft-board", team, combineSeason, evalSeason, cfbSeason],
-    queryFn: () => getDraftBoard(team, combineSeason, evalSeason, cfbSeason),
+    queryKey: ["draft-board", team, DRAFT_COMBINE_SEASON, DRAFT_EVAL_SEASON, DRAFT_CFB_SEASON],
+    queryFn: () =>
+      getDraftBoard(team, DRAFT_COMBINE_SEASON, DRAFT_EVAL_SEASON, DRAFT_CFB_SEASON),
     staleTime: 60_000,
   });
 
@@ -95,12 +159,12 @@ export default function DraftRoom() {
     mutationFn: () =>
       postDraftRecommend({
         team,
-        combine_season: combineSeason,
-        eval_season: evalSeason,
+        combine_season: DRAFT_COMBINE_SEASON,
+        eval_season: DRAFT_EVAL_SEASON,
         pick_number: pickNumber,
         n_simulations: 600,
         temperature: 2.0,
-        cfb_season: cfbSeason,
+        cfb_season: DRAFT_CFB_SEASON,
       }),
   });
 
@@ -108,13 +172,13 @@ export default function DraftRoom() {
     mutationFn: () =>
       postDraftAnalyst({
         team,
-        combine_season: combineSeason,
-        eval_season: evalSeason,
+        combine_season: DRAFT_COMBINE_SEASON,
+        eval_season: DRAFT_EVAL_SEASON,
         pick_number: pickNumber,
         n_simulations: 600,
         temperature: 2.0,
         ai_mode: "template",
-        cfb_season: cfbSeason,
+        cfb_season: DRAFT_CFB_SEASON,
       }),
   });
 
@@ -122,13 +186,13 @@ export default function DraftRoom() {
     mutationFn: () =>
       postDraftTrade({
         team,
-        combine_season: combineSeason,
-        eval_season: evalSeason,
+        combine_season: DRAFT_COMBINE_SEASON,
+        eval_season: DRAFT_EVAL_SEASON,
         current_pick: pickNumber,
         max_target_pick: maxTradeTarget,
         n_simulations: 500,
         temperature: 2.0,
-        cfb_season: cfbSeason,
+        cfb_season: DRAFT_CFB_SEASON,
       }),
   });
 
@@ -145,17 +209,19 @@ export default function DraftRoom() {
         question: chatQ,
         context_type: "draft",
         draft_team: team,
-        combine_season: combineSeason,
-        eval_season: evalSeason,
+        combine_season: DRAFT_COMBINE_SEASON,
+        eval_season: DRAFT_EVAL_SEASON,
         pick_number: pickNumber,
         ai_mode: "template",
-        cfb_season: cfbSeason,
+        cfb_season: DRAFT_CFB_SEASON,
       });
       setChatOut(res.answer);
     } catch (e) {
       setChatOut(e instanceof Error ? e.message : "Chat failed");
     }
   };
+
+  const logosQ = useQuery({ queryKey: ["team-logos"], queryFn: getTeamLogos });
 
   const displayTeams = useMemo(() => {
     const m = logosQ.data?.teams;
@@ -181,6 +247,17 @@ export default function DraftRoom() {
     return rows;
   }, [sortedBoardRows, posFilter, boardViewTab]);
 
+  const prospectDbRows = useMemo(() => {
+    const q = prospectSearch.trim().toLowerCase();
+    if (!q) return displayRows;
+    return displayRows.filter(
+      (r) =>
+        r.player_name.toLowerCase().includes(q) ||
+        (r.school || "").toLowerCase().includes(q) ||
+        (r.pos || "").toLowerCase().includes(q),
+    );
+  }, [displayRows, prospectSearch]);
+
   const toggleTableSort = (k: TableSortKey) => {
     if (k === tableSortKey) {
       setTableSortDir((d) => (d === "asc" ? "desc" : "asc"));
@@ -202,8 +279,10 @@ export default function DraftRoom() {
     <div className="giq-draft-root min-h-screen bg-[#050709] text-[#dde4ef]">
       <Navbar />
       <DraftPlatformView
-        draftModule={draftModule}
-        setDraftModule={setDraftModule}
+        roomTab={roomTab}
+        setRoomTab={setRoomTab}
+        analyticsSub={analyticsSub}
+        setAnalyticsSub={setAnalyticsSub}
         posFilter={posFilter}
         setPosFilter={setPosFilter}
         boardViewTab={boardViewTab}
@@ -212,6 +291,9 @@ export default function DraftRoom() {
         boardLoading={boardQ.isLoading}
         boardError={boardQ.error ? (boardQ.error as Error) : null}
         displayRows={displayRows}
+        prospectDbRows={prospectDbRows}
+        prospectSearch={prospectSearch}
+        setProspectSearch={setProspectSearch}
         selected={selected}
         selectedId={selectedId}
         setSelectedId={setSelectedId}
@@ -220,12 +302,6 @@ export default function DraftRoom() {
         team={team}
         setTeam={setTeam}
         displayTeams={displayTeams}
-        combineSeason={combineSeason}
-        setCombineSeason={setCombineSeason}
-        cfbSeason={cfbSeason}
-        setCfbSeason={setCfbSeason}
-        evalSeason={evalSeason}
-        setEvalSeason={setEvalSeason}
         pickNumber={pickNumber}
         setPickNumber={setPickNumber}
         maxTradeTarget={maxTradeTarget}
