@@ -130,6 +130,31 @@ export interface DraftPick {
   record: TeamRecord;
 }
 
+/** Single slot in the real 2026 NFL draft (from ESPN). */
+export interface NflDraftPick {
+  overall: number;
+  round: number;
+  pick_in_round: number;
+  /** Current owner (post-trades). */
+  team: string;
+  team_long: string;
+  /** Prior owners in order; empty if never traded. */
+  via: string[];
+  /** Original team (= `team` when `via` is empty). */
+  original_team: string;
+  is_compensatory: boolean;
+  is_special_comp: boolean;
+}
+
+/** Full 2026 draft payload produced by `scripts/build_2026_draft_order.py`. */
+export interface NflDraft2026 {
+  source: string;
+  total_picks: number;
+  team_needs: Record<string, string[]>;
+  team_long_names: Record<string, string>;
+  picks: NflDraftPick[];
+}
+
 export interface EngineData {
   winProb: WinProbModel;
   margin: RegressionModel;
@@ -143,8 +168,12 @@ export interface EngineData {
   r1Board: R1BoardRow[];
   /** 2025 final standings (descending by wins). */
   standings2025: TeamRecord[];
-  /** 2026 first-round pick order derived from reverse 2025 standings. */
+  /** 2026 first-round pick order derived from reverse 2025 standings.
+   *  Retained for backward compatibility; prefer `nflDraft` for anything
+   *  user-facing because it includes actual trades and comp picks. */
   draftOrder2026: DraftPick[];
+  /** Real 2026 NFL draft order (all 257 picks, with trades + needs). */
+  nflDraft: NflDraft2026 | null;
 }
 
 const SEASONS = [2020, 2021, 2022, 2023, 2024, 2025] as const;
@@ -230,18 +259,38 @@ function computeDraftOrder(standings: TeamRecord[]): DraftPick[] {
   return reversed.slice(0, 32).map((record, i) => ({ pick: i + 1, team: record.team, record }));
 }
 
+/** Fetch the real 2026 NFL draft order JSON, returning `null` if missing. */
+async function fetchNflDraft(): Promise<NflDraft2026 | null> {
+  try {
+    return await fetchJson<NflDraft2026>("/data/nfl_draft_order_2026.json");
+  } catch (err) {
+    console.warn("[engine] nfl_draft_order_2026.json unavailable:", err);
+    return null;
+  }
+}
+
 async function loadEngine(): Promise<EngineData> {
-  const [winProb, margin, total, score, sample, defStrength, r1Board, ...seasonGames] =
-    await Promise.all([
-      fetchJson<WinProbModel>("/engine/win_prob_model.json"),
-      fetchJson<RegressionModel>("/engine/margin_model.json"),
-      fetchJson<RegressionModel>("/engine/total_model.json"),
-      fetchJson<ScoreModel>("/engine/score_model.json"),
-      fetchJson<SamplePrediction>("/engine/sample_prediction.json"),
-      fetchCsv<DefStrengthRow>("/engine/def_strength_2025.csv"),
-      fetchCsv<R1BoardRow>("/engine/r1_board_combined.csv"),
-      ...SEASONS.map((y) => fetchJson<ScheduleGame[]>(`/engine/schedule_${y}.json`)),
-    ]);
+  const [
+    winProb,
+    margin,
+    total,
+    score,
+    sample,
+    defStrength,
+    r1Board,
+    nflDraft,
+    ...seasonGames
+  ] = await Promise.all([
+    fetchJson<WinProbModel>("/engine/win_prob_model.json"),
+    fetchJson<RegressionModel>("/engine/margin_model.json"),
+    fetchJson<RegressionModel>("/engine/total_model.json"),
+    fetchJson<ScoreModel>("/engine/score_model.json"),
+    fetchJson<SamplePrediction>("/engine/sample_prediction.json"),
+    fetchCsv<DefStrengthRow>("/engine/def_strength_2025.csv"),
+    fetchCsv<R1BoardRow>("/engine/r1_board_combined.csv"),
+    fetchNflDraft(),
+    ...SEASONS.map((y) => fetchJson<ScheduleGame[]>(`/engine/schedule_${y}.json`)),
+  ]);
 
   const perSeason: SeasonAccuracy[] = SEASONS.map((season, i) => ({
     ...summarizeAccuracy(seasonGames[i] as ScheduleGame[]),
@@ -268,6 +317,7 @@ async function loadEngine(): Promise<EngineData> {
     r1Board,
     standings2025,
     draftOrder2026,
+    nflDraft,
   };
 }
 

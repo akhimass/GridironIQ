@@ -321,6 +321,25 @@ def _sync_frontend_assets() -> None:
         eng_copied += 1
     print(f"[ok] engine -> {engine_dir.relative_to(REPO_ROOT)} ({eng_copied}/{len(engine_assets)})")
 
+    # ------------------------------------------------------------------
+    # Real 2026 NFL draft order (ESPN) — static JSON with trades + needs.
+    # ``scripts/build_2026_draft_order.py`` is the source of truth; we just
+    # copy both the canonical ``outputs/`` copy and the public one if this
+    # function is called before the builder ran.
+    # ------------------------------------------------------------------
+    data_dir = REPO_ROOT / "gridiron-intel" / "public" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    draft_src = REPO_ROOT / "outputs" / "nfl_draft_order_2026.json"
+    draft_dst = data_dir / "nfl_draft_order_2026.json"
+    if draft_src.exists():
+        draft_dst.write_bytes(draft_src.read_bytes())
+        print(f"[ok] draft -> {draft_dst.relative_to(REPO_ROOT)}")
+    else:
+        print(
+            f"  [warn] {draft_src.relative_to(REPO_ROOT)} missing —"
+            " run scripts/build_2026_draft_order.py first"
+        )
+
 
 def main() -> None:
     print("==> normalizing real CSVs")
