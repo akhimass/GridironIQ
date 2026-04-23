@@ -57,7 +57,8 @@ export function sortProspects(rows: ApiDraftProspect[], key: TableSortKey, dir: 
 /** Primary draft room surface (tabs in the main column).
  *
  * - `big_board` — Global 2026 R1 projections (no team context).
- * - `mock_draft` — Full 32-pick R1 mock assigned by 2025 reverse standings.
+ * - `mock_draft` — Full 32-pick R1 mock (real 2026 order) using the nflverse
+ *   combine-class board when the API is up, else RMU QB/WR/RB fallback.
  * - `simulator` — Interactive live simulation.
  * - `team_view` — Team-selectable big board + team mock + trade scan + analyst.
  * - `prospect_db` — Searchable prospect database.

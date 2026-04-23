@@ -29,8 +29,13 @@ import type {
 } from "@/lib/api.ts";
 import type { RmuConfidence, RmuData, RmuPosition, RmuProspect } from "@/lib/rmu.ts";
 import { confidenceColor, matchRmu } from "@/lib/rmu.ts";
-import type { EngineData, NflDraftPick } from "@/lib/engine.ts";
+import type { EngineData, R1BoardRow } from "@/lib/engine.ts";
 import { pct, topFeatures } from "@/lib/engine.ts";
+import {
+  buildMockDraftFullPoolRows,
+  buildMockDraftSkillOnlyRows,
+  findR1Overlay,
+} from "@/lib/mockDraftComposite.ts";
 import DraftSimulator from "../DraftSimulator.tsx";
 import type { AnalyticsSubTab, BoardViewTab, DraftRoomTab, PosFilter } from "./draftBoardUtils.ts";
 import {
@@ -518,7 +523,13 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
         )}
 
         {canonicalRoom === "mock_draft" && (
-          <MockDraftPane rmuData={p.rmuData} engineData={p.engineData} />
+          <MockDraftPane
+            rmuData={p.rmuData}
+            engineData={p.engineData}
+            board={p.board}
+            boardLoading={p.boardLoading}
+            boardError={p.boardError}
+          />
         )}
 
         {showBoardLayers && (
@@ -1890,41 +1901,28 @@ function TeamNeedsStrip({
   );
 }
 
-/** Maps one of the combined R1-board positions to the "family" used in the
- *  team-need lists (QB/WR/RB/TE/OL/DL/EDGE/CB/S/LB). */
-function needFamily(pos: string | null | undefined): string {
-  const p = (pos ?? "").toUpperCase();
-  if (!p) return "";
-  if (p === "QB") return "QB";
-  if (p === "WR") return "WR";
-  if (p === "RB" || p === "FB") return "RB";
-  if (p === "TE") return "TE";
-  if (p === "OT" || p === "OG" || p === "C" || p === "IOL" || p.includes("OL")) return "OL";
-  if (p === "DE" || p === "EDGE" || p.includes("EDGE")) return "EDGE";
-  if (p === "DT" || p === "NT" || p === "IDL" || p.includes("DL")) return "DL";
-  if (p === "CB") return "CB";
-  if (p === "S" || p === "FS" || p === "SS") return "S";
-  if (p.includes("LB")) return "LB";
-  return p;
-}
-
 /**
- * Real 2026 NFL Draft · Round 1 mock driven by need-weighted BPA.
+ * Round 1 mock: real ESPN pick order + either the **full** nflverse combine-class
+ * board (all positions) or a QB/WR/RB-only fallback when the draft API is down.
  *
- * Pick order + trade chains + compensatory picks come straight from the real
- * ESPN draft order (transcribed into `nfl_draft_order_2026.json` and loaded
- * via `engineData.nflDraft`). For every pick we score the remaining R1 pool
- * by `P(R1) + need_bonus`, where `need_bonus` rewards prospects whose
- * position family is in the team's top-5 need list (heavier bonus for higher
- * need-rank). The top-scored prospect is assigned; the next two are shown
- * as "on-the-clock" alternatives.
+ * Full-pool scoring blends GridironIQ ``prospect_score`` (PBP / combine / CFB
+ * when configured), consensus / market slotting, ESPN top-5 needs for the
+ * **on-clock** team, positional-value priors (early picks lean QB/OT/EDGE per
+ * historical capital curves), and the RMU P(R1) overlay on skill names that
+ * match the hackathon board.
  */
 function MockDraftPane({
   rmuData,
   engineData,
+  board,
+  boardLoading,
+  boardError,
 }: {
   rmuData: RmuData | null | undefined;
   engineData: EngineData | null | undefined;
+  board: ApiDraftBoard | undefined;
+  boardLoading: boolean;
+  boardError: Error | null;
 }) {
   if (!engineData) {
     return (
@@ -1948,74 +1946,88 @@ function MockDraftPane({
       </div>
     );
   }
+  if (boardLoading && !(board?.prospects && board.prospects.length > 0)) {
+    return (
+      <div className="p-5 font-mono text-xs text-[#7d8fa8]">
+        Loading nflverse combine-class board (full positional pool)…
+      </div>
+    );
+  }
 
   const { picks: allPicks, team_needs, team_long_names } = engineData.nflDraft;
   const round1 = allPicks.filter((p) => p.round === 1);
+  const fullPool = board?.prospects && board.prospects.length > 0 ? board.prospects : null;
+  const fullPoolMode = Boolean(fullPool);
 
-  // Need-weighted BPA selection --------------------------------------------
-  const board = [...engineData.r1Board].sort(
+  const r1Sorted = [...engineData.r1Board].sort(
     (a, b) => (b.r1_probability ?? 0) - (a.r1_probability ?? 0),
   );
-  const taken = new Set<string>();
-  const rows: Array<{
-    slot: NflDraftPick;
-    needs: string[];
-    selected: (typeof board)[number] | null;
-    fitRank: number | null; // 1-5 if hit a need slot, null otherwise
-    alternates: typeof board;
-  }> = [];
 
-  for (const slot of round1) {
-    const needs = team_needs[slot.team] ?? [];
-    const pool = board.filter((r) => !taken.has(r.name));
-    const scored = pool.map((cand) => {
-      const fam = needFamily(cand.position);
-      const needIdx = needs.indexOf(fam);
-      // Need bonus: up to 0.18 for top need, down to 0.02 for 5th need.
-      const needBonus = needIdx === -1 ? 0 : 0.2 - 0.04 * needIdx;
-      return { cand, score: (cand.r1_probability ?? 0) + needBonus, needIdx };
-    });
-    scored.sort((a, b) => b.score - a.score);
-    const top = scored[0];
-    const selected = top?.cand ?? null;
-    if (selected) taken.add(selected.name);
-    rows.push({
-      slot,
-      needs,
-      selected,
-      fitRank: top ? (top.needIdx === -1 ? null : top.needIdx + 1) : null,
-      alternates: scored.slice(1, 3).map((s) => s.cand),
-    });
-  }
+  const rowsFull = fullPoolMode
+    ? buildMockDraftFullPoolRows(round1, team_needs, fullPool!, engineData.r1Board)
+    : null;
+  const rowsSkill = !fullPoolMode
+    ? buildMockDraftSkillOnlyRows(round1, team_needs, r1Sorted)
+    : null;
+
+  const rows = rowsFull ?? rowsSkill!;
+  const fits = rows.filter((r) => r.fitRank !== null).length;
+  const tradeCount = round1.filter((p) => p.via.length > 0).length;
 
   const byPos: Record<string, number> = {};
-  for (const { selected } of rows) {
-    if (!selected) continue;
-    const key = selected.position ?? "—";
+  for (const r of rows) {
+    const sel = "selected" in r && r.selected ? r.selected : null;
+    if (!sel) continue;
+    const key =
+      "pos_bucket" in sel ? (sel as ApiDraftProspect).pos_bucket : (sel as R1BoardRow).position ?? "—";
     byPos[key] = (byPos[key] ?? 0) + 1;
   }
-  const fits = rows.filter((r) => r.fitRank !== null).length;
 
-  const tradeCount = round1.filter((p) => p.via.length > 0).length;
+  const rmuHitsOnBoard =
+    fullPoolMode && fullPool
+      ? fullPool.filter((p) => findR1Overlay(engineData.r1Board, p.player_name)).length
+      : engineData.r1Board.length;
+
+  const poolLabel = fullPoolMode ? fullPool!.length : engineData.r1Board.length;
+  const boardTeam = board?.team;
 
   return (
     <div className="space-y-4 border-b border-white/[0.06] p-4">
+      {!fullPoolMode && (
+        <div className="rounded border border-[#d4a843]/35 bg-[#d4a843]/10 px-3 py-2 font-mono text-[10px] leading-relaxed text-[#dde4ef]">
+          <span className="text-[#d4a843]">FALLBACK · SKILL_ONLY.</span> The nflverse draft board
+          did not load
+          {boardError ? ` (${boardError.message})` : ""}. Showing the 42-name RMU QB/WR/RB pool
+          only. Start the GridironIQ API (
+          <span className="text-[#7d8fa8]">VITE_API_BASE_URL</span>) so MOCK_DRAFT can simulate the
+          **entire combine class** (OL, EDGE, DB, etc.) with the same scoring stack.
+        </div>
+      )}
+
       <div className="giq-module-header border-t-0">
         <div className="giq-mh-title">
           <span>//</span> 2026 NFL DRAFT · MOCK · ROUND_1
         </div>
         <div className="font-mono text-[10px] uppercase tracking-wider text-[#7d8fa8]">
-          real order · includes {tradeCount} trades · BPA+need
+          real order · {tradeCount} trades ·{" "}
+          {fullPoolMode
+            ? "FULL_POOL · nflverse + consensus + needs + positional value + RMU overlay"
+            : "RMU SKILL POOL ONLY (API unavailable)"}
         </div>
       </div>
 
       <div className="giq-kpi-bar">
         <div className="giq-kpi-item">
           <div className="giq-kpi-label">POOL_SIZE</div>
-          <div className="giq-kpi-value text-[22px] text-[#d4a843]">
-            {engineData.r1Board.length}
+          <div className="giq-kpi-value text-[22px] text-[#d4a843]">{poolLabel}</div>
+          <div className="giq-kpi-delta">
+            {fullPoolMode ? "ALL_POSITIONS · COMBINE_CLASS" : "QB · WR · RB"}
           </div>
-          <div className="giq-kpi-delta">RMU_P(R1)</div>
+        </div>
+        <div className="giq-kpi-item">
+          <div className="giq-kpi-label">RMU_OVERLAY</div>
+          <div className="giq-kpi-value text-[22px] text-[#d4a843]">{rmuHitsOnBoard}</div>
+          <div className="giq-kpi-delta">NAMES_MATCH_R1_BOARD</div>
         </div>
         <div className="giq-kpi-item">
           <div className="giq-kpi-label">NEED_FITS</div>
@@ -2029,12 +2041,16 @@ function MockDraftPane({
           <div className="giq-kpi-value text-[22px] text-[#d4a843]">
             {(byPos["QB"] ?? 0)} · {(byPos["WR"] ?? 0)} · {(byPos["RB"] ?? 0)}
           </div>
-          <div className="giq-kpi-delta">SKILL_PICKS_R1</div>
+          <div className="giq-kpi-delta">R1_SELECTIONS</div>
         </div>
         <div className="giq-kpi-item">
           <div className="giq-kpi-label">NO. 1_OVERALL</div>
           <div className="giq-kpi-value text-[22px] text-[#dde4ef]">
-            {rows[0]?.selected?.name ?? "—"}
+            {rows[0]?.selected
+              ? "player_name" in rows[0].selected!
+                ? (rows[0].selected as ApiDraftProspect).player_name
+                : (rows[0].selected as R1BoardRow).name
+              : "—"}
           </div>
           <div className="giq-kpi-delta">
             {rows[0]?.slot.team ?? "—"} · {rows[0] && team_long_names[rows[0].slot.team]}
@@ -2051,99 +2067,200 @@ function MockDraftPane({
               <th className="text-left">SELECTION</th>
               <th className="text-left">POS</th>
               <th className="text-left">SCHOOL</th>
-              <th className="text-right">P(R1)</th>
+              {fullPoolMode ? (
+                <>
+                  <th className="text-right">MOCK</th>
+                  <th className="text-right">P(R1)</th>
+                </>
+              ) : (
+                <th className="text-right">P(R1)</th>
+              )}
               <th className="text-left">FIT</th>
               <th className="text-left">NEXT_BEST</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map(({ slot, needs, selected, fitRank, alternates }) => {
-              const rmu = selected ? matchRmu(rmuData, selected.name) : null;
-              const viaBadge =
-                slot.via.length > 0
-                  ? `via ${slot.via.join(" → ")}`
-                  : null;
-              return (
-                <tr key={slot.overall} className="giq-board-row">
-                  <td className="font-mono text-[#d4a843]">{String(slot.overall).padStart(2, "0")}</td>
-                  <td>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-1 text-[13px] font-semibold text-[#dde4ef]">
-                        <span>{slot.team}</span>
-                        {viaBadge && (
-                          <span
-                            className="rounded border border-[#d4a843]/40 bg-[#d4a843]/10 px-1 py-[1px] font-mono text-[9px] uppercase tracking-wider text-[#d4a843]"
-                            title={`${slot.original_team} → ${slot.team}`}
-                          >
-                            TRADE
+            {fullPoolMode && rowsFull
+              ? rowsFull.map(({ slot, needs, selected, fitRank, alternates, parts, r1Overlay }) => {
+                  const rmu = selected ? matchRmu(rmuData, selected.player_name) : null;
+                  const viaBadge =
+                    slot.via.length > 0 ? `via ${slot.via.join(" → ")}` : null;
+                  return (
+                    <tr key={slot.overall} className="giq-board-row">
+                      <td className="font-mono text-[#d4a843]">
+                        {String(slot.overall).padStart(2, "0")}
+                      </td>
+                      <td>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-1 text-[13px] font-semibold text-[#dde4ef]">
+                            <span>{slot.team}</span>
+                            {viaBadge && (
+                              <span
+                                className="rounded border border-[#d4a843]/40 bg-[#d4a843]/10 px-1 py-[1px] font-mono text-[9px] uppercase tracking-wider text-[#d4a843]"
+                                title={`${slot.original_team} → ${slot.team}`}
+                              >
+                                TRADE
+                              </span>
+                            )}
+                          </div>
+                          <div className="font-mono text-[10px] text-[#7d8fa8]">
+                            {needs.length > 0 ? needs.join(" · ") : "—"}
+                          </div>
+                          {viaBadge && (
+                            <div className="font-mono text-[9px] text-[#d4a843]/80">{viaBadge}</div>
+                          )}
+                        </div>
+                      </td>
+                      <td>
+                        <div className="flex items-center gap-2">
+                          <Headshot rmu={rmu} name={selected?.player_name ?? "—"} size="sm" />
+                          <div className="min-w-0">
+                            <div className="truncate text-[13px] font-semibold text-[#dde4ef]">
+                              {selected?.player_name ?? "—"}
+                            </div>
+                            <div className="font-mono text-[10px] text-[#7d8fa8]">
+                              MDL {selected?.prospect_score?.toFixed(0) ?? "—"}
+                              {selected?.model_rank != null ? ` · RANK ${selected.model_rank}` : ""}
+                              {selected?.consensus_rank != null
+                                ? ` · CON ${selected.consensus_rank}`
+                                : ""}
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        {selected ? (
+                          <span className={prospectPosPill(selected.pos ?? "")}>{selected.pos}</span>
+                        ) : null}
+                      </td>
+                      <td className="font-mono text-[10px] text-[#7d8fa8]">{selected?.school ?? "—"}</td>
+                      <td className="text-right font-mono text-[#d4a843]">
+                        {parts ? String(Math.round(parts.total * 100)) : "—"}
+                      </td>
+                      <td className="text-right font-mono text-[#7d8fa8]">
+                        {r1Overlay?.r1_probability != null
+                          ? `${(r1Overlay.r1_probability * 100).toFixed(0)}%`
+                          : "—"}
+                      </td>
+                      <td>
+                        {fitRank != null ? (
+                          <span className="rounded border border-[#3fd15b]/40 bg-[#3fd15b]/10 px-1.5 py-[1px] font-mono text-[10px] font-semibold text-[#3fd15b]">
+                            NEED #{fitRank}
                           </span>
+                        ) : (
+                          <span className="font-mono text-[10px] text-[#7d8fa8]">BPA</span>
                         )}
-                      </div>
-                      <div className="font-mono text-[10px] text-[#7d8fa8]">
-                        {needs.length > 0 ? needs.join(" · ") : "—"}
-                      </div>
-                      {viaBadge && (
-                        <div className="font-mono text-[9px] text-[#d4a843]/80">{viaBadge}</div>
-                      )}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="flex items-center gap-2">
-                      <Headshot rmu={rmu} name={selected?.name ?? "—"} size="sm" />
-                      <div className="min-w-0">
-                        <div className="truncate text-[13px] font-semibold text-[#dde4ef]">
-                          {selected?.name ?? "—"}
+                      </td>
+                      <td className="font-mono text-[10px] text-[#7d8fa8]">
+                        {alternates
+                          .map((p) => `${p.player_name} (${p.pos})`)
+                          .join(" · ") || "—"}
+                      </td>
+                    </tr>
+                  );
+                })
+              : rowsSkill!.map(({ slot, needs, selected, fitRank, alternates }) => {
+                  const rmu = selected ? matchRmu(rmuData, selected.name) : null;
+                  const viaBadge =
+                    slot.via.length > 0 ? `via ${slot.via.join(" → ")}` : null;
+                  return (
+                    <tr key={slot.overall} className="giq-board-row">
+                      <td className="font-mono text-[#d4a843]">
+                        {String(slot.overall).padStart(2, "0")}
+                      </td>
+                      <td>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-1 text-[13px] font-semibold text-[#dde4ef]">
+                            <span>{slot.team}</span>
+                            {viaBadge && (
+                              <span
+                                className="rounded border border-[#d4a843]/40 bg-[#d4a843]/10 px-1 py-[1px] font-mono text-[9px] uppercase tracking-wider text-[#d4a843]"
+                                title={`${slot.original_team} → ${slot.team}`}
+                              >
+                                TRADE
+                              </span>
+                            )}
+                          </div>
+                          <div className="font-mono text-[10px] text-[#7d8fa8]">
+                            {needs.length > 0 ? needs.join(" · ") : "—"}
+                          </div>
+                          {viaBadge && (
+                            <div className="font-mono text-[9px] text-[#d4a843]/80">{viaBadge}</div>
+                          )}
                         </div>
-                        <div className="font-mono text-[10px] text-[#7d8fa8]">
-                          {selected?.confidence ?? "—"}
-                          {selected?.height ? ` · ${Math.floor(selected.height / 12)}'${selected.height % 12}"` : ""}
-                          {selected?.weight ? ` · ${selected.weight}lb` : ""}
+                      </td>
+                      <td>
+                        <div className="flex items-center gap-2">
+                          <Headshot rmu={rmu} name={selected?.name ?? "—"} size="sm" />
+                          <div className="min-w-0">
+                            <div className="truncate text-[13px] font-semibold text-[#dde4ef]">
+                              {selected?.name ?? "—"}
+                            </div>
+                            <div className="font-mono text-[10px] text-[#7d8fa8]">
+                              {selected?.confidence ?? "—"}
+                              {selected?.height
+                                ? ` · ${Math.floor(selected.height / 12)}'${selected.height % 12}"`
+                                : ""}
+                              {selected?.weight ? ` · ${selected.weight}lb` : ""}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    {selected ? (
-                      <span className={prospectPosPill(selected.position ?? "")}>
-                        {selected.position ?? "—"}
-                      </span>
-                    ) : null}
-                  </td>
-                  <td className="font-mono text-[10px] text-[#7d8fa8]">
-                    {selected?.college_team ?? "—"}
-                  </td>
-                  <td className="text-right font-mono text-[#d4a843]">
-                    {selected?.r1_probability != null
-                      ? `${(selected.r1_probability * 100).toFixed(0)}%`
-                      : "—"}
-                  </td>
-                  <td>
-                    {fitRank != null ? (
-                      <span className="rounded border border-[#3fd15b]/40 bg-[#3fd15b]/10 px-1.5 py-[1px] font-mono text-[10px] font-semibold text-[#3fd15b]">
-                        NEED #{fitRank}
-                      </span>
-                    ) : (
-                      <span className="font-mono text-[10px] text-[#7d8fa8]">BPA</span>
-                    )}
-                  </td>
-                  <td className="font-mono text-[10px] text-[#7d8fa8]">
-                    {alternates
-                      .map((p) => `${p.name} (${p.position})`)
-                      .join(" · ") || "—"}
-                  </td>
-                </tr>
-              );
-            })}
+                      </td>
+                      <td>
+                        {selected ? (
+                          <span className={prospectPosPill(selected.position ?? "")}>
+                            {selected.position ?? "—"}
+                          </span>
+                        ) : null}
+                      </td>
+                      <td className="font-mono text-[10px] text-[#7d8fa8]">
+                        {selected?.college_team ?? "—"}
+                      </td>
+                      <td className="text-right font-mono text-[#d4a843]">
+                        {selected?.r1_probability != null
+                          ? `${(selected.r1_probability * 100).toFixed(0)}%`
+                          : "—"}
+                      </td>
+                      <td>
+                        {fitRank != null ? (
+                          <span className="rounded border border-[#3fd15b]/40 bg-[#3fd15b]/10 px-1.5 py-[1px] font-mono text-[10px] font-semibold text-[#3fd15b]">
+                            NEED #{fitRank}
+                          </span>
+                        ) : (
+                          <span className="font-mono text-[10px] text-[#7d8fa8]">BPA</span>
+                        )}
+                      </td>
+                      <td className="font-mono text-[10px] text-[#7d8fa8]">
+                        {alternates.map((p) => `${p.name} (${p.position})`).join(" · ") || "—"}
+                      </td>
+                    </tr>
+                  );
+                })}
           </tbody>
         </table>
       </div>
 
       <p className="font-mono text-[10px] leading-relaxed text-[#7d8fa8]">
-        Pick order is the real 2026 NFL draft (ESPN) — all trades and compensatory picks
-        included. Each team's selection is made with a need-weighted best-player-available
-        rule: the model scores every remaining prospect by P(R1) + a need bonus tied to the
-        team's top-5 positional needs. "NEED #n" means the pick landed on the team's nth
-        declared need; "BPA" means the top-available prospect did not match any top-5 need.
+        Pick order follows the published 2026 NFL draft (trades + compensatory picks).{" "}
+        {fullPoolMode ? (
+          <>
+            Each selection scores every remaining combine invitee using: (1) GridironIQ
+            prospect_score (nflverse PBP / snaps / injuries / combine, plus CFBD production when
+            keyed), (2) consensus / market slotting when ranks exist, else model rank, (3) ESPN
+            top-5 needs for the <em>on-clock</em> club, (4) positional-value priors that mirror
+            historical round-one capital (QB/OT/EDGE premium early; RB discounted), and (5) the
+            RMU ensemble P(R1) overlay on QB/WR/RB names that match the hackathon board. Raw
+            grades in this session were computed with the API team context{" "}
+            <span className="text-[#d4a843]">{boardTeam ?? "—"}</span>
+            — only the on-clock need list and pick order change per slot; divisional “arms race”
+            boosts still need a per-team context pass server-side.
+          </>
+        ) : (
+          <>
+            Fallback mode ranks only the 42 RMU test prospects by P(R1) plus ESPN need fit — not
+            representative of the full draft class.
+          </>
+        )}
       </p>
     </div>
   );
