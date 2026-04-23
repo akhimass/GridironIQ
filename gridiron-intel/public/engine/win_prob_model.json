@@ -1,0 +1,35 @@
+{
+  "intercept": 0.15444095999628024,
+  "coef": {
+    "epa_edge": -0.7345519485075946,
+    "success_edge": 0.798658824705323,
+    "explosive_edge": 0.18436143937875127,
+    "early_down_success_edge": 0.5601083873541962,
+    "third_down_edge": 0.570350222773854,
+    "redzone_edge": -0.03871410423805517,
+    "sack_edge": 1.360621638284689,
+    "sos_edge": -0.05277554883491581,
+    "recent_epa_edge": 2.7286594028692353
+  },
+  "feature_cols": [
+    "epa_edge",
+    "success_edge",
+    "explosive_edge",
+    "early_down_success_edge",
+    "third_down_edge",
+    "redzone_edge",
+    "sack_edge",
+    "sos_edge",
+    "recent_epa_edge"
+  ],
+  "metrics": {
+    "n_rows": 1597,
+    "log_loss": 0.6527947476783844,
+    "brier": 0.23113764532298733,
+    "accuracy": 0.6,
+    "p_mean": 0.53308487521886,
+    "p_min": 0.21910896280198547,
+    "p_max": 0.9166666666666666,
+    "calibrated": true
+  }
+}

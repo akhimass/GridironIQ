@@ -1,0 +1,15 @@
+name,college_team,college_conference,r1_probability,r1_predicted,confidence
+Elijah Sarratt,Indiana,Big Ten,0.5176,1,MEDIUM
+Omar Cooper Jr.,Indiana,Big Ten,0.4884,0,MEDIUM
+Makai Lemon,USC,Big Ten,0.4375,0,MEDIUM
+Chris Brazzell II,Tennessee,SEC,0.3895,0,MEDIUM
+Denzel Boston,Washington,Big Ten,0.3468,0,MEDIUM
+Chris Bell,Louisville,ACC,0.3339,0,MEDIUM
+Germie Bernard,Alabama,SEC,0.3283,0,MEDIUM
+Ja'Kobi Lane,USC,Big Ten,0.3147,0,MEDIUM
+KC Concepcion,Texas A&M,SEC,0.2904,0,LOW
+Carnell Tate,Ohio State,Big Ten,0.287,0,LOW
+Zachariah Branch,Georgia,SEC,0.2056,0,LOW
+Jordyn Tyson,Arizona State,Big 12,0.1987,0,LOW
+Antonio Williams,Clemson,ACC,0.1007,0,LOW
+Malachi Fields,Notre Dame,FBS Independents,0.0786,0,LOW

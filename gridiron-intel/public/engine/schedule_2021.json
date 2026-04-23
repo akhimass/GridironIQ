@@ -1,0 +1,4847 @@
+[
+  {
+    "game_id": "2021_01_DAL_TB",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "DAL",
+    "home_score": 31,
+    "away_score": 29,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 25,
+      "DAL": 24
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_PHI_ATL",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "PHI",
+    "home_score": 6,
+    "away_score": 32,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "ATL": 0,
+      "PHI": 54
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_PIT_BUF",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "PIT",
+    "home_score": 16,
+    "away_score": 23,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 40,
+      "PIT": 17
+    },
+    "win_probability": 0.999,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_NYJ_CAR",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "NYJ",
+    "home_score": 19,
+    "away_score": 14,
+    "predicted_winner": "NYJ",
+    "predicted_score": {
+      "CAR": 24,
+      "NYJ": 17
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_MIN_CIN",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "MIN",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 8,
+      "MIN": 29
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_SF_DET",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "SF",
+    "home_score": 33,
+    "away_score": 41,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "DET": 13,
+      "SF": 29
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_JAX_HOU",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "JAX",
+    "home_score": 37,
+    "away_score": 21,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 23,
+      "JAX": 16
+    },
+    "win_probability": 0.914,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_SEA_IND",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "SEA",
+    "home_score": 16,
+    "away_score": 28,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 33,
+      "SEA": 7
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_ARI_TEN",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "ARI",
+    "home_score": 13,
+    "away_score": 38,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "TEN": 0,
+      "ARI": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_LAC_WAS",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "LAC",
+    "home_score": 16,
+    "away_score": 20,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "WAS": 12,
+      "LAC": 27
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_CLE_KC",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "CLE",
+    "home_score": 33,
+    "away_score": 29,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "KC": 15,
+      "CLE": 29
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_MIA_NE",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "MIA",
+    "home_score": 16,
+    "away_score": 17,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 52,
+      "MIA": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_GB_NO",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "GB",
+    "home_score": 38,
+    "away_score": 3,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "NO": 4,
+      "GB": 43
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_01_DEN_NYG",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "DEN",
+    "home_score": 13,
+    "away_score": 27,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "NYG": 0,
+      "DEN": 56
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_CHI_LA",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "CHI",
+    "home_score": 34,
+    "away_score": 14,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 49,
+      "CHI": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_01_BAL_LV",
+    "season": 2021,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "BAL",
+    "home_score": 33,
+    "away_score": 27,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "LV": 17,
+      "BAL": 32
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_NYG_WAS",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "NYG",
+    "home_score": 30,
+    "away_score": 29,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "WAS": 50,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_NO_CAR",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "NO",
+    "home_score": 26,
+    "away_score": 7,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "CAR": 13,
+      "NO": 39
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_CIN_CHI",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "CIN",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CHI": 0,
+      "CIN": 48
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_HOU_CLE",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "HOU",
+    "home_score": 31,
+    "away_score": 21,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 64,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_LA_IND",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "LA",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "IND": 33,
+      "LA": 5
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_DEN_JAX",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "DEN",
+    "home_score": 13,
+    "away_score": 23,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "JAX": 0,
+      "DEN": 56
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_BUF_MIA",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "BUF",
+    "home_score": 0,
+    "away_score": 35,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "MIA": 3,
+      "BUF": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_NE_NYJ",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "NE",
+    "home_score": 6,
+    "away_score": 25,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NYJ": 0,
+      "NE": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_SF_PHI",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "SF",
+    "home_score": 11,
+    "away_score": 17,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 45,
+      "SF": 6
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_LV_PIT",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "LV",
+    "home_score": 17,
+    "away_score": 26,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 19,
+      "LV": 20
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_MIN_ARI",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "MIN",
+    "home_score": 34,
+    "away_score": 33,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "ARI": 19,
+      "MIN": 20
+    },
+    "win_probability": 0.193,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_ATL_TB",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "ATL",
+    "home_score": 48,
+    "away_score": 25,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 55,
+      "ATL": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_DAL_LAC",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DAL",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "LAC": 18,
+      "DAL": 32
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_TEN_SEA",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "TEN",
+    "home_score": 30,
+    "away_score": 33,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 38,
+      "TEN": 25
+    },
+    "win_probability": 0.993,
+    "correct": false
+  },
+  {
+    "game_id": "2021_02_KC_BAL",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "KC",
+    "home_score": 36,
+    "away_score": 35,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 33,
+      "KC": 13
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2021_02_DET_GB",
+    "season": 2021,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "DET",
+    "home_score": 35,
+    "away_score": 17,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 49,
+      "DET": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_CAR_HOU",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "CAR",
+    "home_score": 9,
+    "away_score": 24,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 11,
+      "CAR": 29
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_03_WAS_BUF",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "WAS",
+    "home_score": 43,
+    "away_score": 21,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 36,
+      "WAS": 15
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_CHI_CLE",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "CHI",
+    "home_score": 26,
+    "away_score": 6,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 51,
+      "CHI": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_BAL_DET",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "BAL",
+    "home_score": 17,
+    "away_score": 19,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "DET": 13,
+      "BAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_ARI_JAX",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "ARI",
+    "home_score": 19,
+    "away_score": 31,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "JAX": 0,
+      "ARI": 68
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_LAC_KC",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LAC",
+    "home_score": 24,
+    "away_score": 30,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "KC": 15,
+      "LAC": 27
+    },
+    "win_probability": 0.002,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_NO_NE",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "NO",
+    "home_score": 13,
+    "away_score": 28,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 40,
+      "NO": 21
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2021_03_ATL_NYG",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "ATL",
+    "home_score": 14,
+    "away_score": 17,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "NYG": 10,
+      "ATL": 31
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_CIN_PIT",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CIN",
+    "home_score": 10,
+    "away_score": 24,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "PIT": 7,
+      "CIN": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_IND_TEN",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "IND",
+    "home_score": 25,
+    "away_score": 16,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 5,
+      "IND": 35
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_NYJ_DEN",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "NYJ",
+    "home_score": 26,
+    "away_score": 0,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 43,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_MIA_LV",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "MIA",
+    "home_score": 31,
+    "away_score": 28,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "LV": 39,
+      "MIA": 19
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_03_TB_LA",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "TB",
+    "home_score": 34,
+    "away_score": 24,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "LA": 15,
+      "TB": 32
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_03_SEA_MIN",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "SEA",
+    "home_score": 30,
+    "away_score": 17,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "MIN": 46,
+      "SEA": 6
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_03_GB_SF",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "GB",
+    "home_score": 28,
+    "away_score": 30,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "SF": 14,
+      "GB": 47
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_03_PHI_DAL",
+    "season": 2021,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "PHI",
+    "home_score": 41,
+    "away_score": 21,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "DAL": 16,
+      "PHI": 27
+    },
+    "win_probability": 0.003,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_JAX_CIN",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "JAX",
+    "home_score": 24,
+    "away_score": 21,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 63,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_WAS_ATL",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "WAS",
+    "home_score": 30,
+    "away_score": 34,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "ATL": 16,
+      "WAS": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_HOU_BUF",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "HOU",
+    "home_score": 40,
+    "away_score": 0,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 62,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_DET_CHI",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "DET",
+    "home_score": 24,
+    "away_score": 14,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "CHI": 14,
+      "DET": 30
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_CAR_DAL",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "CAR",
+    "home_score": 36,
+    "away_score": 28,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 58,
+      "CAR": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_IND_MIA",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "IND",
+    "home_score": 17,
+    "away_score": 27,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "MIA": 0,
+      "IND": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_CLE_MIN",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "CLE",
+    "home_score": 7,
+    "away_score": 14,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "MIN": 44,
+      "CLE": 9
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_NYG_NO",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "NYG",
+    "home_score": 21,
+    "away_score": 27,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 51,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_TEN_NYJ",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "TEN",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "NYJ": 17,
+      "TEN": 44
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_KC_PHI",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "KC",
+    "home_score": 30,
+    "away_score": 42,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 53,
+      "KC": 4
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_ARI_LA",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "ARI",
+    "home_score": 20,
+    "away_score": 37,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "LA": 10,
+      "ARI": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_SEA_SF",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "SEA",
+    "home_score": 21,
+    "away_score": 28,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 24,
+      "SEA": 24
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_04_BAL_DEN",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "BAL",
+    "home_score": 7,
+    "away_score": 23,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "DEN": 23,
+      "BAL": 21
+    },
+    "win_probability": 0.463,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_PIT_GB",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "PIT",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 51,
+      "PIT": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_TB_NE",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "TB",
+    "home_score": 17,
+    "away_score": 19,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "NE": 20,
+      "TB": 26
+    },
+    "win_probability": 0.023,
+    "correct": true
+  },
+  {
+    "game_id": "2021_04_LV_LAC",
+    "season": 2021,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "LV",
+    "home_score": 28,
+    "away_score": 14,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 37,
+      "LV": 18
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_LA_SEA",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "LA",
+    "home_score": 17,
+    "away_score": 26,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "SEA": 25,
+      "LA": 21
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_NYJ_ATL",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "NYJ",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 26,
+      "NYJ": 20
+    },
+    "win_probability": 0.788,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_PHI_CAR",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "PHI",
+    "home_score": 18,
+    "away_score": 21,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "CAR": 0,
+      "PHI": 51
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_GB_CIN",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "GB",
+    "home_score": 22,
+    "away_score": 25,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "CIN": 18,
+      "GB": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_NE_HOU",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "NE",
+    "home_score": 22,
+    "away_score": 25,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "HOU": 0,
+      "NE": 47
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_TEN_JAX",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "TEN",
+    "home_score": 19,
+    "away_score": 37,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "JAX": 4,
+      "TEN": 51
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_DET_MIN",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "DET",
+    "home_score": 19,
+    "away_score": 17,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 59,
+      "DET": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_DEN_PIT",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "DEN",
+    "home_score": 27,
+    "away_score": 19,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "PIT": 13,
+      "DEN": 32
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_05_MIA_TB",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "MIA",
+    "home_score": 45,
+    "away_score": 17,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 57,
+      "MIA": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_NO_WAS",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "NO",
+    "home_score": 22,
+    "away_score": 33,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "WAS": 25,
+      "NO": 29
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_05_CLE_LAC",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "CLE",
+    "home_score": 47,
+    "away_score": 42,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 26,
+      "CLE": 25
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_CHI_LV",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "CHI",
+    "home_score": 9,
+    "away_score": 20,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 40,
+      "CHI": 11
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_05_SF_ARI",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SF",
+    "home_score": 17,
+    "away_score": 10,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 41,
+      "SF": 2
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_NYG_DAL",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "NYG",
+    "home_score": 44,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 71,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_BUF_KC",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "BUF",
+    "home_score": 20,
+    "away_score": 38,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "KC": 18,
+      "BUF": 30
+    },
+    "win_probability": 0.002,
+    "correct": true
+  },
+  {
+    "game_id": "2021_05_IND_BAL",
+    "season": 2021,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "IND",
+    "home_score": 31,
+    "away_score": 25,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 17,
+      "IND": 32
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_TB_PHI",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "TB",
+    "home_score": 22,
+    "away_score": 28,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "PHI": 35,
+      "TB": 16
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_MIA_JAX",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "MIA",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "JAX": 13,
+      "MIA": 41
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_06_LAC_BAL",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "LAC",
+    "home_score": 34,
+    "away_score": 6,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "BAL": 22,
+      "LAC": 17
+    },
+    "win_probability": 0.494,
+    "correct": false
+  },
+  {
+    "game_id": "2021_06_MIN_CAR",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "MIN",
+    "home_score": 28,
+    "away_score": 34,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "CAR": 0,
+      "MIN": 53
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_GB_CHI",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "GB",
+    "home_score": 14,
+    "away_score": 24,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "CHI": 0,
+      "GB": 61
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_CIN_DET",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "CIN",
+    "home_score": 11,
+    "away_score": 34,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "DET": 9,
+      "CIN": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_HOU_IND",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "HOU",
+    "home_score": 31,
+    "away_score": 3,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 70,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_LA_NYG",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "LA",
+    "home_score": 11,
+    "away_score": 38,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "NYG": 0,
+      "LA": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_KC_WAS",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "KC",
+    "home_score": 13,
+    "away_score": 31,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "WAS": 22,
+      "KC": 22
+    },
+    "win_probability": 0.21,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_ARI_CLE",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "ARI",
+    "home_score": 14,
+    "away_score": 37,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "CLE": 12,
+      "ARI": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_LV_DEN",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LV",
+    "home_score": 24,
+    "away_score": 34,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "DEN": 31,
+      "LV": 11
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_DAL_NE",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "DAL",
+    "home_score": 29,
+    "away_score": 35,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "NE": 20,
+      "DAL": 28
+    },
+    "win_probability": 0.009,
+    "correct": true
+  },
+  {
+    "game_id": "2021_06_SEA_PIT",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "SEA",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "PIT": 10,
+      "SEA": 24
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2021_06_BUF_TEN",
+    "season": 2021,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "BUF",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "TEN": 13,
+      "BUF": 24
+    },
+    "win_probability": 0.003,
+    "correct": false
+  },
+  {
+    "game_id": "2021_07_DEN_CLE",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "DEN",
+    "home_score": 17,
+    "away_score": 14,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 30,
+      "DEN": 27
+    },
+    "win_probability": 0.568,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_CIN_BAL",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CIN",
+    "home_score": 17,
+    "away_score": 41,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "BAL": 21,
+      "CIN": 27
+    },
+    "win_probability": 0.015,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_WAS_GB",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "WAS",
+    "home_score": 24,
+    "away_score": 10,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 47,
+      "WAS": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_ATL_MIA",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "ATL",
+    "home_score": 28,
+    "away_score": 30,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 23,
+      "ATL": 13
+    },
+    "win_probability": 0.962,
+    "correct": false
+  },
+  {
+    "game_id": "2021_07_NYJ_NE",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "NYJ",
+    "home_score": 54,
+    "away_score": 13,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 51,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_CAR_NYG",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "CAR",
+    "home_score": 25,
+    "away_score": 3,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "NYG": 12,
+      "CAR": 35
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_07_KC_TEN",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "KC",
+    "home_score": 27,
+    "away_score": 3,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 20,
+      "KC": 16
+    },
+    "win_probability": 0.712,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_DET_LA",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "DET",
+    "home_score": 28,
+    "away_score": 19,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 38,
+      "DET": 17
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_PHI_LV",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "PHI",
+    "home_score": 33,
+    "away_score": 22,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "LV": 0,
+      "PHI": 41
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_07_HOU_ARI",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "HOU",
+    "home_score": 31,
+    "away_score": 5,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 77,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_CHI_TB",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CHI",
+    "home_score": 38,
+    "away_score": 3,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 59,
+      "CHI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_IND_SF",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "IND",
+    "home_score": 18,
+    "away_score": 30,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "SF": 17,
+      "IND": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_07_NO_SEA",
+    "season": 2021,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "NO",
+    "home_score": 10,
+    "away_score": 13,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 36,
+      "NO": 26
+    },
+    "win_probability": 0.973,
+    "correct": false
+  },
+  {
+    "game_id": "2021_08_GB_ARI",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "GB",
+    "home_score": 21,
+    "away_score": 24,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "ARI": 29,
+      "GB": 27
+    },
+    "win_probability": 0.358,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_CAR_ATL",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "CAR",
+    "home_score": 13,
+    "away_score": 19,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "ATL": 27,
+      "CAR": 26
+    },
+    "win_probability": 0.287,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_MIA_BUF",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "MIA",
+    "home_score": 26,
+    "away_score": 11,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 47,
+      "MIA": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_SF_CHI",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "SF",
+    "home_score": 22,
+    "away_score": 33,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "CHI": 2,
+      "SF": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_PIT_CLE",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "PIT",
+    "home_score": 10,
+    "away_score": 15,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 42,
+      "PIT": 18
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_08_PHI_DET",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "PHI",
+    "home_score": 6,
+    "away_score": 44,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "DET": 0,
+      "PHI": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_LA_HOU",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "LA",
+    "home_score": 22,
+    "away_score": 38,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "HOU": 0,
+      "LA": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_TEN_IND",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "TEN",
+    "home_score": 31,
+    "away_score": 34,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "IND": 46,
+      "TEN": 9
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_CIN_NYJ",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "CIN",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "NYJ": 0,
+      "CIN": 51
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_08_NE_LAC",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "NE",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "LAC": 23,
+      "NE": 26
+    },
+    "win_probability": 0.101,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_JAX_SEA",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "JAX",
+    "home_score": 31,
+    "away_score": 7,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 60,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_WAS_DEN",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "WAS",
+    "home_score": 17,
+    "away_score": 10,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 33,
+      "WAS": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_TB_NO",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "TB",
+    "home_score": 36,
+    "away_score": 27,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "NO": 5,
+      "TB": 28
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_08_DAL_MIN",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "DAL",
+    "home_score": 16,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "MIN": 36,
+      "DAL": 16
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_08_NYG_KC",
+    "season": 2021,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "NYG",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 53,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_NYJ_IND",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "NYJ",
+    "home_score": 45,
+    "away_score": 30,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 54,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_MIN_BAL",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "MIN",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 4,
+      "MIN": 33
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_NE_CAR",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "NE",
+    "home_score": 6,
+    "away_score": 24,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "CAR": 0,
+      "NE": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_CLE_CIN",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "CLE",
+    "home_score": 16,
+    "away_score": 41,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 27,
+      "CLE": 15
+    },
+    "win_probability": 0.983,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_DEN_DAL",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "DEN",
+    "home_score": 16,
+    "away_score": 30,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 38,
+      "DEN": 20
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_BUF_JAX",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "BUF",
+    "home_score": 9,
+    "away_score": 6,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "JAX": 0,
+      "BUF": 52
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_HOU_MIA",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "HOU",
+    "home_score": 17,
+    "away_score": 9,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 39,
+      "HOU": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_ATL_NO",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "ATL",
+    "home_score": 25,
+    "away_score": 27,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 35,
+      "ATL": 2
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_LV_NYG",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "LV",
+    "home_score": 23,
+    "away_score": 16,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "NYG": 0,
+      "LV": 44
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_LAC_PHI",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "LAC",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 42,
+      "LAC": 8
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_GB_KC",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "GB",
+    "home_score": 13,
+    "away_score": 7,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "KC": 7,
+      "GB": 50
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_ARI_SF",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "ARI",
+    "home_score": 17,
+    "away_score": 31,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "SF": 9,
+      "ARI": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_09_TEN_LA",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "TEN",
+    "home_score": 16,
+    "away_score": 28,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 38,
+      "TEN": 27
+    },
+    "win_probability": 0.978,
+    "correct": false
+  },
+  {
+    "game_id": "2021_09_CHI_PIT",
+    "season": 2021,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CHI",
+    "home_score": 29,
+    "away_score": 27,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 34,
+      "CHI": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_BAL_MIA",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "BAL",
+    "home_score": 22,
+    "away_score": 10,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "MIA": 3,
+      "BAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_10_ATL_DAL",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "ATL",
+    "home_score": 43,
+    "away_score": 3,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 56,
+      "ATL": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_JAX_IND",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "JAX",
+    "home_score": 23,
+    "away_score": 17,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 67,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_CLE_NE",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "CLE",
+    "home_score": 45,
+    "away_score": 7,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 28,
+      "CLE": 21
+    },
+    "win_probability": 0.889,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_BUF_NYJ",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "BUF",
+    "home_score": 17,
+    "away_score": 45,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NYJ": 5,
+      "BUF": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_DET_PIT",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "DET",
+    "home_score": 16,
+    "away_score": 16,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 23,
+      "DET": 17
+    },
+    "win_probability": 0.881,
+    "correct": false
+  },
+  {
+    "game_id": "2021_10_NO_TEN",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "NO",
+    "home_score": 23,
+    "away_score": 21,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 23,
+      "NO": 23
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_TB_WAS",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "TB",
+    "home_score": 29,
+    "away_score": 19,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "WAS": 5,
+      "TB": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_10_CAR_ARI",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "CAR",
+    "home_score": 10,
+    "away_score": 34,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 62,
+      "CAR": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_10_MIN_LAC",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "MIN",
+    "home_score": 20,
+    "away_score": 27,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "LAC": 7,
+      "MIN": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_PHI_DEN",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "PHI",
+    "home_score": 13,
+    "away_score": 30,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "DEN": 3,
+      "PHI": 30
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_SEA_GB",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "SEA",
+    "home_score": 17,
+    "away_score": 0,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 36,
+      "SEA": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_KC_LV",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "KC",
+    "home_score": 14,
+    "away_score": 41,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "LV": 24,
+      "KC": 23
+    },
+    "win_probability": 0.354,
+    "correct": true
+  },
+  {
+    "game_id": "2021_10_LA_SF",
+    "season": 2021,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "LA",
+    "home_score": 31,
+    "away_score": 10,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 25,
+      "LA": 22
+    },
+    "win_probability": 0.559,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_NE_ATL",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "NE",
+    "home_score": 0,
+    "away_score": 25,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "ATL": 0,
+      "NE": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_IND_BUF",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "IND",
+    "home_score": 15,
+    "away_score": 41,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 17,
+      "IND": 34
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_11_WAS_CAR",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "WAS",
+    "home_score": 21,
+    "away_score": 27,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "CAR": 14,
+      "WAS": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_BAL_CHI",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "BAL",
+    "home_score": 13,
+    "away_score": 16,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "CHI": 2,
+      "BAL": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_DET_CLE",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "DET",
+    "home_score": 13,
+    "away_score": 10,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 40,
+      "DET": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_SF_JAX",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "SF",
+    "home_score": 10,
+    "away_score": 30,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "JAX": 0,
+      "SF": 47
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_GB_MIN",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "GB",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "MIN": 35,
+      "GB": 29
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_11_MIA_NYJ",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "MIA",
+    "home_score": 17,
+    "away_score": 24,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "NYJ": 27,
+      "MIA": 34
+    },
+    "win_probability": 0.015,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_NO_PHI",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "NO",
+    "home_score": 40,
+    "away_score": 29,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 55,
+      "NO": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_HOU_TEN",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "HOU",
+    "home_score": 13,
+    "away_score": 22,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 49,
+      "HOU": 1
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_11_CIN_LV",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "CIN",
+    "home_score": 13,
+    "away_score": 32,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "LV": 12,
+      "CIN": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_DAL_KC",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "DAL",
+    "home_score": 19,
+    "away_score": 9,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "KC": 7,
+      "DAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_11_ARI_SEA",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "ARI",
+    "home_score": 13,
+    "away_score": 23,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "SEA": 10,
+      "ARI": 42
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_PIT_LAC",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "PIT",
+    "home_score": 41,
+    "away_score": 37,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 43,
+      "PIT": 20
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_11_NYG_TB",
+    "season": 2021,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "NYG",
+    "home_score": 30,
+    "away_score": 10,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 71,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_CHI_DET",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "CHI",
+    "home_score": 14,
+    "away_score": 16,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 37,
+      "CHI": 15
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_LV_DAL",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "LV",
+    "home_score": 33,
+    "away_score": 36,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 44,
+      "LV": 8
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_BUF_NO",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "BUF",
+    "home_score": 6,
+    "away_score": 31,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NO": 15,
+      "BUF": 23
+    },
+    "win_probability": 0.019,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_PIT_CIN",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "PIT",
+    "home_score": 41,
+    "away_score": 10,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 44,
+      "PIT": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_NYJ_HOU",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "NYJ",
+    "home_score": 14,
+    "away_score": 21,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 9,
+      "NYJ": 23
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_TB_IND",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "TB",
+    "home_score": 31,
+    "away_score": 38,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "IND": 23,
+      "TB": 15
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_ATL_JAX",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "ATL",
+    "home_score": 14,
+    "away_score": 21,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "JAX": 11,
+      "ATL": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_CAR_MIA",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "CAR",
+    "home_score": 33,
+    "away_score": 10,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 25,
+      "CAR": 17
+    },
+    "win_probability": 0.939,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_TEN_NE",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "TEN",
+    "home_score": 36,
+    "away_score": 13,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 43,
+      "TEN": 20
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_PHI_NYG",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "PHI",
+    "home_score": 13,
+    "away_score": 7,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NYG": 0,
+      "PHI": 63
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_LAC_DEN",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LAC",
+    "home_score": 28,
+    "away_score": 13,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "DEN": 19,
+      "LAC": 16
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_LA_GB",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "LA",
+    "home_score": 36,
+    "away_score": 28,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "GB": 36,
+      "LA": 0
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_MIN_SF",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "MIN",
+    "home_score": 34,
+    "away_score": 26,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 3,
+      "MIN": 40
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_12_CLE_BAL",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CLE",
+    "home_score": 16,
+    "away_score": 10,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "BAL": 23,
+      "CLE": 20
+    },
+    "win_probability": 0.371,
+    "correct": false
+  },
+  {
+    "game_id": "2021_12_SEA_WAS",
+    "season": 2021,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "SEA",
+    "home_score": 17,
+    "away_score": 15,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "WAS": 14,
+      "SEA": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_DAL_NO",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "DAL",
+    "home_score": 17,
+    "away_score": 27,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "NO": 5,
+      "DAL": 29
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_TB_ATL",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "TB",
+    "home_score": 17,
+    "away_score": 30,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "ATL": 0,
+      "TB": 48
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_ARI_CHI",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "ARI",
+    "home_score": 22,
+    "away_score": 33,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "CHI": 0,
+      "ARI": 57
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_LAC_CIN",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "LAC",
+    "home_score": 22,
+    "away_score": 41,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 26,
+      "LAC": 13
+    },
+    "win_probability": 0.989,
+    "correct": false
+  },
+  {
+    "game_id": "2021_13_MIN_DET",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "MIN",
+    "home_score": 29,
+    "away_score": 27,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "DET": 0,
+      "MIN": 47
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_13_IND_HOU",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "IND",
+    "home_score": 0,
+    "away_score": 31,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "HOU": 0,
+      "IND": 57
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_NYG_MIA",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NYG",
+    "home_score": 20,
+    "away_score": 9,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 39,
+      "NYG": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_PHI_NYJ",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "PHI",
+    "home_score": 18,
+    "away_score": 33,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NYJ": 0,
+      "PHI": 56
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_JAX_LA",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "JAX",
+    "home_score": 37,
+    "away_score": 7,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 59,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_WAS_LV",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "WAS",
+    "home_score": 15,
+    "away_score": 17,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "LV": 27,
+      "WAS": 23
+    },
+    "win_probability": 0.48,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_BAL_PIT",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "BAL",
+    "home_score": 20,
+    "away_score": 19,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "PIT": 11,
+      "BAL": 30
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_13_SF_SEA",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "SF",
+    "home_score": 30,
+    "away_score": 23,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SEA": 26,
+      "SF": 21
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_13_DEN_KC",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "DEN",
+    "home_score": 22,
+    "away_score": 9,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 20,
+      "DEN": 34
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_13_NE_BUF",
+    "season": 2021,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NE",
+    "home_score": 10,
+    "away_score": 14,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "BUF": 20,
+      "NE": 23
+    },
+    "win_probability": 0.057,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_PIT_MIN",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "PIT",
+    "home_score": 36,
+    "away_score": 28,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 61,
+      "PIT": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_ATL_CAR",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "ATL",
+    "home_score": 21,
+    "away_score": 29,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "CAR": 23,
+      "ATL": 19
+    },
+    "win_probability": 0.713,
+    "correct": false
+  },
+  {
+    "game_id": "2021_14_BAL_CLE",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "BAL",
+    "home_score": 24,
+    "away_score": 22,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 28,
+      "BAL": 25
+    },
+    "win_probability": 0.629,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_SEA_HOU",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "SEA",
+    "home_score": 13,
+    "away_score": 33,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "HOU": 0,
+      "SEA": 42
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_LV_KC",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LV",
+    "home_score": 48,
+    "away_score": 9,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 26,
+      "LV": 22
+    },
+    "win_probability": 0.646,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_NO_NYJ",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "NO",
+    "home_score": 9,
+    "away_score": 30,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NYJ": 15,
+      "NO": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_JAX_TEN",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "JAX",
+    "home_score": 20,
+    "away_score": 0,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 47,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_DAL_WAS",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "DAL",
+    "home_score": 20,
+    "away_score": 27,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "WAS": 4,
+      "DAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_DET_DEN",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "DET",
+    "home_score": 38,
+    "away_score": 10,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 35,
+      "DET": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_NYG_LAC",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "NYG",
+    "home_score": 37,
+    "away_score": 21,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 64,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_SF_CIN",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "SF",
+    "home_score": 23,
+    "away_score": 26,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "CIN": 30,
+      "SF": 11
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_BUF_TB",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "BUF",
+    "home_score": 33,
+    "away_score": 27,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 35,
+      "BUF": 18
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_CHI_GB",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "CHI",
+    "home_score": 45,
+    "away_score": 30,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 60,
+      "CHI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_14_LA_ARI",
+    "season": 2021,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "LA",
+    "home_score": 23,
+    "away_score": 30,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 40,
+      "LA": 2
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_KC_LAC",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "KC",
+    "home_score": 28,
+    "away_score": 34,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 36,
+      "KC": 18
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_NE_IND",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "NE",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "IND": 28,
+      "NE": 12
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_CAR_BUF",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "CAR",
+    "home_score": 31,
+    "away_score": 14,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 47,
+      "CAR": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_ARI_DET",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "ARI",
+    "home_score": 30,
+    "away_score": 12,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "DET": 0,
+      "ARI": 49
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_HOU_JAX",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "HOU",
+    "home_score": 16,
+    "away_score": 30,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "JAX": 28,
+      "HOU": 29
+    },
+    "win_probability": 0.086,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_NYJ_MIA",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NYJ",
+    "home_score": 31,
+    "away_score": 24,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 24,
+      "NYJ": 11
+    },
+    "win_probability": 0.985,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_DAL_NYG",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "DAL",
+    "home_score": 6,
+    "away_score": 21,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "NYG": 0,
+      "DAL": 58
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_TEN_PIT",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "TEN",
+    "home_score": 19,
+    "away_score": 13,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "PIT": 23,
+      "TEN": 26
+    },
+    "win_probability": 0.092,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_CIN_DEN",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "CIN",
+    "home_score": 10,
+    "away_score": 15,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "DEN": 18,
+      "CIN": 25
+    },
+    "win_probability": 0.02,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_ATL_SF",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "ATL",
+    "home_score": 31,
+    "away_score": 13,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 45,
+      "ATL": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_GB_BAL",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "GB",
+    "home_score": 30,
+    "away_score": 31,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 14,
+      "GB": 40
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_NO_TB",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "NO",
+    "home_score": 0,
+    "away_score": 9,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 45,
+      "NO": 17
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_LV_CLE",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "LV",
+    "home_score": 14,
+    "away_score": 16,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 36,
+      "LV": 15
+    },
+    "win_probability": 0.999,
+    "correct": false
+  },
+  {
+    "game_id": "2021_15_MIN_CHI",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "MIN",
+    "home_score": 9,
+    "away_score": 17,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "CHI": 0,
+      "MIN": 55
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_SEA_LA",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SEA",
+    "home_score": 20,
+    "away_score": 10,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 25,
+      "SEA": 24
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_15_WAS_PHI",
+    "season": 2021,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "WAS",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 56,
+      "WAS": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_SF_TEN",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "SF",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 13,
+      "SF": 19
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_CLE_GB",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "CLE",
+    "home_score": 24,
+    "away_score": 22,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 34,
+      "CLE": 2
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_IND_ARI",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "IND",
+    "home_score": 16,
+    "away_score": 22,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 33,
+      "IND": 19
+    },
+    "win_probability": 0.992,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_DET_ATL",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "DET",
+    "home_score": 20,
+    "away_score": 16,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "ATL": 17,
+      "DET": 32
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_TB_CAR",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "TB",
+    "home_score": 6,
+    "away_score": 32,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "CAR": 0,
+      "TB": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_BAL_CIN",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "BAL",
+    "home_score": 41,
+    "away_score": 21,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 30,
+      "BAL": 18
+    },
+    "win_probability": 0.985,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_LAC_HOU",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "LAC",
+    "home_score": 41,
+    "away_score": 29,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "HOU": 0,
+      "LAC": 43
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_LA_MIN",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "LA",
+    "home_score": 23,
+    "away_score": 30,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 46,
+      "LA": 4
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_BUF_NE",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "BUF",
+    "home_score": 21,
+    "away_score": 33,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 30,
+      "BUF": 22
+    },
+    "win_probability": 0.943,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_JAX_NYJ",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "JAX",
+    "home_score": 26,
+    "away_score": 21,
+    "predicted_winner": "NYJ",
+    "predicted_score": {
+      "NYJ": 39,
+      "JAX": 15
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_NYG_PHI",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "NYG",
+    "home_score": 34,
+    "away_score": 10,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 81,
+      "NYG": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_CHI_SEA",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "CHI",
+    "home_score": 24,
+    "away_score": 25,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 49,
+      "CHI": 7
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_16_PIT_KC",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "PIT",
+    "home_score": 36,
+    "away_score": 10,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 32,
+      "PIT": 25
+    },
+    "win_probability": 0.856,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_DEN_LV",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "DEN",
+    "home_score": 17,
+    "away_score": 13,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 19,
+      "DEN": 34
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_WAS_DAL",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "WAS",
+    "home_score": 56,
+    "away_score": 14,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 46,
+      "WAS": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_16_MIA_NO",
+    "season": 2021,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "MIA",
+    "home_score": 3,
+    "away_score": 20,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 37,
+      "MIA": 11
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_17_LA_BAL",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "LA",
+    "home_score": 19,
+    "away_score": 20,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "BAL": 25,
+      "LA": 15
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_ATL_BUF",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "ATL",
+    "home_score": 29,
+    "away_score": 15,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 45,
+      "ATL": 2
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_NYG_CHI",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "NYG",
+    "home_score": 29,
+    "away_score": 3,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 37,
+      "NYG": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_KC_CIN",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "KC",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 37,
+      "KC": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_LV_IND",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "LV",
+    "home_score": 20,
+    "away_score": 23,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 42,
+      "LV": 3
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_17_JAX_NE",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "JAX",
+    "home_score": 50,
+    "away_score": 10,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 64,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_TB_NYJ",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "TB",
+    "home_score": 24,
+    "away_score": 28,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "NYJ": 0,
+      "TB": 50
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_MIA_TEN",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "MIA",
+    "home_score": 34,
+    "away_score": 3,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 35,
+      "MIA": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_PHI_WAS",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "PHI",
+    "home_score": 16,
+    "away_score": 20,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "WAS": 0,
+      "PHI": 41
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_DEN_LAC",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DEN",
+    "home_score": 34,
+    "away_score": 13,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 31,
+      "DEN": 29
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_HOU_SF",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "HOU",
+    "home_score": 23,
+    "away_score": 7,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 61,
+      "HOU": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_ARI_DAL",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "ARI",
+    "home_score": 22,
+    "away_score": 25,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "DAL": 20,
+      "ARI": 31
+    },
+    "win_probability": 0.003,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_CAR_NO",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "CAR",
+    "home_score": 18,
+    "away_score": 10,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "NO": 37,
+      "CAR": 6
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2021_17_DET_SEA",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "DET",
+    "home_score": 51,
+    "away_score": 29,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 38,
+      "DET": 15
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_MIN_GB",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "MIN",
+    "home_score": 37,
+    "away_score": 10,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 15,
+      "MIN": 15
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2021_17_CLE_PIT",
+    "season": 2021,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CLE",
+    "home_score": 26,
+    "away_score": 14,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "PIT": 8,
+      "CLE": 27
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_KC_DEN",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "KC",
+    "home_score": 24,
+    "away_score": 28,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "DEN": 30,
+      "KC": 11
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_DAL_PHI",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "DAL",
+    "home_score": 26,
+    "away_score": 51,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 35,
+      "DAL": 18
+    },
+    "win_probability": 0.997,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_PIT_BAL",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "PIT",
+    "home_score": 13,
+    "away_score": 16,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 40,
+      "PIT": 15
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_CIN_CLE",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "CIN",
+    "home_score": 21,
+    "away_score": 16,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CLE": 23,
+      "CIN": 29
+    },
+    "win_probability": 0.017,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_GB_DET",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "GB",
+    "home_score": 37,
+    "away_score": 30,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "DET": 2,
+      "GB": 54
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_TEN_HOU",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "TEN",
+    "home_score": 25,
+    "away_score": 28,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "HOU": 1,
+      "TEN": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_IND_JAX",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "IND",
+    "home_score": 26,
+    "away_score": 11,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "JAX": 0,
+      "IND": 64
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_CHI_MIN",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "CHI",
+    "home_score": 31,
+    "away_score": 17,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 70,
+      "CHI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_WAS_NYG",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "WAS",
+    "home_score": 7,
+    "away_score": 22,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "NYG": 0,
+      "WAS": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_SEA_ARI",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SEA",
+    "home_score": 30,
+    "away_score": 38,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 40,
+      "SEA": 3
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_NO_ATL",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "NO",
+    "home_score": 20,
+    "away_score": 30,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "ATL": 15,
+      "NO": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_NYJ_BUF",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NYJ",
+    "home_score": 27,
+    "away_score": 10,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 46,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_SF_LA",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SF",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "LA": 26,
+      "SF": 23
+    },
+    "win_probability": 0.441,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_NE_MIA",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NE",
+    "home_score": 33,
+    "away_score": 24,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "MIA": 0,
+      "NE": 35
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2021_18_CAR_TB",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CAR",
+    "home_score": 41,
+    "away_score": 17,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 57,
+      "CAR": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2021_18_LAC_LV",
+    "season": 2021,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "LAC",
+    "home_score": 35,
+    "away_score": 32,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LV": 14,
+      "LAC": 27
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2021_19_LV_CIN",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "CIN",
+    "away_team": "LV",
+    "home_score": 26,
+    "away_score": 19,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 27,
+      "LV": 19
+    },
+    "win_probability": 0.919,
+    "correct": true
+  },
+  {
+    "game_id": "2021_19_NE_BUF",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "BUF",
+    "away_team": "NE",
+    "home_score": 47,
+    "away_score": 17,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 32,
+      "NE": 17
+    },
+    "win_probability": 0.993,
+    "correct": true
+  },
+  {
+    "game_id": "2021_19_PHI_TB",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "TB",
+    "away_team": "PHI",
+    "home_score": 31,
+    "away_score": 15,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "TB": 23,
+      "PHI": 22
+    },
+    "win_probability": 0.178,
+    "correct": false
+  },
+  {
+    "game_id": "2021_19_SF_DAL",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "DAL",
+    "away_team": "SF",
+    "home_score": 17,
+    "away_score": 23,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 27,
+      "SF": 21
+    },
+    "win_probability": 0.883,
+    "correct": false
+  },
+  {
+    "game_id": "2021_19_PIT_KC",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "KC",
+    "away_team": "PIT",
+    "home_score": 42,
+    "away_score": 21,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 32,
+      "PIT": 19
+    },
+    "win_probability": 0.99,
+    "correct": true
+  },
+  {
+    "game_id": "2021_19_ARI_LA",
+    "season": 2021,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "LA",
+    "away_team": "ARI",
+    "home_score": 34,
+    "away_score": 11,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 31,
+      "ARI": 19
+    },
+    "win_probability": 0.953,
+    "correct": true
+  },
+  {
+    "game_id": "2021_20_CIN_TEN",
+    "season": 2021,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "TEN",
+    "away_team": "CIN",
+    "home_score": 16,
+    "away_score": 19,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "TEN": 18,
+      "CIN": 28
+    },
+    "win_probability": 0.005,
+    "correct": true
+  },
+  {
+    "game_id": "2021_20_SF_GB",
+    "season": 2021,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "GB",
+    "away_team": "SF",
+    "home_score": 10,
+    "away_score": 13,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "GB": 24,
+      "SF": 23
+    },
+    "win_probability": 0.231,
+    "correct": true
+  },
+  {
+    "game_id": "2021_20_LA_TB",
+    "season": 2021,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "TB",
+    "away_team": "LA",
+    "home_score": 27,
+    "away_score": 30,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "TB": 24,
+      "LA": 22
+    },
+    "win_probability": 0.385,
+    "correct": true
+  },
+  {
+    "game_id": "2021_20_BUF_KC",
+    "season": 2021,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "KC",
+    "away_team": "BUF",
+    "home_score": 42,
+    "away_score": 36,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "KC": 22,
+      "BUF": 25
+    },
+    "win_probability": 0.086,
+    "correct": false
+  },
+  {
+    "game_id": "2021_21_CIN_KC",
+    "season": 2021,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "KC",
+    "away_team": "CIN",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 30,
+      "CIN": 20
+    },
+    "win_probability": 0.986,
+    "correct": false
+  },
+  {
+    "game_id": "2021_21_SF_LA",
+    "season": 2021,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "LA",
+    "away_team": "SF",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 27,
+      "SF": 22
+    },
+    "win_probability": 0.743,
+    "correct": true
+  },
+  {
+    "game_id": "2021_22_LA_CIN",
+    "season": 2021,
+    "week": 22,
+    "season_type": "SB",
+    "home_team": "CIN",
+    "away_team": "LA",
+    "home_score": 20,
+    "away_score": 23,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "CIN": 25,
+      "LA": 22
+    },
+    "win_probability": 0.406,
+    "correct": true
+  }
+]

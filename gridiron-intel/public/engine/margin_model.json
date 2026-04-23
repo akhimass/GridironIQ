@@ -1,0 +1,33 @@
+{
+  "intercept": 1.785541917503589,
+  "coef": {
+    "epa_edge": -13.101990604144524,
+    "success_edge": 6.618638099055662,
+    "explosive_edge": 5.570313082851786,
+    "early_down_success_edge": 3.4446523700256497,
+    "third_down_edge": 6.3988209705245,
+    "redzone_edge": 2.2840990395542584,
+    "sack_edge": 19.501122516991316,
+    "sos_edge": -0.2895101067629915,
+    "recent_epa_edge": 26.44761189107182
+  },
+  "feature_cols": [
+    "epa_edge",
+    "success_edge",
+    "explosive_edge",
+    "early_down_success_edge",
+    "third_down_edge",
+    "redzone_edge",
+    "sack_edge",
+    "sos_edge",
+    "recent_epa_edge"
+  ],
+  "metrics": {
+    "n_rows": 1597,
+    "mae": 10.986812013389514,
+    "rmse": 14.115315980621858,
+    "pred_min": -9.847343165540746,
+    "pred_max": 16.72678565649287,
+    "alpha": 2.0
+  }
+}

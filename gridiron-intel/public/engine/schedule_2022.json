@@ -1,0 +1,4830 @@
+[
+  {
+    "game_id": "2022_01_BUF_LA",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "BUF",
+    "home_score": 10,
+    "away_score": 31,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "LA": 6,
+      "BUF": 22
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_NO_ATL",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "NO",
+    "home_score": 26,
+    "away_score": 27,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 41,
+      "NO": 8
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_CLE_CAR",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "CLE",
+    "home_score": 24,
+    "away_score": 26,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CAR": 8,
+      "CLE": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_SF_CHI",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "SF",
+    "home_score": 19,
+    "away_score": 10,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "CHI": 7,
+      "SF": 43
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_PIT_CIN",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "PIT",
+    "home_score": 20,
+    "away_score": 23,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 31,
+      "PIT": 22
+    },
+    "win_probability": 0.95,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_PHI_DET",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "PHI",
+    "home_score": 35,
+    "away_score": 38,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "DET": 13,
+      "PHI": 26
+    },
+    "win_probability": 0.003,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_IND_HOU",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "IND",
+    "home_score": 20,
+    "away_score": 20,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "HOU": 24,
+      "IND": 21
+    },
+    "win_probability": 0.482,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_NE_MIA",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NE",
+    "home_score": 20,
+    "away_score": 7,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 49,
+      "NE": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_BAL_NYJ",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "BAL",
+    "home_score": 9,
+    "away_score": 24,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "NYJ": 11,
+      "BAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_JAX_WAS",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "JAX",
+    "home_score": 28,
+    "away_score": 22,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "WAS": 14,
+      "JAX": 21
+    },
+    "win_probability": 0.014,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_KC_ARI",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "KC",
+    "home_score": 21,
+    "away_score": 44,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "ARI": 0,
+      "KC": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_LV_LAC",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "LV",
+    "home_score": 24,
+    "away_score": 19,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LAC": 22,
+      "LV": 24
+    },
+    "win_probability": 0.119,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_GB_MIN",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "GB",
+    "home_score": 23,
+    "away_score": 7,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 23,
+      "GB": 34
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_NYG_TEN",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "NYG",
+    "home_score": 20,
+    "away_score": 21,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "TEN": 1,
+      "NYG": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_01_TB_DAL",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "TB",
+    "home_score": 3,
+    "away_score": 19,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 47,
+      "TB": 15
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_01_DEN_SEA",
+    "season": 2022,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "DEN",
+    "home_score": 17,
+    "away_score": 16,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 31,
+      "DEN": 22
+    },
+    "win_probability": 0.923,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_LAC_KC",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LAC",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 46,
+      "LAC": 13
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_MIA_BAL",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "MIA",
+    "home_score": 38,
+    "away_score": 42,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "BAL": 21,
+      "MIA": 20
+    },
+    "win_probability": 0.171,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_NYJ_CLE",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "NYJ",
+    "home_score": 30,
+    "away_score": 31,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 42,
+      "NYJ": 5
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_WAS_DET",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "WAS",
+    "home_score": 36,
+    "away_score": 27,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 47,
+      "WAS": 13
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_IND_JAX",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "IND",
+    "home_score": 24,
+    "away_score": 0,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 57,
+      "IND": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_TB_NO",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "TB",
+    "home_score": 10,
+    "away_score": 20,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 31,
+      "TB": 25
+    },
+    "win_probability": 0.776,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_CAR_NYG",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "CAR",
+    "home_score": 19,
+    "away_score": 16,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 48,
+      "CAR": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_NE_PIT",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "NE",
+    "home_score": 14,
+    "away_score": 17,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 31,
+      "NE": 4
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_ATL_LA",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "ATL",
+    "home_score": 31,
+    "away_score": 27,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "LA": 4,
+      "ATL": 37
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_SEA_SF",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "SEA",
+    "home_score": 27,
+    "away_score": 7,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 37,
+      "SEA": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_CIN_DAL",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "CIN",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "DAL": 28,
+      "CIN": 29
+    },
+    "win_probability": 0.113,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_HOU_DEN",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "HOU",
+    "home_score": 16,
+    "away_score": 9,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 51,
+      "HOU": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_02_ARI_LV",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "ARI",
+    "home_score": 23,
+    "away_score": 29,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 46,
+      "ARI": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_CHI_GB",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "CHI",
+    "home_score": 27,
+    "away_score": 10,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "GB": 34,
+      "CHI": 7
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_TEN_BUF",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "TEN",
+    "home_score": 41,
+    "away_score": 7,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "BUF": 34,
+      "TEN": 31
+    },
+    "win_probability": 0.34,
+    "correct": false
+  },
+  {
+    "game_id": "2022_02_MIN_PHI",
+    "season": 2022,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "MIN",
+    "home_score": 24,
+    "away_score": 7,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 48,
+      "MIN": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_PIT_CLE",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "PIT",
+    "home_score": 29,
+    "away_score": 17,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 41,
+      "PIT": 19
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_NO_CAR",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "NO",
+    "home_score": 22,
+    "away_score": 14,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "CAR": 31,
+      "NO": 17
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_HOU_CHI",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "HOU",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 51,
+      "HOU": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_KC_IND",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "KC",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "IND": 0,
+      "KC": 59
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_BUF_MIA",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "BUF",
+    "home_score": 21,
+    "away_score": 19,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 37,
+      "BUF": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_DET_MIN",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "DET",
+    "home_score": 28,
+    "away_score": 24,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 14,
+      "DET": 37
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_BAL_NE",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "BAL",
+    "home_score": 26,
+    "away_score": 37,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "NE": 6,
+      "BAL": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_CIN_NYJ",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "CIN",
+    "home_score": 12,
+    "away_score": 27,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "NYJ": 19,
+      "CIN": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_LV_TEN",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "LV",
+    "home_score": 24,
+    "away_score": 22,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "TEN": 14,
+      "LV": 29
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_PHI_WAS",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "PHI",
+    "home_score": 8,
+    "away_score": 24,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "WAS": 0,
+      "PHI": 35
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_JAX_LAC",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "JAX",
+    "home_score": 10,
+    "away_score": 38,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 23,
+      "JAX": 20
+    },
+    "win_probability": 0.616,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_LA_ARI",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "LA",
+    "home_score": 12,
+    "away_score": 20,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 27,
+      "LA": 21
+    },
+    "win_probability": 0.849,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_ATL_SEA",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "ATL",
+    "home_score": 23,
+    "away_score": 27,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "SEA": 23,
+      "ATL": 30
+    },
+    "win_probability": 0.013,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_GB_TB",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "GB",
+    "home_score": 12,
+    "away_score": 14,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "TB": 3,
+      "GB": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_03_SF_DEN",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "SF",
+    "home_score": 11,
+    "away_score": 10,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "DEN": 7,
+      "SF": 40
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_03_DAL_NYG",
+    "season": 2022,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "DAL",
+    "home_score": 16,
+    "away_score": 23,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 38,
+      "DAL": 7
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_04_MIA_CIN",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "MIA",
+    "home_score": 27,
+    "away_score": 15,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 13,
+      "MIA": 20
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_MIN_NO",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "MIN",
+    "home_score": 25,
+    "away_score": 28,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "NO": 10,
+      "MIN": 30
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_CLE_ATL",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "CLE",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "ATL": 18,
+      "CLE": 29
+    },
+    "win_probability": 0.005,
+    "correct": false
+  },
+  {
+    "game_id": "2022_04_BUF_BAL",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "BUF",
+    "home_score": 20,
+    "away_score": 23,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BAL": 33,
+      "BUF": 5
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_WAS_DAL",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "WAS",
+    "home_score": 25,
+    "away_score": 10,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 37,
+      "WAS": 24
+    },
+    "win_probability": 0.991,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_SEA_DET",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "SEA",
+    "home_score": 45,
+    "away_score": 48,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 38,
+      "SEA": 7
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_04_LAC_HOU",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "LAC",
+    "home_score": 24,
+    "away_score": 34,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "HOU": 0,
+      "LAC": 49
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_TEN_IND",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "TEN",
+    "home_score": 17,
+    "away_score": 24,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "IND": 4,
+      "TEN": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_CHI_NYG",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "CHI",
+    "home_score": 20,
+    "away_score": 12,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 46,
+      "CHI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_JAX_PHI",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "JAX",
+    "home_score": 29,
+    "away_score": 21,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 48,
+      "JAX": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_NYJ_PIT",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "NYJ",
+    "home_score": 20,
+    "away_score": 24,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 26,
+      "NYJ": 8
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2022_04_ARI_CAR",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "ARI",
+    "home_score": 16,
+    "away_score": 26,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "CAR": 36,
+      "ARI": 18
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_NE_GB",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "NE",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 40,
+      "NE": 2
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_DEN_LV",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "DEN",
+    "home_score": 32,
+    "away_score": 23,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 33,
+      "DEN": 14
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_KC_TB",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "KC",
+    "home_score": 31,
+    "away_score": 41,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "TB": 0,
+      "KC": 42
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_04_LA_SF",
+    "season": 2022,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "LA",
+    "home_score": 24,
+    "away_score": 9,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 57,
+      "LA": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_IND_DEN",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "IND",
+    "home_score": 9,
+    "away_score": 12,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 50,
+      "IND": 2
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_NYG_GB",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "NYG",
+    "home_score": 22,
+    "away_score": 27,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "GB": 13,
+      "NYG": 29
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_PIT_BUF",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "PIT",
+    "home_score": 38,
+    "away_score": 3,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 31,
+      "PIT": 40
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_LAC_CLE",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "LAC",
+    "home_score": 28,
+    "away_score": 30,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 35,
+      "LAC": 15
+    },
+    "win_probability": 0.999,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_HOU_JAX",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "HOU",
+    "home_score": 6,
+    "away_score": 13,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 59,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_CHI_MIN",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "CHI",
+    "home_score": 29,
+    "away_score": 22,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 32,
+      "CHI": 18
+    },
+    "win_probability": 0.991,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_DET_NE",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "DET",
+    "home_score": 29,
+    "away_score": 0,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "NE": 1,
+      "DET": 45
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_SEA_NO",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "SEA",
+    "home_score": 39,
+    "away_score": 32,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 12,
+      "SEA": 29
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_MIA_NYJ",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "MIA",
+    "home_score": 40,
+    "away_score": 17,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "NYJ": 6,
+      "MIA": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_ATL_TB",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "ATL",
+    "home_score": 21,
+    "away_score": 15,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "TB": 4,
+      "ATL": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_TEN_WAS",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "TEN",
+    "home_score": 17,
+    "away_score": 21,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "WAS": 25,
+      "TEN": 18
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_SF_CAR",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "SF",
+    "home_score": 15,
+    "away_score": 37,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "CAR": 6,
+      "SF": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_PHI_ARI",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "PHI",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "ARI": 0,
+      "PHI": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_DAL_LA",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "DAL",
+    "home_score": 10,
+    "away_score": 22,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "LA": 3,
+      "DAL": 33
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_05_CIN_BAL",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CIN",
+    "home_score": 19,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "BAL": 33,
+      "CIN": 23
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_05_LV_KC",
+    "season": 2022,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LV",
+    "home_score": 30,
+    "away_score": 29,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 43,
+      "LV": 14
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_WAS_CHI",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "WAS",
+    "home_score": 7,
+    "away_score": 12,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 29,
+      "WAS": 31
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_SF_ATL",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "SF",
+    "home_score": 28,
+    "away_score": 14,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "ATL": 15,
+      "SF": 32
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_NE_CLE",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "NE",
+    "home_score": 15,
+    "away_score": 38,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 46,
+      "NE": 1
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_NYJ_GB",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "NYJ",
+    "home_score": 10,
+    "away_score": 27,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 35,
+      "NYJ": 6
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_JAX_IND",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "JAX",
+    "home_score": 34,
+    "away_score": 27,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "IND": 0,
+      "JAX": 47
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_MIN_MIA",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "MIN",
+    "home_score": 16,
+    "away_score": 24,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 36,
+      "MIN": 16
+    },
+    "win_probability": 0.999,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_CIN_NO",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "CIN",
+    "home_score": 26,
+    "away_score": 30,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "NO": 12,
+      "CIN": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_BAL_NYG",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "BAL",
+    "home_score": 24,
+    "away_score": 20,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "NYG": 33,
+      "BAL": 13
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_TB_PIT",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "TB",
+    "home_score": 20,
+    "away_score": 18,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 38,
+      "TB": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_CAR_LA",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "CAR",
+    "home_score": 24,
+    "away_score": 10,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 13,
+      "CAR": 29
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_ARI_SEA",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "ARI",
+    "home_score": 19,
+    "away_score": 9,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 43,
+      "ARI": 18
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_BUF_KC",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "BUF",
+    "home_score": 20,
+    "away_score": 24,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 45,
+      "BUF": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_06_DAL_PHI",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "DAL",
+    "home_score": 26,
+    "away_score": 17,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 47,
+      "DAL": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_06_DEN_LAC",
+    "season": 2022,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DEN",
+    "home_score": 19,
+    "away_score": 16,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 30,
+      "DEN": 16
+    },
+    "win_probability": 0.992,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_NO_ARI",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "NO",
+    "home_score": 42,
+    "away_score": 34,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 21,
+      "NO": 21
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_CLE_BAL",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CLE",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "BAL": 23,
+      "CLE": 26
+    },
+    "win_probability": 0.063,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_TB_CAR",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "TB",
+    "home_score": 21,
+    "away_score": 3,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "CAR": 37,
+      "TB": 19
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_ATL_CIN",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "ATL",
+    "home_score": 35,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 23,
+      "ATL": 20
+    },
+    "win_probability": 0.706,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_DET_DAL",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "DET",
+    "home_score": 24,
+    "away_score": 6,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DAL": 15,
+      "DET": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_NYG_JAX",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "NYG",
+    "home_score": 17,
+    "away_score": 23,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "JAX": 12,
+      "NYG": 38
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_IND_TEN",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "IND",
+    "home_score": 19,
+    "away_score": 10,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 46,
+      "IND": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_GB_WAS",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "GB",
+    "home_score": 23,
+    "away_score": 21,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "WAS": 13,
+      "GB": 30
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_NYJ_DEN",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "NYJ",
+    "home_score": 9,
+    "away_score": 16,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 27,
+      "NYJ": 19
+    },
+    "win_probability": 0.913,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_HOU_LV",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "HOU",
+    "home_score": 38,
+    "away_score": 20,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 59,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_SEA_LAC",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "SEA",
+    "home_score": 23,
+    "away_score": 37,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 25,
+      "SEA": 16
+    },
+    "win_probability": 0.942,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_KC_SF",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "KC",
+    "home_score": 23,
+    "away_score": 44,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "SF": 17,
+      "KC": 21
+    },
+    "win_probability": 0.044,
+    "correct": true
+  },
+  {
+    "game_id": "2022_07_PIT_MIA",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "PIT",
+    "home_score": 16,
+    "away_score": 10,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "MIA": 43,
+      "PIT": 25
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_07_CHI_NE",
+    "season": 2022,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "CHI",
+    "home_score": 14,
+    "away_score": 33,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "NE": 19,
+      "CHI": 27
+    },
+    "win_probability": 0.011,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_BAL_TB",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "BAL",
+    "home_score": 22,
+    "away_score": 27,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "TB": 0,
+      "BAL": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_DEN_JAX",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "DEN",
+    "home_score": 17,
+    "away_score": 21,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 33,
+      "DEN": 18
+    },
+    "win_probability": 0.992,
+    "correct": false
+  },
+  {
+    "game_id": "2022_08_CAR_ATL",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "CAR",
+    "home_score": 37,
+    "away_score": 34,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 35,
+      "CAR": 14
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_CHI_DAL",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "CHI",
+    "home_score": 49,
+    "away_score": 29,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 33,
+      "CHI": 15
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_MIA_DET",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "MIA",
+    "home_score": 27,
+    "away_score": 31,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 26,
+      "MIA": 15
+    },
+    "win_probability": 0.979,
+    "correct": false
+  },
+  {
+    "game_id": "2022_08_ARI_MIN",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "ARI",
+    "home_score": 34,
+    "away_score": 26,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 45,
+      "ARI": 17
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_LV_NO",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "LV",
+    "home_score": 24,
+    "away_score": 0,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "NO": 9,
+      "LV": 37
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_08_NE_NYJ",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "NE",
+    "home_score": 17,
+    "away_score": 22,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NYJ": 30,
+      "NE": 19
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_PIT_PHI",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "PIT",
+    "home_score": 35,
+    "away_score": 13,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 56,
+      "PIT": 14
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_TEN_HOU",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "TEN",
+    "home_score": 10,
+    "away_score": 17,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "HOU": 3,
+      "TEN": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_WAS_IND",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "WAS",
+    "home_score": 16,
+    "away_score": 17,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "IND": 4,
+      "WAS": 49
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_SF_LA",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SF",
+    "home_score": 14,
+    "away_score": 31,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "LA": 0,
+      "SF": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_NYG_SEA",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "NYG",
+    "home_score": 27,
+    "away_score": 13,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "SEA": 10,
+      "NYG": 42
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_08_GB_BUF",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "GB",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 22,
+      "GB": 43
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_08_CIN_CLE",
+    "season": 2022,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "CIN",
+    "home_score": 32,
+    "away_score": 13,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CLE": 35,
+      "CIN": 19
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_09_PHI_HOU",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "PHI",
+    "home_score": 17,
+    "away_score": 29,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "HOU": 0,
+      "PHI": 60
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_LAC_ATL",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "LAC",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "ATL": 28,
+      "LAC": 21
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_MIA_CHI",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "MIA",
+    "home_score": 32,
+    "away_score": 35,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "CHI": 8,
+      "MIA": 33
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_CAR_CIN",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "CAR",
+    "home_score": 42,
+    "away_score": 21,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 32,
+      "CAR": 12
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_GB_DET",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "GB",
+    "home_score": 15,
+    "away_score": 9,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 35,
+      "GB": 20
+    },
+    "win_probability": 0.995,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_LV_JAX",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "LV",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 25,
+      "LV": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_IND_NE",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "IND",
+    "home_score": 26,
+    "away_score": 3,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 44,
+      "IND": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_BUF_NYJ",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "BUF",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NYJ": 19,
+      "BUF": 19
+    },
+    "win_probability": 0.18,
+    "correct": false
+  },
+  {
+    "game_id": "2022_09_MIN_WAS",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "MIN",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "WAS": 15,
+      "MIN": 18
+    },
+    "win_probability": 0.047,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_SEA_ARI",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SEA",
+    "home_score": 21,
+    "away_score": 31,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "ARI": 7,
+      "SEA": 27
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_LA_TB",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "LA",
+    "home_score": 16,
+    "away_score": 13,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "TB": 26,
+      "LA": 19
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_09_TEN_KC",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "TEN",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 54,
+      "TEN": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_09_BAL_NO",
+    "season": 2022,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "BAL",
+    "home_score": 13,
+    "away_score": 27,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "NO": 4,
+      "BAL": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_ATL_CAR",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "ATL",
+    "home_score": 25,
+    "away_score": 15,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "CAR": 16,
+      "ATL": 31
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2022_10_SEA_TB",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "SEA",
+    "home_score": 21,
+    "away_score": 16,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 6,
+      "SEA": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_MIN_BUF",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "MIN",
+    "home_score": 30,
+    "away_score": 33,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "BUF": 23,
+      "MIN": 31
+    },
+    "win_probability": 0.012,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_DET_CHI",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "DET",
+    "home_score": 30,
+    "away_score": 31,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "CHI": 7,
+      "DET": 41
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_JAX_KC",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "JAX",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 43,
+      "JAX": 10
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_CLE_MIA",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "CLE",
+    "home_score": 39,
+    "away_score": 17,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "MIA": 28,
+      "CLE": 29
+    },
+    "win_probability": 0.245,
+    "correct": false
+  },
+  {
+    "game_id": "2022_10_HOU_NYG",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "HOU",
+    "home_score": 24,
+    "away_score": 16,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 72,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_NO_PIT",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "NO",
+    "home_score": 20,
+    "away_score": 10,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 33,
+      "NO": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_DEN_TEN",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "DEN",
+    "home_score": 17,
+    "away_score": 10,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 22,
+      "DEN": 21
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_IND_LV",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "IND",
+    "home_score": 20,
+    "away_score": 25,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 58,
+      "IND": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_10_DAL_GB",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "DAL",
+    "home_score": 31,
+    "away_score": 28,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "GB": 26,
+      "DAL": 14
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_10_ARI_LA",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "ARI",
+    "home_score": 17,
+    "away_score": 27,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "LA": 24,
+      "ARI": 24
+    },
+    "win_probability": 0.151,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_LAC_SF",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "LAC",
+    "home_score": 22,
+    "away_score": 16,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 38,
+      "LAC": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_10_WAS_PHI",
+    "season": 2022,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "WAS",
+    "home_score": 21,
+    "away_score": 32,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 59,
+      "WAS": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_11_TEN_GB",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "TEN",
+    "home_score": 17,
+    "away_score": 27,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 38,
+      "TEN": 11
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_11_CHI_ATL",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "CHI",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 33,
+      "CHI": 12
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_CAR_BAL",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CAR",
+    "home_score": 13,
+    "away_score": 3,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 40,
+      "CAR": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_CLE_BUF",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "CLE",
+    "home_score": 31,
+    "away_score": 23,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 16,
+      "CLE": 44
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_WAS_HOU",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "WAS",
+    "home_score": 10,
+    "away_score": 23,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "HOU": 3,
+      "WAS": 48
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_PHI_IND",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "PHI",
+    "home_score": 16,
+    "away_score": 17,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "IND": 0,
+      "PHI": 61
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_NYJ_NE",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "NYJ",
+    "home_score": 10,
+    "away_score": 3,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 20,
+      "NYJ": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_LA_NO",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "LA",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "NO": 31,
+      "LA": 22
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_11_DET_NYG",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "DET",
+    "home_score": 18,
+    "away_score": 31,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 28,
+      "DET": 19
+    },
+    "win_probability": 0.941,
+    "correct": false
+  },
+  {
+    "game_id": "2022_11_LV_DEN",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LV",
+    "home_score": 16,
+    "away_score": 22,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "DEN": 17,
+      "LV": 31
+    },
+    "win_probability": 0.002,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_DAL_MIN",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "DAL",
+    "home_score": 3,
+    "away_score": 40,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "MIN": 24,
+      "DAL": 25
+    },
+    "win_probability": 0.112,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_CIN_PIT",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CIN",
+    "home_score": 30,
+    "away_score": 37,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "PIT": 19,
+      "CIN": 22
+    },
+    "win_probability": 0.05,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_KC_LAC",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "KC",
+    "home_score": 27,
+    "away_score": 30,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "LAC": 4,
+      "KC": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_11_SF_ARI",
+    "season": 2022,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SF",
+    "home_score": 10,
+    "away_score": 38,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "ARI": 0,
+      "SF": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_BUF_DET",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "BUF",
+    "home_score": 25,
+    "away_score": 28,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 38,
+      "BUF": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_NYG_DAL",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "NYG",
+    "home_score": 28,
+    "away_score": 20,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "DAL": 12,
+      "NYG": 38
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_NE_MIN",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "NE",
+    "home_score": 33,
+    "away_score": 26,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 38,
+      "NE": 14
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_DEN_CAR",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "DEN",
+    "home_score": 23,
+    "away_score": 10,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "CAR": 23,
+      "DEN": 23
+    },
+    "win_probability": 0.277,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_TB_CLE",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "TB",
+    "home_score": 23,
+    "away_score": 17,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 54,
+      "TB": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_BAL_JAX",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "BAL",
+    "home_score": 28,
+    "away_score": 27,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "JAX": 19,
+      "BAL": 28
+    },
+    "win_probability": 0.009,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_HOU_MIA",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "HOU",
+    "home_score": 30,
+    "away_score": 15,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 69,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_CHI_NYJ",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "CHI",
+    "home_score": 31,
+    "away_score": 10,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "NYJ": 24,
+      "CHI": 23
+    },
+    "win_probability": 0.226,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_CIN_TEN",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "CIN",
+    "home_score": 16,
+    "away_score": 20,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "TEN": 16,
+      "CIN": 32
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_ATL_WAS",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "ATL",
+    "home_score": 19,
+    "away_score": 13,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "WAS": 14,
+      "ATL": 25
+    },
+    "win_probability": 0.003,
+    "correct": false
+  },
+  {
+    "game_id": "2022_12_LAC_ARI",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "LAC",
+    "home_score": 24,
+    "away_score": 25,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "ARI": 8,
+      "LAC": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_LV_SEA",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "LV",
+    "home_score": 34,
+    "away_score": 40,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "SEA": 23,
+      "LV": 31
+    },
+    "win_probability": 0.012,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_LA_KC",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LA",
+    "home_score": 26,
+    "away_score": 10,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 65,
+      "LA": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_NO_SF",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "NO",
+    "home_score": 13,
+    "away_score": 0,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 51,
+      "NO": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_GB_PHI",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "GB",
+    "home_score": 40,
+    "away_score": 33,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 47,
+      "GB": 17
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_12_PIT_IND",
+    "season": 2022,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "PIT",
+    "home_score": 17,
+    "away_score": 24,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "IND": 1,
+      "PIT": 54
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_BUF_NE",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "BUF",
+    "home_score": 10,
+    "away_score": 24,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NE": 14,
+      "BUF": 23
+    },
+    "win_probability": 0.008,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_PIT_ATL",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "PIT",
+    "home_score": 16,
+    "away_score": 19,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "ATL": 33,
+      "PIT": 25
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_DEN_BAL",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "DEN",
+    "home_score": 10,
+    "away_score": 9,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 39,
+      "DEN": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_GB_CHI",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "GB",
+    "home_score": 19,
+    "away_score": 28,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 16,
+      "GB": 38
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_13_JAX_DET",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "JAX",
+    "home_score": 40,
+    "away_score": 14,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 36,
+      "JAX": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_CLE_HOU",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "CLE",
+    "home_score": 14,
+    "away_score": 27,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "HOU": 0,
+      "CLE": 56
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_NYJ_MIN",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "NYJ",
+    "home_score": 27,
+    "away_score": 22,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 34,
+      "NYJ": 17
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_WAS_NYG",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "WAS",
+    "home_score": 20,
+    "away_score": 20,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 50,
+      "WAS": 9
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_13_TEN_PHI",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "TEN",
+    "home_score": 35,
+    "away_score": 10,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 59,
+      "TEN": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_SEA_LA",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SEA",
+    "home_score": 23,
+    "away_score": 27,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 6,
+      "SEA": 29
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_13_MIA_SF",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "MIA",
+    "home_score": 33,
+    "away_score": 17,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 25,
+      "MIA": 13
+    },
+    "win_probability": 0.982,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_KC_CIN",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "KC",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "CIN": 5,
+      "KC": 28
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_13_LAC_LV",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "LAC",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 28,
+      "LAC": 21
+    },
+    "win_probability": 0.881,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_IND_DAL",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "IND",
+    "home_score": 54,
+    "away_score": 19,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 58,
+      "IND": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_13_NO_TB",
+    "season": 2022,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "NO",
+    "home_score": 17,
+    "away_score": 16,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "TB": 20,
+      "NO": 20
+    },
+    "win_probability": 0.224,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_LV_LA",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "LV",
+    "home_score": 17,
+    "away_score": 16,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LA": 3,
+      "LV": 37
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_NYJ_BUF",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NYJ",
+    "home_score": 20,
+    "away_score": 12,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 32,
+      "NYJ": 26
+    },
+    "win_probability": 0.82,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_CLE_CIN",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "CLE",
+    "home_score": 23,
+    "away_score": 10,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 15,
+      "CLE": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_HOU_DAL",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "HOU",
+    "home_score": 27,
+    "away_score": 23,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 59,
+      "HOU": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_MIN_DET",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "MIN",
+    "home_score": 34,
+    "away_score": 23,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "DET": 37,
+      "MIN": 8
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_PHI_NYG",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "PHI",
+    "home_score": 22,
+    "away_score": 48,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NYG": 16,
+      "PHI": 22
+    },
+    "win_probability": 0.031,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_BAL_PIT",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "BAL",
+    "home_score": 14,
+    "away_score": 16,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 11,
+      "BAL": 22
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_JAX_TEN",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "JAX",
+    "home_score": 22,
+    "away_score": 36,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "TEN": 14,
+      "JAX": 25
+    },
+    "win_probability": 0.005,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_KC_DEN",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "KC",
+    "home_score": 28,
+    "away_score": 34,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "DEN": 0,
+      "KC": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_CAR_SEA",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "CAR",
+    "home_score": 24,
+    "away_score": 30,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 33,
+      "CAR": 22
+    },
+    "win_probability": 0.954,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_TB_SF",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "TB",
+    "home_score": 35,
+    "away_score": 7,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 57,
+      "TB": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_14_MIA_LAC",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "MIA",
+    "home_score": 23,
+    "away_score": 17,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "LAC": 12,
+      "MIA": 24
+    },
+    "win_probability": 0.005,
+    "correct": false
+  },
+  {
+    "game_id": "2022_14_NE_ARI",
+    "season": 2022,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "NE",
+    "home_score": 13,
+    "away_score": 27,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 19,
+      "NE": 20
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_15_SF_SEA",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "SF",
+    "home_score": 13,
+    "away_score": 21,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SEA": 13,
+      "SF": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_IND_MIN",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "IND",
+    "home_score": 39,
+    "away_score": 36,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 57,
+      "IND": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_BAL_CLE",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "BAL",
+    "home_score": 13,
+    "away_score": 3,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 27,
+      "BAL": 18
+    },
+    "win_probability": 0.937,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_MIA_BUF",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "MIA",
+    "home_score": 32,
+    "away_score": 29,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "BUF": 13,
+      "MIA": 38
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_15_PIT_CAR",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "PIT",
+    "home_score": 16,
+    "away_score": 24,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "CAR": 24,
+      "PIT": 33
+    },
+    "win_probability": 0.007,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_PHI_CHI",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "PHI",
+    "home_score": 20,
+    "away_score": 25,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "CHI": 0,
+      "PHI": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_KC_HOU",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "KC",
+    "home_score": 24,
+    "away_score": 30,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "HOU": 0,
+      "KC": 58
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_DAL_JAX",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "DAL",
+    "home_score": 40,
+    "away_score": 34,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "JAX": 25,
+      "DAL": 22
+    },
+    "win_probability": 0.39,
+    "correct": false
+  },
+  {
+    "game_id": "2022_15_ATL_NO",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "ATL",
+    "home_score": 21,
+    "away_score": 18,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "NO": 10,
+      "ATL": 37
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_15_DET_NYJ",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "DET",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "NYJ": 5,
+      "DET": 42
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_ARI_DEN",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "ARI",
+    "home_score": 24,
+    "away_score": 15,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 38,
+      "ARI": 18
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_NE_LV",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "NE",
+    "home_score": 30,
+    "away_score": 24,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 39,
+      "NE": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_TEN_LAC",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "TEN",
+    "home_score": 17,
+    "away_score": 14,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 34,
+      "TEN": 17
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_CIN_TB",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CIN",
+    "home_score": 23,
+    "away_score": 34,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "TB": 6,
+      "CIN": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_NYG_WAS",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "NYG",
+    "home_score": 12,
+    "away_score": 20,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "WAS": 1,
+      "NYG": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_15_LA_GB",
+    "season": 2022,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "LA",
+    "home_score": 24,
+    "away_score": 12,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 48,
+      "LA": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_JAX_NYJ",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "JAX",
+    "home_score": 3,
+    "away_score": 19,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "NYJ": 16,
+      "JAX": 30
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_ATL_BAL",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "ATL",
+    "home_score": 17,
+    "away_score": 9,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "BAL": 31,
+      "ATL": 20
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_DET_CAR",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "DET",
+    "home_score": 37,
+    "away_score": 23,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "CAR": 5,
+      "DET": 38
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_BUF_CHI",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "BUF",
+    "home_score": 13,
+    "away_score": 35,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "CHI": 20,
+      "BUF": 18
+    },
+    "win_probability": 0.334,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_NO_CLE",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "NO",
+    "home_score": 10,
+    "away_score": 17,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 48,
+      "NO": 2
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_SEA_KC",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "SEA",
+    "home_score": 24,
+    "away_score": 10,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 45,
+      "SEA": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_NYG_MIN",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "NYG",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "MIN": 11,
+      "NYG": 40
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_CIN_NE",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "CIN",
+    "home_score": 18,
+    "away_score": 22,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "NE": 14,
+      "CIN": 40
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_HOU_TEN",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "HOU",
+    "home_score": 14,
+    "away_score": 19,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 48,
+      "HOU": 2
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_WAS_SF",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "WAS",
+    "home_score": 37,
+    "away_score": 20,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 47,
+      "WAS": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_PHI_DAL",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "PHI",
+    "home_score": 40,
+    "away_score": 34,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "DAL": 3,
+      "PHI": 37
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_LV_PIT",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "LV",
+    "home_score": 13,
+    "away_score": 10,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 17,
+      "LV": 20
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_GB_MIA",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "GB",
+    "home_score": 20,
+    "away_score": 26,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "MIA": 34,
+      "GB": 27
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_16_DEN_LA",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "DEN",
+    "home_score": 51,
+    "away_score": 14,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "LA": 11,
+      "DEN": 29
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_TB_ARI",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "TB",
+    "home_score": 16,
+    "away_score": 19,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 26,
+      "TB": 24
+    },
+    "win_probability": 0.578,
+    "correct": false
+  },
+  {
+    "game_id": "2022_16_LAC_IND",
+    "season": 2022,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "LAC",
+    "home_score": 3,
+    "away_score": 20,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "IND": 0,
+      "LAC": 50
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_DAL_TEN",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "DAL",
+    "home_score": 13,
+    "away_score": 27,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "TEN": 14,
+      "DAL": 25
+    },
+    "win_probability": 0.003,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_ARI_ATL",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "ARI",
+    "home_score": 20,
+    "away_score": 19,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 45,
+      "ARI": 10
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_CHI_DET",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "CHI",
+    "home_score": 41,
+    "away_score": 10,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 44,
+      "CHI": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_JAX_HOU",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "JAX",
+    "home_score": 3,
+    "away_score": 31,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "HOU": 0,
+      "JAX": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_DEN_KC",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "DEN",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 51,
+      "DEN": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_MIA_NE",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "MIA",
+    "home_score": 23,
+    "away_score": 21,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "NE": 2,
+      "MIA": 38
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_17_IND_NYG",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "IND",
+    "home_score": 38,
+    "away_score": 10,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 71,
+      "IND": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_NO_PHI",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "NO",
+    "home_score": 10,
+    "away_score": 20,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 64,
+      "NO": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2022_17_CAR_TB",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CAR",
+    "home_score": 30,
+    "away_score": 24,
+    "predicted_winner": "CAR",
+    "predicted_score": {
+      "TB": 14,
+      "CAR": 26
+    },
+    "win_probability": 0.002,
+    "correct": false
+  },
+  {
+    "game_id": "2022_17_CLE_WAS",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "CLE",
+    "home_score": 10,
+    "away_score": 24,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "WAS": 7,
+      "CLE": 31
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_SF_LV",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "SF",
+    "home_score": 34,
+    "away_score": 37,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "LV": 15,
+      "SF": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_NYJ_SEA",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "NYJ",
+    "home_score": 23,
+    "away_score": 6,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 32,
+      "NYJ": 19
+    },
+    "win_probability": 0.988,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_MIN_GB",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "MIN",
+    "home_score": 41,
+    "away_score": 17,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "GB": 27,
+      "MIN": 11
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_17_LA_LAC",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "LA",
+    "home_score": 31,
+    "away_score": 10,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 44,
+      "LA": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_17_PIT_BAL",
+    "season": 2022,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "PIT",
+    "home_score": 13,
+    "away_score": 16,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "BAL": 39,
+      "PIT": 23
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_KC_LV",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "KC",
+    "home_score": 13,
+    "away_score": 31,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "LV": 7,
+      "KC": 31
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_TEN_JAX",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "TEN",
+    "home_score": 20,
+    "away_score": 16,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 36,
+      "TEN": 20
+    },
+    "win_probability": 0.995,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_TB_ATL",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "TB",
+    "home_score": 30,
+    "away_score": 17,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 46,
+      "TB": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_NE_BUF",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NE",
+    "home_score": 35,
+    "away_score": 23,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 37,
+      "NE": 22
+    },
+    "win_probability": 0.992,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_MIN_CHI",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "MIN",
+    "home_score": 13,
+    "away_score": 29,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "CHI": 18,
+      "MIN": 27
+    },
+    "win_probability": 0.009,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_BAL_CIN",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "BAL",
+    "home_score": 27,
+    "away_score": 16,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 17,
+      "BAL": 22
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_HOU_IND",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "HOU",
+    "home_score": 31,
+    "away_score": 32,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 27,
+      "HOU": 23
+    },
+    "win_probability": 0.518,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_NYJ_MIA",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NYJ",
+    "home_score": 11,
+    "away_score": 6,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 44,
+      "NYJ": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_CAR_NO",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "CAR",
+    "home_score": 7,
+    "away_score": 10,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 19,
+      "CAR": 28
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_CLE_PIT",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CLE",
+    "home_score": 28,
+    "away_score": 14,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "PIT": 10,
+      "CLE": 26
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_LAC_DEN",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LAC",
+    "home_score": 31,
+    "away_score": 28,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "DEN": 20,
+      "LAC": 29
+    },
+    "win_probability": 0.008,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_NYG_PHI",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "NYG",
+    "home_score": 22,
+    "away_score": 16,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 35,
+      "NYG": 23
+    },
+    "win_probability": 0.969,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_LA_SEA",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "LA",
+    "home_score": 19,
+    "away_score": 16,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "SEA": 45,
+      "LA": 16
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_ARI_SF",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "ARI",
+    "home_score": 38,
+    "away_score": 13,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 56,
+      "ARI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2022_18_DAL_WAS",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "DAL",
+    "home_score": 26,
+    "away_score": 6,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "WAS": 14,
+      "DAL": 21
+    },
+    "win_probability": 0.009,
+    "correct": false
+  },
+  {
+    "game_id": "2022_18_DET_GB",
+    "season": 2022,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "DET",
+    "home_score": 16,
+    "away_score": 20,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "GB": 16,
+      "DET": 25
+    },
+    "win_probability": 0.005,
+    "correct": true
+  },
+  {
+    "game_id": "2022_19_SEA_SF",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "SF",
+    "away_team": "SEA",
+    "home_score": 41,
+    "away_score": 23,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 28,
+      "SEA": 20
+    },
+    "win_probability": 0.826,
+    "correct": true
+  },
+  {
+    "game_id": "2022_19_LAC_JAX",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "JAX",
+    "away_team": "LAC",
+    "home_score": 31,
+    "away_score": 30,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "JAX": 22,
+      "LAC": 27
+    },
+    "win_probability": 0.045,
+    "correct": false
+  },
+  {
+    "game_id": "2022_19_MIA_BUF",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "BUF",
+    "away_team": "MIA",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 31,
+      "MIA": 20
+    },
+    "win_probability": 0.972,
+    "correct": true
+  },
+  {
+    "game_id": "2022_19_NYG_MIN",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "MIN",
+    "away_team": "NYG",
+    "home_score": 24,
+    "away_score": 31,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "MIN": 24,
+      "NYG": 22
+    },
+    "win_probability": 0.296,
+    "correct": true
+  },
+  {
+    "game_id": "2022_19_BAL_CIN",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "CIN",
+    "away_team": "BAL",
+    "home_score": 24,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 27,
+      "BAL": 21
+    },
+    "win_probability": 0.868,
+    "correct": true
+  },
+  {
+    "game_id": "2022_19_DAL_TB",
+    "season": 2022,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "TB",
+    "away_team": "DAL",
+    "home_score": 14,
+    "away_score": 31,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "TB": 26,
+      "DAL": 22
+    },
+    "win_probability": 0.404,
+    "correct": true
+  },
+  {
+    "game_id": "2022_20_JAX_KC",
+    "season": 2022,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "KC",
+    "away_team": "JAX",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 32,
+      "JAX": 16
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2022_20_NYG_PHI",
+    "season": 2022,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "PHI",
+    "away_team": "NYG",
+    "home_score": 38,
+    "away_score": 7,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 29,
+      "NYG": 19
+    },
+    "win_probability": 0.938,
+    "correct": true
+  },
+  {
+    "game_id": "2022_20_CIN_BUF",
+    "season": 2022,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "BUF",
+    "away_team": "CIN",
+    "home_score": 10,
+    "away_score": 27,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "BUF": 24,
+      "CIN": 24
+    },
+    "win_probability": 0.183,
+    "correct": true
+  },
+  {
+    "game_id": "2022_20_DAL_SF",
+    "season": 2022,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "SF",
+    "away_team": "DAL",
+    "home_score": 19,
+    "away_score": 12,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "SF": 26,
+      "DAL": 22
+    },
+    "win_probability": 0.369,
+    "correct": false
+  },
+  {
+    "game_id": "2022_21_SF_PHI",
+    "season": 2022,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "PHI",
+    "away_team": "SF",
+    "home_score": 31,
+    "away_score": 7,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 31,
+      "SF": 18
+    },
+    "win_probability": 0.99,
+    "correct": true
+  },
+  {
+    "game_id": "2022_21_CIN_KC",
+    "season": 2022,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "KC",
+    "away_team": "CIN",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 28,
+      "CIN": 20
+    },
+    "win_probability": 0.938,
+    "correct": true
+  },
+  {
+    "game_id": "2022_22_KC_PHI",
+    "season": 2022,
+    "week": 22,
+    "season_type": "SB",
+    "home_team": "PHI",
+    "away_team": "KC",
+    "home_score": 35,
+    "away_score": 38,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 27,
+      "KC": 21
+    },
+    "win_probability": 0.803,
+    "correct": false
+  }
+]

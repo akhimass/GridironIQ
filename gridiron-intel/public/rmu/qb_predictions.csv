@@ -1,0 +1,15 @@
+name,college_team,college_conference,r1_probability,r1_predicted,confidence
+Fernando Mendoza,Indiana,Big Ten,0.9625,1,LOCK
+Carson Beck,Miami,ACC,0.7536,1,LOCK
+Joey Aguilar,Tennessee,SEC,0.5839,1,HIGH
+Sawyer Robertson,Baylor,Big 12,0.5638,1,HIGH
+Taylen Green,Arkansas,SEC,0.3299,0,MEDIUM
+Ty Simpson,Alabama,SEC,0.3185,0,MEDIUM
+Behren Morton,Texas Tech,Big 12,0.2442,0,LOW
+Diego Pavia,Vanderbilt,SEC,0.2221,0,LOW
+Cade Klubnik,Clemson,ACC,0.157,0,LOW
+Jalon Daniels,Kansas,Big 12,0.157,0,LOW
+Luke Altmyer,Illinois,Big Ten,0.1197,0,LOW
+Garrett Nussmeier,LSU,SEC,0.0625,0,LOW
+Mark Gronowski,Iowa,Big Ten,0.0337,0,LOW
+Miller Moss,Louisville,ACC,0.0024,0,LOW

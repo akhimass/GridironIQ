@@ -10,6 +10,8 @@ import {
   aiChat,
   getTeamLogos,
 } from "@/lib/api.ts";
+import { useRmuData } from "@/lib/rmu.ts";
+import { useEngineData } from "@/lib/engine.ts";
 import DraftPlatformView from "./draft/DraftPlatformView.tsx";
 import {
   type BoardViewTab,
@@ -222,6 +224,8 @@ export default function DraftRoom() {
   };
 
   const logosQ = useQuery({ queryKey: ["team-logos"], queryFn: getTeamLogos });
+  const rmuQ = useRmuData();
+  const engineQ = useEngineData();
 
   const displayTeams = useMemo(() => {
     const m = logosQ.data?.teams;
@@ -323,6 +327,12 @@ export default function DraftRoom() {
         sendChat={sendChat}
         consensusConfigured={consensusConfigured}
         refetchBoard={() => boardQ.refetch()}
+        rmuData={rmuQ.data}
+        rmuLoading={rmuQ.isLoading}
+        rmuError={rmuQ.error ? (rmuQ.error as Error) : null}
+        engineData={engineQ.data}
+        engineLoading={engineQ.isLoading}
+        engineError={engineQ.error ? (engineQ.error as Error) : null}
       />
     </div>
   );

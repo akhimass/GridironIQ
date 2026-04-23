@@ -1,0 +1,43 @@
+overall_rank,name,position,college_team,college_conference,r1_probability,r1_predicted,confidence,height,weight,stat_line
+1,Fernando Mendoza,QB,Indiana,Big Ten,0.9625,1,LOCK,77,225,3535 yds · 41 TD / 6 INT · 72.0%
+2,Carson Beck,QB,Miami,ACC,0.7536,1,LOCK,76,220,3813 yds · 30 TD / 12 INT · 72.4%
+3,Joey Aguilar,QB,Tennessee,SEC,0.5839,1,HIGH,75,225,3565 yds · 24 TD / 10 INT · 67.3%
+4,Sawyer Robertson,QB,Baylor,Big 12,0.5638,1,HIGH,76,220,3681 yds · 31 TD / 12 INT · 60.3%
+5,Elijah Sarratt,WR,Indiana,Big Ten,0.5176,1,MEDIUM,74,209,65 rec · 830 yds · 15 TD
+6,Omar Cooper Jr.,WR,Indiana,Big Ten,0.4884,0,MEDIUM,72,201,69 rec · 937 yds · 13 TD
+7,Jeremiyah Love,RB,Notre Dame,FBS Independents,0.4683,0,MEDIUM,72,214,1372 rush · 18 TD · 27 rec / 280 yds
+8,Makai Lemon,WR,USC,Big Ten,0.4375,0,MEDIUM,71,195,79 rec · 1156 yds · 11 TD
+9,Chris Brazzell II,WR,Tennessee,SEC,0.3895,0,MEDIUM,77,200,62 rec · 1017 yds · 9 TD
+10,Jonah Coleman,RB,Washington,Big Ten,0.3669,0,MEDIUM,69,220,758 rush · 15 TD · 31 rec / 354 yds
+11,Denzel Boston,WR,Washington,Big Ten,0.3468,0,MEDIUM,76,209,62 rec · 881 yds · 11 TD
+12,Chris Bell,WR,Louisville,ACC,0.3339,0,MEDIUM,74,220,72 rec · 917 yds · 6 TD
+13,Taylen Green,QB,Arkansas,SEC,0.3299,0,MEDIUM,78,230,2714 yds · 19 TD / 11 INT · 60.7%
+14,Germie Bernard,WR,Alabama,SEC,0.3283,0,MEDIUM,73,204,64 rec · 862 yds · 7 TD
+15,Ty Simpson,QB,Alabama,SEC,0.3185,0,MEDIUM,74,208,3567 yds · 28 TD / 5 INT · 64.5%
+16,Ja'Kobi Lane,WR,USC,Big Ten,0.3147,0,MEDIUM,76,200,49 rec · 745 yds · 4 TD
+17,KC Concepcion,WR,Texas A&M,SEC,0.2904,0,LOW,71,190,61 rec · 919 yds · 9 TD
+18,Carnell Tate,WR,Ohio State,Big Ten,0.287,0,LOW,75,195,51 rec · 875 yds · 9 TD
+19,Behren Morton,QB,Texas Tech,Big 12,0.2442,0,LOW,74,210,2780 yds · 22 TD / 6 INT · 66.0%
+20,Diego Pavia,QB,Vanderbilt,SEC,0.2221,0,LOW,72,207,3539 yds · 29 TD / 8 INT · 70.6%
+21,Zachariah Branch,WR,Georgia,SEC,0.2056,0,LOW,70,180,81 rec · 811 yds · 6 TD
+22,Jordyn Tyson,WR,Arizona State,Big 12,0.1987,0,LOW,74,200,61 rec · 711 yds · 8 TD
+23,Jalon Daniels,QB,Kansas,Big 12,0.157,0,LOW,72,220,2531 yds · 22 TD / 7 INT · 62.1%
+24,Cade Klubnik,QB,Clemson,ACC,0.157,0,LOW,74,210,2943 yds · 16 TD / 6 INT · 65.6%
+25,Luke Altmyer,QB,Illinois,Big Ten,0.1197,0,LOW,74,205,3007 yds · 22 TD / 5 INT · 67.4%
+26,Antonio Williams,WR,Clemson,ACC,0.1007,0,LOW,71,190,55 rec · 604 yds · 4 TD
+27,Malachi Fields,WR,Notre Dame,FBS Independents,0.0786,0,LOW,76,223,36 rec · 630 yds · 5 TD
+28,Garrett Nussmeier,QB,LSU,SEC,0.0625,0,LOW,75,200,1927 yds · 12 TD / 5 INT · 67.4%
+29,Emmett Johnson,RB,Nebraska,Big Ten,0.0515,0,LOW,71,200,1451 rush · 12 TD · 46 rec / 370 yds
+30,Le'Veon Moss,RB,Texas A&M,SEC,0.0343,0,LOW,71,210,404 rush · 6 TD · 2 rec / 3 yds
+31,Mark Gronowski,QB,Iowa,Big Ten,0.0337,0,LOW,74,230,1741 yds · 10 TD / 7 INT · 63.4%
+32,Mike Washington Jr.,RB,Arkansas,SEC,0.0179,0,LOW,72,228,1070 rush · 8 TD · 28 rec / 226 yds
+33,J'Mari Taylor,RB,Virginia,ACC,0.0158,0,LOW,69,205,1062 rush · 14 TD · 43 rec / 253 yds
+34,Kaelon Black,RB,Indiana,Big Ten,0.0143,0,LOW,70,210,1040 rush · 10 TD · 4 rec / 36 yds
+35,Kaytron Allen,RB,Penn State,Big Ten,0.0142,0,LOW,71,220,1303 rush · 15 TD · 18 rec / 68 yds
+36,Jadarian Price,RB,Notre Dame,FBS Independents,0.0138,0,LOW,71,210,674 rush · 11 TD · 6 rec / 87 yds
+37,Nicholas Singleton,RB,Penn State,Big Ten,0.0099,0,LOW,72,221,549 rush · 13 TD · 24 rec / 219 yds
+38,Miller Moss,QB,Louisville,ACC,0.0024,0,LOW,74,205,2679 yds · 16 TD / 7 INT · 64.2%
+39,Desmond Claiborne,RB,Wake Forest,ACC,0.0021,0,LOW,69,187,907 rush · 10 TD · 28 rec / 140 yds
+40,Seth McGowan,RB,Kentucky,SEC,0.0021,0,LOW,71,215,725 rush · 12 TD · 19 rec / 126 yds
+41,Jaydn Ott,RB,Oklahoma,SEC,0.0018,0,LOW,71,208,68 rush · 0 TD · 2 rec / 10 yds
+42,Terion Stewart,RB,Virginia Tech,ACC,0.0014,0,LOW,69,222,469 rush · 0 TD · 4 rec / 19 yds

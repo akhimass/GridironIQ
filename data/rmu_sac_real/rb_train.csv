@@ -1,0 +1,279 @@
+college_team,college_conference,nfl_team,year,overall,draft_round,pick,name,position,height,weight,season_before_draft,rushing_car,rushing_yds,rushing_td,rushing_ypc,receiving_rec,receiving_yds,receiving_td,receiving_ypr,regular_season_games,regular_season_wins,regular_season_losses,postseason_games,postseason_wins,postseason_losses,forty,bench,vertical,broad_jump,cone,shuttle,attended_combine
+Clemson,ACC,Buffalo,2010,9,1,9,C.J. Spiller,Running Back,71.0,196.0,2009,216,1212,12,5.6,36.0,503.0,4.0,14.0,13,8,5,1,1,0,4.37,18.0,,,,,Y
+Fresno State,Western Athletic,Los Angeles,2010,12,1,12,Ryan Mathews,Running Back,72.0,218.0,2009,276,1808,19,6.6,11.0,122.0,0.0,11.1,12,8,4,1,0,1,4.37,19.0,36.0,121.0,7.0,4.33,Y
+California,Pac-10,Detroit,2010,30,1,30,Jahvid Best,Running Back,70.0,199.0,2009,141,867,12,6.1,22.0,213.0,4.0,9.7,12,8,4,1,0,1,4.34,18.0,32.5,113.0,6.75,4.17,Y
+Ole Miss,SEC,Kansas City,2010,36,2,4,Dexter McCluster,Running Back,69.0,172.0,2009,181,1169,8,6.5,44.0,520.0,3.0,11.8,12,8,4,1,1,0,4.53,20.0,37.5,118.0,,4.06,Y
+Stanford,Pac-10,Minnesota,2010,51,2,19,Toby Gerhart,Running Back,72.0,231.0,2009,343,1871,27,5.5,11.0,157.0,0.0,14.3,12,8,4,1,0,1,4.5,22.0,38.0,118.0,6.94,4.25,Y
+Auburn,SEC,Houston,2010,58,2,26,Ben Tate,Running Back,71.0,220.0,2009,263,1362,10,5.2,20.0,105.0,0.0,5.3,12,7,5,1,1,0,4.34,26.0,40.5,124.0,6.91,4.12,Y
+Tennessee,SEC,Cleveland,2010,59,2,27,Montario Hardesty,Running Back,72.0,225.0,2009,282,1345,13,4.8,25.0,302.0,1.0,12.1,12,7,5,1,0,1,4.49,21.0,41.0,124.0,6.87,4.14,Y
+USC,Pac-10,New York,2010,112,4,14,Joe McKnight,Running Back,71.0,198.0,2009,164,1014,8,6.2,22.0,146.0,0.0,6.6,12,8,4,1,1,0,4.4,18.0,36.5,120.0,,,Y
+Georgia Tech,ACC,Pittsburgh,2010,188,6,19,Jonathan Dwyer,Running Back,71.0,229.0,2009,235,1395,14,5.9,5.0,37.0,0.0,7.4,13,11,2,1,0,1,4.64,15.0,33.0,107.0,7.56,4.67,Y
+LSU,SEC,Philadelphia,2010,200,6,31,Charles Scott,Running Back,71.0,238.0,2009,116,542,4,4.7,8.0,54.0,1.0,6.8,12,9,3,1,0,1,4.68,,30.5,111.0,6.98,4.47,Y
+Alabama,SEC,New Orleans,2011,28,1,28,Mark Ingram,Running Back,69.0,215.0,2010,158,875,13,5.5,21.0,282.0,1.0,13.4,12,9,3,1,1,0,4.62,21.0,31.5,118.0,7.13,4.62,Y
+Virginia Tech,ACC,Arizona,2011,38,2,6,Ryan Williams,Running Back,69.0,212.0,2010,110,477,9,4.3,10.0,109.0,1.0,10.9,13,11,2,1,0,1,4.59,19.0,40.0,123.0,6.96,4.18,Y
+California,Pac-10,New England,2011,56,2,24,Shane Vereen,Running Back,69.0,203.0,2010,231,1167,13,5.1,22.0,209.0,3.0,9.5,12,5,7,0,0,0,4.49,31.0,34.0,115.0,6.95,4.28,Y
+Illinois,Big Ten,Detroit,2011,57,2,25,Mikel Leshoure,Running Back,72.0,227.0,2010,281,1697,17,6.0,17.0,196.0,3.0,11.5,12,6,6,1,1,0,4.56,21.0,38.0,122.0,6.82,4.4,Y
+Kansas State,Big 12,Miami,2011,62,2,30,Daniel Thomas,Running Back,72.0,230.0,2010,298,1585,19,5.3,27.0,171.0,0.0,6.3,12,7,5,1,0,1,4.62,21.0,,,,,Y
+LSU,SEC,New England,2011,73,3,9,Stevan Ridley,Running Back,71.0,225.0,2010,249,1147,15,4.6,11.0,61.0,0.0,5.5,12,10,2,1,1,0,4.65,18.0,36.0,118.0,6.78,4.21,Y
+Oklahoma State,Big 12,San Francisco,2011,115,4,18,Kendall Hunter,Running Back,67.0,199.0,2010,271,1548,16,5.7,20.0,101.0,0.0,5.1,12,10,2,1,1,0,4.46,24.0,35.0,122.0,6.74,4.21,Y
+Syracuse,Big East,Indianapolis,2011,119,4,22,Delone Carter,Running Back,69.0,225.0,2010,231,1233,9,5.3,8.0,45.0,0.0,5.6,12,7,5,1,1,0,4.54,27.0,37.0,120.0,6.92,4.07,Y
+Louisville,Big East,New York,2011,126,4,29,Bilal Powell,Running Back,71.0,207.0,2010,229,1405,11,6.1,18.0,158.0,3.0,8.8,12,6,6,1,1,0,4.51,18.0,,,,,Y
+Clemson,ACC,Tennessee,2011,130,4,33,Jamie Harper,Running Back,71.0,233.0,2010,197,760,7,3.9,37.0,320.0,3.0,8.6,12,6,6,1,0,1,4.53,24.0,36.5,120.0,7.16,4.39,Y
+North Carolina,ACC,Buffalo,2011,133,5,2,Johnny White,Running Back,70.0,209.0,2010,130,720,7,5.5,24.0,288.0,0.0,12.0,12,7,5,1,1,0,4.5,,32.5,117.0,7.07,4.31,Y
+Oregon State,Pac-10,Atlanta,2011,145,5,14,Jacquizz Rodgers,Running Back,66.0,196.0,2010,256,1184,14,4.6,44.0,287.0,3.0,6.5,12,5,7,0,0,0,4.59,,33.0,113.0,7.31,4.26,Y
+Pittsburgh,Big East,Philadelphia,2011,149,5,18,Dion Lewis,Running Back,67.0,193.0,2010,219,1061,13,4.8,27.0,216.0,0.0,8.0,12,7,5,1,1,0,4.56,17.0,34.5,112.0,6.9,4.18,Y
+Penn State,Big Ten,Washington,2011,177,6,12,Evan Royster,Running Back,72.0,212.0,2010,208,1014,6,4.9,25.0,202.0,1.0,8.1,12,7,5,1,0,1,4.65,20.0,34.0,113.0,7.07,4.18,Y
+UConn,Big East,Los Angeles,2011,183,6,18,Jordan Todman,Running Back,69.0,203.0,2010,334,1695,14,5.1,19.0,94.0,0.0,4.9,12,8,4,1,0,1,4.4,25.0,38.0,126.0,7.24,4.18,Y
+USC,Pac-10,Tampa Bay,2011,187,6,22,Allen Bradford,Running Back,72.0,242.0,2010,110,794,5,7.2,3.0,74.0,1.0,24.7,13,8,5,0,0,0,4.53,28.0,29.0,113.0,6.97,4.39,Y
+Maryland,ACC,New York,2011,221,7,18,Da'Rel Scott,Running Back,71.0,211.0,2010,122,708,5,5.8,14.0,170.0,3.0,12.1,12,8,4,1,1,0,4.4,19.0,34.0,117.0,7.15,4.2,Y
+Georgia Tech,ACC,Baltimore,2011,225,7,22,Anthony Allen,Running Back,73.0,228.0,2010,240,1316,7,5.5,3.0,88.0,1.0,29.3,12,6,6,1,0,1,4.56,24.0,41.5,120.0,6.79,4.06,Y
+Texas Tech,Big 12,Pittsburgh,2011,232,7,29,Baron Batch,Running Back,69.0,202.0,2010,177,816,5,4.6,32.0,226.0,3.0,7.1,12,7,5,1,1,0,,,,,,,N
+Baylor,Big 12,Cincinnati,2011,246,7,43,Jay Finley,Running Back,71.0,198.0,2010,195,1218,12,6.2,9.0,76.0,0.0,8.4,12,7,5,1,0,1,,,,,,,N
+Alabama,SEC,Cleveland,2012,3,1,3,Trent Richardson,Running Back,69.0,228.0,2011,283,1679,21,5.9,29.0,338.0,3.0,11.7,12,11,1,1,1,0,4.48,,,,,,Y
+Boise State,Mountain West,Tampa Bay,2012,31,1,31,Doug Martin,Running Back,69.0,223.0,2011,263,1299,16,4.9,28.0,255.0,2.0,9.1,12,11,1,1,1,0,4.46,28.0,36.0,120.0,6.79,4.16,Y
+Virginia Tech,ACC,New York,2012,32,1,32,David Wilson,Running Back,70.0,206.0,2011,290,1709,9,5.9,22.0,129.0,1.0,5.9,13,11,2,1,0,1,4.38,,41.0,132.0,7.09,4.12,Y
+Cincinnati,Big East,Los Angeles,2012,50,2,18,Isaiah Pead,Running Back,70.0,197.0,2011,237,1259,12,5.3,39.0,319.0,3.0,8.2,12,9,3,1,1,0,4.39,,33.0,116.0,6.95,4.32,Y
+San Diego State,Mountain West,Denver,2012,67,3,4,Ronnie Hillman,Running Back,69.0,200.0,2011,311,1711,19,5.5,24.0,270.0,1.0,11.3,12,8,4,1,0,1,4.42,17.0,37.0,,,,Y
+Temple,Mid-American,Baltimore,2012,84,3,21,Bernard Pierce,Running Back,72.0,218.0,2011,249,1292,24,5.2,3.0,52.0,0.0,17.3,12,8,4,1,1,0,4.45,17.0,36.5,123.0,7.07,4.28,Y
+Miami,ACC,Miami,2012,97,4,2,Lamar Miller,Running Back,71.0,212.0,2011,227,1272,9,5.6,17.0,85.0,1.0,5.0,12,6,6,0,0,0,4.34,,33.0,,,,Y
+Utah State,Western Athletic,Seattle,2012,106,4,11,Robert Turbin,Running Back,70.0,222.0,2011,249,1517,19,6.1,17.0,171.0,4.0,10.1,12,7,5,1,0,1,4.42,28.0,36.0,122.0,7.16,4.31,Y
+Florida,SEC,Pittsburgh,2012,159,5,24,Chris Rainey,Running Back,68.0,180.0,2011,171,861,2,5.0,31.0,381.0,2.0,12.3,12,6,6,1,1,0,4.36,16.0,36.5,120.0,6.5,3.93,Y
+Mississippi State,SEC,Indianapolis,2012,170,5,35,Vick Ballard,Running Back,70.0,219.0,2011,193,1189,10,6.2,20.0,187.0,1.0,9.4,12,6,6,1,1,0,4.59,23.0,33.0,115.0,7.03,4.19,Y
+Florida Atlantic,Sun Belt,Washington,2012,173,6,3,Alfred Morris,Running Back,70.0,219.0,2011,214,1114,9,5.2,14.0,133.0,1.0,9.5,12,1,11,0,0,0,4.63,16.0,35.5,117.0,7.01,4.19,Y
+Texas A&M,Big 12,Kansas City,2012,182,6,12,Cyrus Gray,Running Back,70.0,206.0,2011,198,1045,12,5.3,31.0,239.0,3.0,7.7,12,6,6,1,1,0,4.4,21.0,32.5,114.0,7.17,,Y
+Baylor,Big 12,New York,2012,202,6,32,Terrance Ganaway,Running Back,72.0,239.0,2011,250,1547,21,6.2,6.0,52.0,1.0,8.7,12,9,3,1,1,0,4.61,,37.5,119.0,7.15,4.25,Y
+Utah State,Western Athletic,Tampa Bay,2012,212,7,5,Michael Smith,Running Back,68.0,206.0,2011,114,870,9,7.6,16.0,181.0,2.0,11.3,12,7,5,1,0,1,,,,,,,N
+Kansas State,Big 12,Philadelphia,2012,229,7,22,Bryce Brown,Running Back,72.0,219.0,2011,3,16,0,5.3,1.0,3.0,0.0,3.0,12,10,2,1,0,1,,,,,,,N
+Michigan State,Big Ten,Los Angeles,2012,250,7,43,Edwin Baker,Running Back,68.0,204.0,2011,170,665,5,3.9,5.0,60.0,1.0,12.0,13,10,3,1,1,0,4.44,20.0,35.0,111.0,7.27,4.31,Y
+North Carolina,ACC,Cincinnati,2013,37,2,5,Giovani Bernard,Running Back,68.0,202.0,2012,184,1228,12,6.7,47.0,490.0,5.0,10.4,12,8,4,0,0,0,4.53,19.0,33.5,122.0,6.91,4.12,Y
+Wisconsin,Big Ten,Denver,2013,58,2,26,Montee Ball,Running Back,71.0,214.0,2012,356,1830,22,5.1,10.0,72.0,0.0,7.2,13,8,5,1,0,1,4.66,15.0,32.0,118.0,6.88,4.4,Y
+Alabama,SEC,Green Bay,2013,61,2,29,Eddie Lacy,Running Back,71.0,231.0,2012,204,1322,17,6.5,22.0,189.0,2.0,8.6,13,12,1,1,1,0,4.55,,,,,,Y
+Texas A&M,SEC,Seattle,2013,62,2,30,Christine Michael,Running Back,70.0,220.0,2012,88,417,12,4.7,8.0,48.0,0.0,6.0,12,10,2,1,1,0,4.54,27.0,43.0,125.0,6.69,4.02,Y
+Arkansas,SEC,Kansas City,2013,96,3,34,Knile Davis,Running Back,71.0,227.0,2012,112,377,2,3.4,11.0,157.0,1.0,14.3,12,4,8,0,0,0,4.37,31.0,33.5,121.0,6.96,4.38,Y
+UCLA,Pac-12,Green Bay,2013,125,4,28,Johnathan Franklin,Running Back,70.0,205.0,2012,282,1734,13,6.1,33.0,323.0,2.0,9.8,13,9,4,1,0,1,4.49,18.0,31.5,115.0,6.89,4.31,Y
+South Carolina,SEC,San Francisco,2013,131,4,34,Marcus Lattimore,Running Back,71.0,221.0,2012,143,662,11,4.6,26.0,173.0,0.0,6.7,12,10,2,1,1,0,4.65,,,,,,Y
+Stanford,Pac-12,Arizona,2013,140,5,7,Stepfan Taylor,Running Back,69.0,214.0,2012,322,1530,13,4.8,41.0,287.0,2.0,7.0,13,11,2,1,1,0,4.76,17.0,30.0,110.0,7.13,4.5,Y
+Oklahoma State,Big 12,Dallas,2013,151,5,18,Joseph Randle,Running Back,72.0,204.0,2012,274,1417,14,5.2,28.0,224.0,0.0,8.0,12,7,5,1,1,0,4.63,,35.0,123.0,,,Y
+Florida State,ACC,Washington,2013,154,5,21,Chris Thompson,Running Back,67.0,192.0,2012,91,687,5,7.5,21.0,248.0,0.0,11.8,13,11,2,1,1,0,4.42,21.0,,,,,Y
+Florida,SEC,Miami,2013,164,5,31,Mike Gillislee,Running Back,71.0,208.0,2012,244,1152,10,4.7,16.0,159.0,1.0,9.9,12,11,1,1,0,1,4.55,15.0,30.5,119.0,7.12,4.4,Y
+UCF,Conference USA,Las Vegas,2013,181,6,13,Latavius Murray,Running Back,75.0,224.0,2012,198,1106,15,5.6,27.0,231.0,4.0,8.6,13,9,4,1,1,0,,,,,,,N
+Oregon,Pac-12,Carolina,2013,182,6,14,Kenjon Barner,Running Back,69.0,196.0,2012,278,1767,21,6.4,20.0,256.0,2.0,12.8,12,11,1,1,1,0,4.52,20.0,35.5,122.0,6.87,4.2,Y
+Clemson,ACC,Arizona,2013,187,6,19,Andre Ellington,Running Back,69.0,199.0,2012,212,1081,8,5.1,14.0,232.0,1.0,16.6,12,10,2,1,1,0,4.61,,34.0,122.0,,,Y
+Miami,ACC,Tampa Bay,2013,189,6,21,Mike James,Running Back,62.0,223.0,2012,147,621,6,4.2,30.0,344.0,3.0,11.5,12,7,5,0,0,0,4.53,28.0,35.0,115.0,,4.62,Y
+Nebraska,Big Ten,Cincinnati,2013,190,6,22,Rex Burkhead,Running Back,70.0,214.0,2012,98,675,5,6.9,11.0,92.0,2.0,8.4,13,10,3,1,0,1,4.73,21.0,39.0,125.0,6.85,4.09,Y
+LSU,SEC,Seattle,2013,194,6,26,Spencer Ware,Running Back,70.0,228.0,2012,94,367,1,3.9,18.0,230.0,1.0,12.8,12,10,2,1,0,1,4.62,,,,,,Y
+Notre Dame,FBS Independents,Detroit,2013,199,6,31,Theo Riddick,Running Back,,201.0,2012,190,917,5,4.8,36.0,370.0,2.0,10.3,12,12,0,1,0,1,4.68,,32.0,118.0,,,Y
+Rutgers,Big East,Washington,2013,228,7,22,Jawan Jamison,Running Back,67.0,203.0,2012,255,1075,4,4.2,28.0,323.0,2.0,11.5,12,9,3,1,0,1,4.68,20.0,29.0,110.0,,,Y
+Utah State,Western Athletic,Indianapolis,2013,230,7,24,Kerwynn Williams,Running Back,68.0,195.0,2012,218,1512,15,6.9,45.0,697.0,5.0,15.5,12,10,2,1,1,0,4.48,17.0,35.0,118.0,7.15,4.15,Y
+Massachusetts,Mid-American,New York,2013,253,7,47,Michael Cox,Running Back,72.0,220.0,2012,198,710,5,3.6,13.0,63.0,0.0,4.8,12,1,11,0,0,0,,,,,,,N
+Washington,Pac-12,Tennessee,2014,54,2,22,Bishop Sankey,Running Back,70.0,209.0,2013,327,1870,20,5.7,28.0,304.0,1.0,10.9,12,8,4,1,1,0,4.49,26.0,35.5,126.0,6.75,4.0,Y
+LSU,SEC,Cincinnati,2014,55,2,23,Jeremy Hill,Running Back,73.0,233.0,2013,203,1401,16,6.9,18.0,181.0,0.0,10.1,12,9,3,1,1,0,4.56,20.0,29.0,113.0,,,Y
+Ohio State,Big Ten,San Francisco,2014,57,2,25,Carlos Hyde,Running Back,72.0,230.0,2013,208,1521,15,7.3,16.0,147.0,3.0,9.2,13,12,1,1,0,1,4.62,19.0,34.5,114.0,,,Y
+West Virginia,Big 12,Tampa Bay,2014,69,3,5,Charles Sims,Running Back,72.0,214.0,2013,208,1095,11,5.3,45.0,401.0,3.0,8.9,12,4,8,0,0,0,4.48,17.0,37.5,126.0,7.16,4.3,Y
+Auburn,SEC,Los Angeles,2014,75,3,11,Tre Mason,Running Back,69.0,207.0,2013,317,1816,23,5.7,12.0,163.0,1.0,13.6,13,12,1,1,0,1,4.5,,38.5,126.0,,4.15,Y
+Towson,CAA,Cleveland,2014,94,3,30,Terrance West,Running Back,69.0,225.0,2013,36,156,2,4.3,1.0,2.0,0.0,2.0,12,10,2,2,1,1,4.56,16.0,33.5,120.0,,,Y
+Georgia Southern,Southern,Minnesota,2014,96,3,32,Jerick McKinnon,Running Back,69.0,209.0,2013,9,125,1,13.9,,,,,11,7,4,0,0,0,4.41,32.0,40.5,132.0,6.83,4.12,Y
+Kent State,Mid-American,Pittsburgh,2014,97,3,33,Dri Archer,Running Back,68.0,173.0,2013,68,527,6,7.8,25.0,327.0,4.0,13.1,12,4,8,0,0,0,4.26,20.0,38.0,122.0,6.86,4.06,Y
+Florida State,ACC,Atlanta,2014,103,4,3,Devonta Freeman,Running Back,68.0,206.0,2013,173,1016,14,5.9,22.0,278.0,1.0,12.6,13,13,0,1,1,0,4.58,,31.5,118.0,7.11,4.26,Y
+Boston College,ACC,New York,2014,113,4,13,Andre Williams,Running Back,71.0,230.0,2013,355,2177,18,6.1,,,,,12,7,5,1,0,1,4.56,,38.0,129.0,7.27,4.06,Y
+Arizona,Pac-12,Chicago,2014,117,4,17,Ka'Deem Carey,Running Back,69.0,207.0,2013,349,1885,19,5.4,26.0,173.0,1.0,6.7,12,7,5,1,1,0,4.69,19.0,32.5,115.0,7.08,4.38,Y
+Oregon,Pac-12,Kansas City,2014,124,4,24,De'Anthony Thomas,Running Back,69.0,174.0,2013,96,594,8,6.2,22.0,246.0,1.0,11.2,12,10,2,1,1,0,4.39,8.0,32.0,124.0,,,Y
+Wisconsin,Big Ten,New England,2014,130,4,30,James White,Running Back,69.0,204.0,2013,221,1444,13,6.5,39.0,300.0,2.0,7.7,12,9,3,1,0,1,4.57,23.0,32.0,114.0,7.05,4.2,Y
+Coastal Carolina,Big South,Baltimore,2014,138,4,38,Lorenzo Taliaferro,Running Back,72.0,229.0,2013,10,21,0,2.1,4.0,11.0,1.0,2.8,13,11,2,0,0,0,4.58,18.0,33.0,118.0,6.88,4.22,Y
+LSU,SEC,Houston,2014,181,6,5,Alfred Blue,Running Back,74.0,223.0,2013,71,343,1,4.8,5.0,62.0,0.0,12.4,12,9,3,1,1,0,4.63,13.0,32.0,121.0,7.15,4.5,Y
+Baylor,Big 12,Washington,2014,186,6,10,Lache Seastrunk,Running Back,70.0,201.0,2013,158,1177,11,7.4,,,,,12,11,1,1,0,1,4.51,15.0,41.5,134.0,,,Y
+Arizona State,Pac-12,Los Angeles,2014,201,6,25,Marion Grice,Running Back,72.0,208.0,2013,191,996,14,5.2,50.0,438.0,6.0,8.8,13,10,3,1,0,1,4.67,,,,,,Y
+Stanford,Pac-12,Carolina,2014,204,6,28,Tyler Gaffney,Running Back,72.0,220.0,2013,330,1709,21,5.2,15.0,86.0,1.0,5.7,13,11,2,1,0,1,4.49,,36.5,116.0,6.78,4.18,Y
+UCF,American Athletic,Jacksonville,2014,222,7,7,Storm Johnson,Running Back,72.0,209.0,2013,213,1139,14,5.3,30.0,260.0,3.0,8.7,12,11,1,1,1,0,4.6,16.0,35.5,118.0,,,Y
+Wisconsin,Big Ten,Los Angeles,2015,15,1,15,Melvin Gordon,Running Back,73.0,215.0,2014,343,2587,29,7.5,19.0,153.0,3.0,8.1,13,10,3,1,1,0,4.52,19.0,35.0,126.0,7.04,4.07,Y
+Alabama,SEC,Jacksonville,2015,36,2,4,T.J. Yeldon,Running Back,73.0,226.0,2014,194,979,11,5.0,15.0,180.0,1.0,12.0,13,12,1,1,0,1,4.61,22.0,36.0,117.0,7.19,4.22,Y
+Nebraska,Big Ten,Detroit,2015,54,2,22,Ameer Abdullah,Running Back,69.0,205.0,2014,264,1611,19,6.1,22.0,269.0,3.0,12.2,12,9,3,1,0,1,4.6,24.0,42.5,130.0,6.79,3.95,Y
+Indiana,Big Ten,Atlanta,2015,73,3,9,Tevin Coleman,Running Back,71.0,206.0,2014,270,2036,15,7.5,25.0,141.0,0.0,5.6,12,4,8,0,0,0,4.4,22.0,,,,,Y
+Northern Iowa,MVFC,Arizona,2015,86,3,22,David Johnson,Running Back,73.0,224.0,2014,31,80,0,2.6,10.0,276.0,1.0,27.6,14,9,5,0,0,0,4.5,25.0,41.5,127.0,6.82,4.27,Y
+Florida,SEC,Washington,2015,95,3,31,Matt Jones,Running Back,74.0,231.0,2014,166,817,6,4.9,11.0,65.0,1.0,5.9,11,6,5,1,1,0,4.61,20.0,31.5,112.0,,4.2,Y
+Michigan State,Big Ten,Chicago,2015,106,4,7,Jeremy Langford,Running Back,72.0,208.0,2014,276,1522,22,5.5,11.0,62.0,0.0,5.6,12,10,2,1,1,0,4.42,,34.5,118.0,7.22,4.32,Y
+South Carolina,SEC,San Francisco,2015,126,4,27,Mike Davis,Running Back,69.0,217.0,2014,199,982,9,4.9,32.0,368.0,2.0,11.5,12,6,6,1,1,0,4.61,17.0,34.0,116.0,7.0,4.18,Y
+Minnesota,Big Ten,Tennessee,2015,138,5,2,David Cobb,Running Back,71.0,229.0,2014,315,1629,13,5.2,16.0,162.0,0.0,10.1,12,8,4,1,0,1,4.81,17.0,38.5,121.0,,,Y
+Boise State,Mountain West,Miami,2015,149,5,13,Jay Ajayi,Running Back,72.0,221.0,2014,347,1823,28,5.3,50.0,535.0,4.0,10.7,13,11,2,1,1,0,4.57,19.0,39.0,121.0,7.1,4.1,Y
+Florida State,ACC,Buffalo,2015,155,5,19,Karlos Williams,Running Back,73.0,230.0,2014,150,689,11,4.6,29.0,265.0,1.0,9.1,13,13,0,1,0,1,4.48,16.0,33.5,117.0,7.16,4.46,Y
+Auburn,SEC,Carolina,2015,174,5,38,Cameron Artis-Payne,Running Back,70.0,212.0,2014,303,1608,13,5.3,13.0,147.0,0.0,11.3,12,8,4,1,0,1,4.53,,36.5,118.0,7.13,,Y
+Mississippi State,SEC,Indianapolis,2015,205,6,29,Josh Robinson,Running Back,68.0,217.0,2014,190,1203,11,6.3,28.0,370.0,1.0,13.2,12,10,2,1,0,1,4.7,21.0,32.0,113.0,,,Y
+Missouri,SEC,New Orleans,2015,230,7,13,Marcus Murphy,Running Back,68.0,193.0,2014,177,924,4,5.2,28.0,212.0,1.0,7.6,13,10,3,1,1,0,4.61,11.0,29.0,109.0,,4.4,Y
+Hawai'i,Mountain West,Tampa Bay,2015,231,7,14,Joey Iosefa,Running Back,,247.0,2014,151,617,8,4.1,11.0,76.0,0.0,6.9,13,4,9,0,0,0,5.02,30.0,31.5,110.0,7.24,4.33,Y
+LSU,SEC,Houston,2015,235,7,18,Kenny Hilliard,Running Back,72.0,226.0,2014,90,447,6,5.0,4.0,35.0,0.0,8.8,12,8,4,1,0,1,4.83,,27.0,111.0,7.17,4.4,Y
+Ohio State,Big Ten,Dallas,2016,4,1,4,Ezekiel Elliott,Running Back,72.0,225.0,2015,289,1821,23,6.3,27.0,206.0,0.0,7.6,12,11,1,1,1,0,4.47,,32.5,118.0,,,Y
+Alabama,SEC,Tennessee,2016,45,2,14,Derrick Henry,Running Back,75.0,247.0,2015,395,2219,28,5.6,11.0,91.0,0.0,8.3,13,12,1,2,2,0,4.54,22.0,37.0,130.0,7.2,4.38,Y
+Alabama,SEC,Miami,2016,73,3,10,Kenyan Drake,Running Back,73.0,210.0,2015,77,408,1,5.3,29.0,276.0,1.0,9.5,13,12,1,2,2,0,4.45,10.0,34.5,123.0,7.04,4.21,Y
+Notre Dame,FBS Independents,Seattle,2016,90,3,27,C.J. Prosise,Running Back,73.0,220.0,2015,156,1032,11,6.6,26.0,308.0,1.0,11.8,12,10,2,1,0,1,4.48,,35.5,121.0,,,Y
+San José State,Mountain West,Houston,2016,119,4,21,Tyler Ervin,Running Back,70.0,192.0,2015,294,1601,13,5.4,45.0,334.0,2.0,7.4,12,5,7,1,1,0,4.41,17.0,39.0,130.0,,,Y
+Louisiana Tech,Conference USA,Baltimore,2016,134,4,36,Kenneth Dixon,Running Back,70.0,215.0,2015,197,1070,19,5.4,34.0,467.0,7.0,13.7,12,8,4,1,1,0,4.56,18.0,37.5,121.0,6.97,4.28,Y
+Utah,Pac-12,Denver,2016,136,4,38,Devontae Booker,Running Back,71.0,219.0,2015,268,1261,11,4.7,37.0,318.0,0.0,8.6,12,9,3,1,1,0,4.56,22.0,,,,,Y
+UCLA,Pac-12,New York,2016,149,5,10,Paul Perkins,Running Back,70.0,208.0,2015,237,1343,14,5.7,30.0,242.0,1.0,8.1,12,8,4,1,0,1,4.54,19.0,32.0,124.0,,,Y
+Indiana,Big Ten,Chicago,2016,150,5,11,Jordan Howard,Running Back,72.0,230.0,2015,196,1213,9,6.2,11.0,106.0,1.0,9.6,12,6,6,1,0,1,4.57,16.0,34.0,122.0,,,Y
+West Virginia,Big 12,Philadelphia,2016,153,5,14,Wendell Smallwood,Running Back,71.0,208.0,2015,238,1519,9,6.4,26.0,160.0,0.0,6.2,12,7,5,1,1,0,4.47,14.0,33.5,120.0,6.83,4.28,Y
+Arkansas,SEC,Seattle,2016,171,5,32,Alex Collins,Running Back,70.0,217.0,2015,271,1577,20,5.8,13.0,95.0,0.0,7.3,12,7,5,1,1,0,4.59,18.0,28.5,113.0,,,Y
+Florida,SEC,San Francisco,2016,211,6,36,Kelvin Taylor,Running Back,70.0,207.0,2015,259,1035,13,4.0,17.0,150.0,0.0,8.8,13,10,3,1,0,1,4.6,15.0,32.0,113.0,,,Y
+Eastern Michigan,Mid-American,Dallas,2016,216,6,41,Darius Jackson,Running Back,72.0,220.0,2015,208,1078,14,5.2,21.0,201.0,2.0,9.6,12,1,11,0,0,0,,,,,,,N
+Washington,Pac-12,Detroit,2016,236,7,15,Dwayne Washington,Running Back,73.0,220.0,2015,47,282,4,6.0,25.0,315.0,3.0,12.6,12,6,6,1,1,0,,,,,,,N
+California,Pac-12,New Orleans,2016,237,7,16,Daniel Lasco,Running Back,72.0,209.0,2015,65,331,3,5.1,4.0,24.0,0.0,6.0,12,7,5,1,1,0,4.46,23.0,41.5,135.0,7.22,4.26,Y
+Georgia,SEC,Washington,2016,242,7,21,Keith Marshall,Running Back,71.0,219.0,2015,68,350,3,5.1,4.0,28.0,1.0,7.0,12,9,3,1,1,0,4.31,25.0,30.5,,,,Y
+Clemson,ACC,Seattle,2016,247,7,26,Zac Brooks,Running Back,72.0,200.0,2015,41,234,3,5.7,9.0,113.0,2.0,12.6,13,13,0,2,1,1,,,,,,,N
+LSU,SEC,Jacksonville,2017,4,1,4,Leonard Fournette,Running Back,73.0,240.0,2016,129,843,8,6.5,15.0,146.0,0.0,9.7,11,7,4,1,1,0,4.51,,28.5,,,,Y
+Stanford,Pac-12,Carolina,2017,8,1,8,Christian McCaffrey,Running Back,71.0,202.0,2016,253,1603,13,6.3,37.0,310.0,3.0,8.4,12,9,3,1,1,0,4.48,10.0,37.5,121.0,6.57,4.22,Y
+Florida State,ACC,Minnesota,2017,41,2,9,Dalvin Cook,Running Back,70.0,210.0,2016,288,1765,19,6.1,33.0,488.0,1.0,14.8,12,9,3,1,1,0,4.49,22.0,30.5,116.0,7.27,4.53,Y
+Oklahoma,Big 12,Cincinnati,2017,48,2,16,Joe Mixon,Running Back,73.0,228.0,2016,187,1274,10,6.8,37.0,538.0,5.0,14.5,12,10,2,1,1,0,,,,,,,N
+Tennessee,SEC,New Orleans,2017,67,3,3,Alvin Kamara,Running Back,70.0,214.0,2016,103,596,9,5.8,40.0,392.0,4.0,9.8,12,8,4,1,1,0,4.56,15.0,39.5,131.0,,,Y
+Toledo,Mid-American,Kansas City,2017,86,3,22,Kareem Hunt,Running Back,71.0,216.0,2016,262,1475,10,5.6,41.0,403.0,1.0,9.8,12,9,3,1,0,1,4.62,18.0,36.5,119.0,,,Y
+Texas,Big 12,Houston,2017,89,3,25,D'Onta Foreman,Running Back,72.0,233.0,2016,323,2028,15,6.3,7.0,75.0,0.0,10.7,12,5,7,0,0,0,,18.0,,,,,Y
+Pittsburgh,ACC,Pittsburgh,2017,105,3,41,James Conner,Running Back,74.0,233.0,2016,216,1092,16,5.1,21.0,302.0,4.0,14.4,12,8,4,1,0,1,4.65,20.0,29.0,113.0,,,Y
+Oklahoma,Big 12,Washington,2017,114,4,7,Samaje Perine,Running Back,71.0,233.0,2016,196,1060,12,5.4,10.0,106.0,1.0,10.6,12,10,2,1,1,0,4.65,30.0,33.0,116.0,7.26,4.37,Y
+North Carolina A&T,MEAC,Chicago,2017,119,4,13,Tarik Cohen,Running Back,67.0,179.0,2016,28,149,1,5.3,9.0,125.0,0.0,13.9,12,9,3,0,0,0,4.42,11.0,31.5,118.0,,,Y
+Utah,Pac-12,San Francisco,2017,121,4,15,Joe Williams,Running Back,71.0,210.0,2016,210,1407,10,6.7,9.0,107.0,0.0,11.9,12,8,4,1,1,0,4.41,14.0,35.0,125.0,7.19,4.19,Y
+San Diego State,Mountain West,Philadelphia,2017,132,4,26,Donnel Pumphrey,Running Back,68.0,176.0,2016,349,2133,17,6.1,27.0,231.0,0.0,8.6,13,10,3,1,1,0,4.48,5.0,33.5,117.0,,,Y
+BYU,FBS Independents,Green Bay,2017,134,4,28,Jamaal Williams,Running Back,72.0,212.0,2016,234,1375,12,5.9,7.0,80.0,0.0,11.4,12,8,4,1,1,0,4.59,,30.0,123.0,7.25,4.53,Y
+Clemson,ACC,New York,2017,140,4,34,Wayne Gallman,Running Back,73.0,215.0,2016,232,1133,17,4.9,20.0,152.0,0.0,7.6,13,12,1,2,2,0,4.6,21.0,29.5,120.0,7.17,4.28,Y
+South Florida,American Athletic,Indianapolis,2017,143,4,37,Marlon Mack,Running Back,71.0,213.0,2016,174,1187,15,6.8,28.0,227.0,0.0,8.1,12,10,2,1,1,0,4.5,15.0,35.5,125.0,,,Y
+Wyoming,Mountain West,Atlanta,2017,156,5,12,Brian Hill,Running Back,73.0,219.0,2016,349,1860,22,5.3,8.0,67.0,0.0,8.4,13,8,5,1,0,1,4.54,15.0,34.0,125.0,7.03,4.32,Y
+Boise State,Mountain West,Tampa Bay,2017,162,5,18,Jeremy McNichols,Running Back,69.0,214.0,2016,314,1709,23,5.4,37.0,474.0,4.0,12.8,12,10,2,1,0,1,4.49,,35.5,121.0,6.93,4.28,Y
+North Carolina,ACC,Arizona,2017,179,5,36,T.J. Logan,Running Back,70.0,196.0,2016,120,650,7,5.4,29.0,244.0,3.0,8.4,12,8,4,1,0,1,4.37,17.0,33.5,121.0,,,Y
+UTEP,Conference USA,Green Bay,2017,182,5,39,Aaron Jones,Running Back,70.0,208.0,2016,229,1773,17,7.7,28.0,233.0,3.0,8.3,12,4,8,0,0,0,4.56,16.0,37.5,127.0,6.82,4.2,Y
+Louisiana,Sun Belt,New York,2017,188,6,4,Elijah McGuire,Running Back,70.0,214.0,2016,232,1127,7,4.9,29.0,238.0,2.0,8.2,12,6,6,1,0,1,4.53,15.0,36.0,120.0,7.26,4.56,Y
+Utah State,Mountain West,Green Bay,2017,238,7,20,Devante Mays,Running Back,70.0,230.0,2016,37,259,3,7.0,1.0,8.0,0.0,8.0,12,3,9,0,0,0,,,,,,,N
+North Carolina,ACC,Las Vegas,2017,242,7,24,Elijah Hood,Running Back,71.0,232.0,2016,145,858,8,5.9,25.0,142.0,0.0,5.7,12,8,4,1,0,1,,18.0,,,,,Y
+Oklahoma State,Big 12,Seattle,2017,249,7,31,Christopher Carson,Running Back,72.0,218.0,2016,82,559,9,6.8,13.0,128.0,1.0,9.8,12,9,3,1,1,0,4.58,23.0,37.0,130.0,,,Y
+NC State,ACC,Cleveland,2017,252,7,34,Matthew Dayes,Running Back,69.0,205.0,2016,249,1166,10,4.7,32.0,267.0,0.0,8.3,12,6,6,1,1,0,4.47,18.0,28.0,109.0,,,Y
+Penn State,Big Ten,New York,2018,2,1,2,Saquon Barkley,Running Back,72.0,233.0,2017,217,1271,18,5.9,54.0,632.0,3.0,11.7,12,10,2,1,1,0,4.4,29.0,41.0,,,4.24,Y
+San Diego State,Mountain West,Seattle,2018,27,1,27,Rashaad Penny,Running Back,71.0,220.0,2017,289,2248,23,7.8,19.0,135.0,2.0,7.1,12,10,2,1,0,1,4.46,13.0,32.5,120.0,,,Y
+Georgia,SEC,New England,2018,31,1,31,Sony Michel,Running Back,71.0,214.0,2017,156,1227,16,7.9,9.0,96.0,1.0,10.7,13,12,1,2,1,1,4.54,22.0,,,,4.21,Y
+Georgia,SEC,Cleveland,2018,35,2,3,Nick Chubb,Running Back,71.0,227.0,2017,223,1345,15,6.0,4.0,30.0,0.0,7.5,13,12,1,2,1,1,4.52,29.0,38.5,128.0,7.09,4.25,Y
+USC,Pac-12,Tampa Bay,2018,38,2,6,Ronald Jones II,Running Back,71.0,205.0,2017,261,1550,19,5.9,14.0,187.0,1.0,13.4,13,11,2,1,0,1,4.65,,36.5,,,,Y
+Auburn,SEC,Detroit,2018,43,2,11,Kerryon Johnson,Running Back,72.0,213.0,2017,285,1391,18,4.9,24.0,194.0,2.0,8.1,13,10,3,1,0,1,,11.0,40.0,126.0,7.07,4.29,Y
+LSU,SEC,Washington,2018,59,2,27,Derrius Guice,Running Back,71.0,224.0,2017,237,1251,11,5.3,18.0,124.0,2.0,6.9,12,9,3,1,0,1,4.49,15.0,31.5,,,,Y
+Oregon,Pac-12,Denver,2018,71,3,7,Royce Freeman,Running Back,72.0,229.0,2017,244,1475,16,6.0,14.0,164.0,0.0,11.7,12,7,5,1,0,1,4.54,17.0,34.0,118.0,6.9,4.16,Y
+NC State,ACC,Indianapolis,2018,104,4,4,Nyheim Hines,Running Back,68.0,198.0,2017,197,1112,12,5.6,26.0,152.0,0.0,5.8,12,8,4,1,1,0,4.38,,35.5,119.0,7.18,4.35,Y
+Miami,ACC,Cincinnati,2018,112,4,12,Mark Walton,Running Back,70.0,202.0,2017,56,428,3,7.6,7.0,91.0,0.0,13.0,12,10,2,1,0,1,4.6,18.0,31.5,118.0,,,Y
+Southern Miss,Conference USA,Atlanta,2018,126,4,26,Ito Smith,Running Back,69.0,198.0,2017,248,1413,13,5.7,40.0,396.0,2.0,9.9,12,8,4,1,0,1,,,,,,,N
+Arizona State,Pac-12,Miami,2018,131,4,31,Kalen Ballage,Running Back,74.0,228.0,2017,157,669,6,4.3,20.0,91.0,0.0,4.6,12,7,5,1,0,1,4.46,15.0,33.5,122.0,6.91,4.35,Y
+Fordham,Patriot,Arizona,2018,134,4,34,Chase Edmonds,Running Back,69.0,205.0,2017,15,42,1,2.8,2.0,21.0,0.0,10.5,11,4,7,0,0,0,4.55,19.0,34.0,122.0,6.79,4.07,Y
+Ole Miss,SEC,Indianapolis,2018,169,5,32,Jordan Wilkins,Running Back,73.0,216.0,2017,155,1011,9,6.5,26.0,241.0,1.0,9.3,12,6,6,0,0,0,,16.0,36.0,117.0,,4.27,Y
+Tennessee,SEC,Los Angeles,2018,176,6,2,John Kelly,Running Back,70.0,216.0,2017,189,778,9,4.1,37.0,299.0,0.0,8.1,12,4,8,0,0,0,,15.0,35.0,120.0,7.13,4.51,Y
+Louisiana Tech,Conference USA,New Orleans,2018,201,6,27,Boston Scott,Running Back,67.0,197.0,2017,182,1040,8,5.7,20.0,181.0,1.0,9.1,12,6,6,1,1,0,,,,,,,N
+Arkansas,SEC,Denver,2018,226,7,8,David Williams,Running Back,72.0,226.0,2017,117,656,8,5.6,10.0,171.0,2.0,17.1,12,4,8,0,0,0,,,,,,,N
+Alabama,SEC,Dallas,2018,236,7,18,Bo Scarbrough,Running Back,73.0,228.0,2017,124,596,8,4.8,17.0,109.0,0.0,6.4,12,11,1,2,2,0,4.52,14.0,40.0,129.0,,4.34,Y
+Northwestern,Big Ten,Los Angeles,2018,251,7,33,Justin Jackson,Running Back,72.0,193.0,2017,287,1311,11,4.6,44.0,276.0,0.0,6.3,12,9,3,1,1,0,4.52,13.0,38.5,122.0,6.81,4.07,Y
+Alabama,SEC,Las Vegas,2019,24,1,24,Josh Jacobs,Running Back,70.0,220.0,2018,120,640,11,5.3,20.0,247.0,3.0,12.4,13,13,0,2,1,1,,,,,,,Y
+Penn State,Big Ten,Philadelphia,2019,53,2,21,Miles Sanders,Running Back,71.0,211.0,2018,219,1271,9,5.8,24.0,139.0,0.0,5.8,12,9,3,1,0,1,4.49,20.0,36.0,124.0,6.89,4.19,Y
+Memphis,American Athletic,Los Angeles,2019,70,3,6,Darrell Henderson,Running Back,68.0,208.0,2018,214,1909,22,8.9,19.0,295.0,3.0,15.5,13,8,5,1,0,1,4.49,22.0,33.5,121.0,,,Y
+Iowa State,Big 12,Chicago,2019,73,3,9,David Montgomery,Running Back,70.0,222.0,2018,255,1185,13,4.6,22.0,157.0,0.0,7.1,12,8,4,1,0,1,4.63,15.0,28.5,121.0,,,Y
+Florida Atlantic,Conference USA,Buffalo,2019,74,3,10,Devin Singletary,Running Back,68.0,203.0,2018,261,1348,22,5.2,6.0,36.0,0.0,6.0,12,5,7,0,0,0,4.66,15.0,35.0,117.0,7.32,4.4,Y
+Alabama,SEC,New England,2019,87,3,23,Damien Harris,Running Back,70.0,216.0,2018,150,876,9,5.8,22.0,204.0,0.0,9.3,13,13,0,2,1,1,4.57,16.0,37.0,121.0,,,Y
+Boise State,Mountain West,Minnesota,2019,102,3,38,Alexander Mattison,Running Back,71.0,221.0,2018,302,1412,17,4.7,27.0,173.0,0.0,6.4,13,10,3,0,0,0,4.67,22.0,35.0,127.0,7.13,4.29,Y
+Stanford,Pac-12,Washington,2019,112,4,10,Bryce Love,Running Back,69.0,200.0,2018,165,736,6,4.5,20.0,99.0,0.0,5.0,12,8,4,1,1,0,,18.0,,,,,Y
+Oklahoma State,Big 12,Baltimore,2019,113,4,11,Justice Hill,Running Back,70.0,198.0,2018,158,930,9,5.9,13.0,68.0,0.0,5.2,12,6,6,1,1,0,4.4,21.0,40.0,130.0,,,Y
+Kentucky,SEC,Pittsburgh,2019,122,4,20,Benny Snell Jr.,Running Back,70.0,224.0,2018,288,1434,16,5.0,17.0,105.0,0.0,6.2,12,9,3,1,1,0,4.66,16.0,29.5,119.0,7.07,4.33,Y
+Memphis,American Athletic,Dallas,2019,128,4,26,Tony Pollard,Running Back,72.0,210.0,2018,79,553,6,7.0,38.0,444.0,3.0,11.7,13,8,5,1,0,1,4.52,13.0,35.0,121.0,,,Y
+Temple,American Athletic,Jacksonville,2019,140,5,2,Ryquell Armstead,Running Back,71.0,220.0,2018,210,1098,13,5.2,8.0,52.0,0.0,6.5,12,8,4,1,0,1,4.45,22.0,30.0,114.0,7.02,4.29,Y
+Pittsburgh,ACC,Atlanta,2019,152,5,14,Qadree Ollison,Running Back,73.0,228.0,2018,194,1213,11,6.3,11.0,66.0,0.0,6.0,13,7,6,1,0,1,4.58,19.0,29.5,114.0,7.53,4.31,Y
+Florida,SEC,Carolina,2019,154,5,16,Jordan Scarlett,Running Back,71.0,208.0,2018,131,776,5,5.9,10.0,84.0,0.0,8.4,12,9,3,1,1,0,4.47,21.0,30.0,116.0,7.37,4.63,Y
+Texas A&M,SEC,Cincinnati,2019,182,6,9,Trayveon Williams,Running Back,68.0,206.0,2018,271,1760,18,6.5,27.0,277.0,1.0,10.3,12,8,4,1,1,0,4.51,19.0,33.0,121.0,7.44,4.44,Y
+Maryland,Big Ten,Detroit,2019,186,6,13,Ty Johnson,Running Back,71.0,210.0,2018,66,506,3,7.7,6.0,22.0,0.0,3.7,12,5,7,0,0,0,,,,,,,N
+Notre Dame,FBS Independents,Green Bay,2019,194,6,21,Dexter Williams,Running Back,71.0,212.0,2018,158,995,12,6.3,16.0,133.0,1.0,8.3,12,12,0,1,0,1,4.57,17.0,36.0,130.0,7.0,4.16,Y
+Miami,ACC,Seattle,2019,204,6,31,Travis Homer,Running Back,70.0,201.0,2018,164,985,4,6.0,19.0,186.0,0.0,9.8,12,7,5,1,0,1,4.48,17.0,39.5,130.0,7.07,4.31,Y
+Oklahoma,Big 12,Cincinnati,2019,211,6,38,Rodney Anderson,Running Back,72.0,224.0,2018,11,119,3,10.8,,,,,13,12,1,1,0,1,,25.0,,,,,Y
+Utah State,Mountain West,Kansas City,2019,214,6,41,Darwin Thompson,Running Back,68.0,198.0,2018,153,1044,14,6.8,23.0,351.0,2.0,15.3,12,10,2,1,1,0,,,,,,,N
+Ohio State,Big Ten,Dallas,2019,218,7,4,Mike Weber,Running Back,70.0,211.0,2018,171,954,5,5.6,21.0,112.0,1.0,5.3,13,12,1,1,1,0,4.47,22.0,33.5,,,,Y
+Texas A&M,SEC,Houston,2019,220,7,6,Cullen Gillaspia,Running Back,73.0,234.0,2018,5,33,1,6.6,5.0,52.0,0.0,10.4,12,8,4,1,1,0,,,,,,,N
+Florida Atlantic,Conference USA,Chicago,2019,222,7,8,Kerrith Whyte Jr.,Running Back,70.0,197.0,2018,134,866,8,6.5,10.0,160.0,2.0,16.0,12,5,7,0,0,0,,,,,,,N
+Washington,Pac-12,Miami,2019,234,7,20,Myles Gaskin,Running Back,69.0,205.0,2018,257,1269,12,4.9,21.0,77.0,1.0,3.7,13,10,3,1,0,1,4.58,24.0,35.5,118.0,7.19,4.27,Y
+LSU,SEC,Kansas City,2020,32,1,32,Clyde Edwards-Helaire,Running Back,67.0,207.0,2019,215,1414,16,6.6,55.0,453.0,1.0,8.2,13,13,0,2,2,0,4.6,15.0,39.5,123.0,,,Y
+Georgia,SEC,Detroit,2020,35,2,3,D'Andre Swift,Running Back,68.0,212.0,2019,196,1218,7,6.2,24.0,216.0,1.0,9.0,13,11,2,1,1,0,4.48,,35.5,121.0,,,Y
+Wisconsin,Big Ten,Indianapolis,2020,41,2,9,Jonathan Taylor,Running Back,70.0,226.0,2019,320,2003,21,6.3,26.0,252.0,5.0,9.7,13,10,3,1,0,1,4.39,17.0,36.0,123.0,7.01,4.24,Y
+Florida State,ACC,Los Angeles,2020,52,2,20,Cam Akers,Running Back,70.0,217.0,2019,231,1144,14,5.0,30.0,225.0,4.0,7.5,12,6,6,1,0,1,4.47,20.0,35.5,122.0,,4.42,Y
+Ohio State,Big Ten,Baltimore,2020,55,2,23,J.K. Dobbins,Running Back,70.0,209.0,2019,301,2003,21,6.7,23.0,247.0,2.0,10.7,13,13,0,1,0,1,,23.0,,,,,Y
+Boston College,ACC,Green Bay,2020,62,2,30,AJ Dillon,Running Back,72.0,247.0,2019,318,1685,14,5.3,13.0,195.0,1.0,15.0,12,6,6,1,0,1,4.53,23.0,41.0,131.0,7.19,,Y
+Vanderbilt,SEC,Tampa Bay,2020,76,3,12,Ke'Shawn Vaughn,Running Back,70.0,214.0,2019,198,1028,9,5.2,28.0,270.0,1.0,9.6,12,3,9,0,0,0,4.51,,32.0,117.0,,,Y
+Utah,Pac-12,Buffalo,2020,86,3,22,Zack Moss,Running Back,69.0,223.0,2019,235,1416,15,6.0,28.0,388.0,2.0,13.9,13,11,2,1,0,1,4.65,19.0,33.0,,,4.37,Y
+App State,Sun Belt,Tennessee,2020,93,3,29,Darrynton Evans,Running Back,70.0,203.0,2019,255,1479,18,5.8,21.0,198.0,5.0,9.4,13,12,1,1,1,0,4.41,20.0,37.0,125.0,,,Y
+UCLA,Pac-12,Los Angeles,2020,112,4,6,Joshua Kelley,Running Back,71.0,212.0,2019,229,1060,12,4.6,11.0,71.0,1.0,6.5,12,4,8,0,0,0,4.49,23.0,31.0,121.0,6.95,4.28,Y
+Florida,SEC,New York,2020,120,4,14,La'Mical Perine,Running Back,71.0,216.0,2019,132,676,6,5.1,40.0,262.0,5.0,6.6,12,10,2,1,1,0,4.62,22.0,35.0,118.0,7.13,4.31,Y
+Maryland,Big Ten,Pittsburgh,2020,124,4,18,Anthony McFarland Jr.,Running Back,68.0,208.0,2019,114,614,8,5.4,17.0,126.0,1.0,7.4,12,3,9,0,0,0,4.44,,29.5,116.0,,,Y
+Miami,ACC,Seattle,2020,144,4,38,DeeJay Dallas,Running Back,70.0,217.0,2019,114,693,8,6.1,14.0,140.0,2.0,10.0,12,6,6,1,0,1,4.58,,33.5,119.0,7.18,4.32,Y
+New Mexico State,FBS Independents,Detroit,2020,172,5,27,Jason Huntley,Running Back,68.0,190.0,2019,154,1090,9,7.1,40.0,192.0,2.0,4.8,12,2,10,0,0,0,,,,,,,N
+Arizona State,Pac-12,Arizona,2020,222,7,8,Eno Benjamin,Running Back,69.0,207.0,2019,253,1083,10,4.3,42.0,347.0,2.0,8.3,12,7,5,1,1,0,4.57,12.0,39.0,122.0,6.97,4.25,Y
+Louisiana,Sun Belt,Tampa Bay,2020,245,7,31,Raymond Calais,Running Back,68.0,188.0,2019,117,886,6,7.6,10.0,67.0,1.0,6.7,13,10,3,1,1,0,4.42,20.0,37.5,120.0,,,Y
+Alabama,SEC,Pittsburgh,2021,24,1,24,Najee Harris,Running Back,73.0,232.0,2020,251,1466,26,5.8,43.0,425.0,4.0,9.9,11,11,0,2,2,0,,,,,,,N
+Clemson,ACC,Jacksonville,2021,25,1,25,Travis Etienne,Running Back,70.0,215.0,2020,168,914,14,5.4,48.0,588.0,2.0,12.3,11,10,1,1,0,1,4.45,18.0,33.5,128.0,,,Y
+North Carolina,ACC,Denver,2021,35,2,3,Javonte Williams,Running Back,70.0,212.0,2020,157,1140,19,7.3,25.0,305.0,3.0,12.2,11,8,3,1,0,1,4.55,22.0,36.0,123.0,6.97,4.09,Y
+Ohio State,Big Ten,San Francisco,2021,88,3,25,Trey Sermon,Running Back,72.0,215.0,2020,116,870,4,7.5,12.0,95.0,0.0,7.9,6,6,0,2,1,1,4.57,,37.0,125.0,6.83,4.28,Y
+North Carolina,ACC,New York,2021,107,4,2,Michael Carter,Running Back,68.0,201.0,2020,156,1245,9,8.0,25.0,267.0,2.0,10.7,11,8,3,1,0,1,4.5,16.0,34.0,119.0,6.81,3.98,Y
+Iowa State,Big 12,Minnesota,2021,119,4,14,Kene Nwangwu,Running Back,73.0,210.0,2020,61,339,4,5.6,3.0,22.0,0.0,7.3,11,8,3,1,1,0,,,,,,,N
+Oklahoma,Big 12,New England,2021,120,4,15,Rhamondre Stevenson,Running Back,72.0,231.0,2020,101,664,7,6.6,18.0,211.0,0.0,11.7,10,8,2,1,1,0,4.64,15.0,31.5,112.0,7.09,4.15,Y
+Oklahoma State,Big 12,Carolina,2021,126,4,21,Chuba Hubbard,Running Back,72.0,210.0,2020,132,623,5,4.7,8.0,52.0,1.0,6.5,10,7,3,1,1,0,4.48,20.0,36.0,120.0,7.24,4.26,Y
+Louisiana,Sun Belt,San Francisco,2021,194,6,10,Elijah Mitchell,Running Back,70.0,201.0,2020,141,878,8,6.2,16.0,153.0,0.0,9.6,10,9,1,1,1,0,4.38,17.0,37.5,128.0,6.94,4.19,Y
+Arizona,Pac-12,New York,2021,196,6,12,Gary Brightwell,Running Back,71.0,218.0,2020,86,386,1,4.5,13.0,58.0,0.0,4.5,5,0,5,0,0,0,4.62,17.0,34.5,118.0,7.51,4.48,Y
+Missouri,SEC,Los Angeles,2021,198,6,14,Larry Rountree III,Running Back,71.0,211.0,2020,209,972,14,4.7,15.0,100.0,0.0,6.7,10,5,5,0,0,0,4.62,,30.0,,6.96,,Y
+Michigan,Big Ten,Cincinnati,2021,202,6,18,Chris Evans,Running Back,71.0,211.0,2020,16,73,1,4.6,9.0,87.0,0.0,9.7,6,2,4,0,0,0,4.5,20.0,40.5,127.0,6.83,4.12,Y
+Virginia Tech,ACC,Chicago,2021,217,6,33,Khalil Herbert,Running Back,69.0,210.0,2020,155,1183,8,7.6,10.0,179.0,1.0,17.9,11,5,6,0,0,0,4.46,22.0,33.0,115.0,6.96,4.31,Y
+Maryland,Big Ten,Los Angeles,2021,233,7,5,Jake Funk,Running Back,70.0,205.0,2020,60,511,3,8.5,10.0,68.0,1.0,6.8,5,2,3,0,0,0,4.49,22.0,38.0,122.0,6.71,4.12,Y
+Cincinnati,American Athletic,Miami,2021,244,7,17,Gerrid Doaks,Running Back,72.0,230.0,2020,144,673,7,4.7,14.0,202.0,2.0,14.4,9,9,0,1,0,1,,,,,,,N
+Mississippi State,SEC,Green Bay,2021,256,7,29,Kylin Hill,Running Back,71.0,214.0,2020,15,58,0,3.9,23.0,237.0,1.0,10.3,10,3,7,1,1,0,4.51,22.0,36.0,122.0,7.13,4.35,Y
+Oregon State,Pac-12,Detroit,2021,257,7,30,Jermar Jefferson,Running Back,70.0,206.0,2020,133,858,7,6.5,9.0,67.0,0.0,7.4,7,2,5,0,0,0,4.57,13.0,31.0,115.0,7.38,4.38,Y
+Iowa State,Big 12,New York,2022,36,2,4,Breece Hall,Running Back,71.0,217.0,2021,253,1472,20,5.8,36.0,302.0,3.0,8.4,12,7,5,1,0,1,4.39,,40.0,126.0,,,Y
+Michigan State,Big Ten,Seattle,2022,41,2,9,Ken Walker III,Running Back,69.0,211.0,2021,263,1636,18,6.2,13.0,89.0,1.0,6.8,12,10,2,1,1,0,4.38,,34.0,122.0,,,Y
+Georgia,SEC,Buffalo,2022,63,2,31,James Cook,Running Back,71.0,199.0,2021,113,728,7,6.4,27.0,284.0,4.0,10.5,13,12,1,2,2,0,4.42,,33.0,124.0,,,Y
+Arizona State,Pac-12,Tampa Bay,2022,91,3,27,Rachaad White,Running Back,72.0,214.0,2021,182,1006,15,5.5,43.0,456.0,1.0,10.6,12,8,4,1,0,1,4.48,,38.0,125.0,,,Y
+LSU,SEC,San Francisco,2022,93,3,29,Tyrion Davis-Price,Running Back,72.0,211.0,2021,211,1003,6,4.8,10.0,64.0,0.0,6.4,12,6,6,1,0,1,4.48,,30.0,117.0,,,Y
+Alabama,SEC,Washington,2022,98,3,34,Brian Robinson Jr.,Running Back,74.0,225.0,2021,271,1343,14,5.0,35.0,296.0,2.0,8.5,13,12,1,2,1,1,4.53,,30.0,119.0,,,Y
+Florida,SEC,Houston,2022,107,4,2,Dameon Pierce,Running Back,70.0,218.0,2021,100,574,13,5.7,19.0,216.0,3.0,11.4,12,6,6,1,0,1,4.59,21.0,34.5,119.0,,,Y
+Georgia,SEC,Las Vegas,2022,122,4,17,Zamir White,Running Back,72.0,214.0,2021,160,856,11,5.4,9.0,75.0,0.0,8.3,13,12,1,2,2,0,4.4,,33.5,128.0,,,Y
+Texas A&M,SEC,Los Angeles,2022,123,4,18,Isaiah Spiller,Running Back,72.0,217.0,2021,179,1011,6,5.6,25.0,189.0,1.0,7.6,12,8,4,0,0,0,,,30.0,114.0,,,Y
+South Dakota State,MVFC,New England,2022,127,4,22,Pierre Strong Jr.,Running Back,71.0,207.0,2021,13,138,2,10.6,3.0,8.0,0.0,2.7,14,11,3,1,0,1,4.37,,36.0,124.0,,,Y
+Michigan,Big Ten,Tennessee,2022,131,4,26,Hassan Haskins,Running Back,74.0,228.0,2021,270,1327,20,4.9,18.0,131.0,0.0,7.3,13,12,1,1,0,1,,27.0,,,,,Y
+BYU,FBS Independents,Atlanta,2022,151,5,8,Tyler Allgeier,Running Back,71.0,224.0,2021,276,1606,23,5.8,28.0,199.0,0.0,7.1,12,10,2,1,0,1,4.6,,33.0,120.0,,,Y
+Ole Miss,SEC,Jacksonville,2022,154,5,11,Snoop Conner,Running Back,70.0,222.0,2021,130,647,13,5.0,14.0,82.0,0.0,5.9,12,10,2,1,0,1,4.59,25.0,29.5,118.0,,,Y
+Cincinnati,American Athletic,Cleveland,2022,156,5,13,Jerome Ford,Running Back,71.0,210.0,2021,215,1319,19,6.1,21.0,220.0,1.0,10.5,13,13,0,1,0,1,4.46,,31.0,118.0,,,Y
+Notre Dame,FBS Independents,Los Angeles,2022,164,5,21,Kyren Williams,Running Back,69.0,194.0,2021,204,1002,14,4.9,42.0,359.0,3.0,8.5,12,11,1,1,0,1,4.65,,32.0,116.0,,,Y
+North Carolina,ACC,Minnesota,2022,169,5,26,Ty Chandler,Running Back,71.0,204.0,2021,182,1092,13,6.0,15.0,216.0,1.0,14.4,12,6,6,1,0,1,4.38,,31.0,121.0,,,Y
+South Carolina,SEC,New England,2022,183,6,4,Kevin Harris,Running Back,70.0,221.0,2021,152,660,4,4.3,11.0,89.0,0.0,8.1,12,6,6,1,1,0,,21.0,38.5,126.0,,,Y
+Missouri,SEC,Baltimore,2022,196,6,18,Tyler Badie,Running Back,68.0,197.0,2021,268,1604,14,6.0,54.0,330.0,4.0,6.1,12,6,6,1,0,1,4.45,,33.5,121.0,,,Y
+USC,Pac-12,Arizona,2022,201,6,23,Keaontay Ingram,Running Back,72.0,221.0,2021,156,911,5,5.8,22.0,156.0,0.0,7.1,12,4,8,0,0,0,4.53,,34.5,122.0,,,Y
+Baylor,Big 12,Chicago,2022,203,6,25,Trestan Ebner,Running Back,71.0,206.0,2021,148,799,2,5.4,28.0,284.0,2.0,10.1,13,11,2,1,1,0,4.43,,30.0,,,,Y
+UCLA,Pac-12,Las Vegas,2022,250,7,29,Brittain Brown,Running Back,73.0,205.0,2021,102,616,7,6.0,18.0,129.0,0.0,7.2,12,8,4,0,0,0,,,,,,,N
+Rutgers,Big Ten,Kansas City,2022,251,7,30,Isaih Pacheco,Running Back,70.0,216.0,2021,167,647,5,3.9,13.0,25.0,0.0,1.9,12,5,7,1,0,1,4.37,,33.0,118.0,,,Y
+Texas,Big 12,Atlanta,2023,8,1,8,Bijan Robinson,Running Back,71.0,215.0,2022,258,1578,18,6.1,19.0,314.0,2.0,16.5,12,8,4,1,0,1,4.46,,37.0,124.0,,,Y
+Alabama,SEC,Detroit,2023,12,1,12,Jahmyr Gibbs,Running Back,69.0,199.0,2022,151,926,7,6.1,44.0,444.0,3.0,10.1,12,10,2,1,1,0,4.36,,33.5,,,,Y
+UCLA,Pac-12,Seattle,2023,52,2,21,Zach Charbonnet,Running Back,72.0,214.0,2022,195,1359,14,7.0,37.0,321.0,0.0,8.7,12,9,3,1,0,1,4.53,,37.0,122.0,,,Y
+TCU,Big 12,New Orleans,2023,71,3,8,Kendre Miller,Running Back,71.0,215.0,2022,224,1399,17,6.2,16.0,116.0,0.0,7.3,13,12,1,2,1,1,,,,,,,Y
+Tulane,American Athletic,Tennessee,2023,81,3,18,Tyjae Spears,Running Back,70.0,201.0,2022,229,1581,19,6.9,22.0,256.0,2.0,11.6,13,11,2,1,1,0,,,39.0,125.0,,,Y
+Texas A&M,SEC,Miami,2023,84,3,21,Devon Achane,Running Back,69.0,188.0,2022,196,1102,8,5.6,36.0,196.0,3.0,5.4,12,5,7,0,0,0,4.32,,33.0,,,,Y
+Auburn,SEC,Jacksonville,2023,88,3,25,Tank Bigsby,Running Back,72.0,210.0,2022,179,970,10,5.4,30.0,180.0,0.0,6.0,12,5,7,0,0,0,4.56,,32.5,119.0,,,Y
+Texas,Big 12,Chicago,2023,115,4,13,Roschon Johnson,Running Back,72.0,219.0,2022,93,554,5,6.0,14.0,128.0,1.0,9.1,12,8,4,1,0,1,4.58,,31.5,122.0,,,Y
+Pittsburgh,ACC,New York,2023,143,5,9,Israel Abanikanda,Running Back,70.0,216.0,2022,239,1431,20,6.0,12.0,146.0,1.0,12.2,12,8,4,1,1,0,,,,,,,Y
+Illinois,Big Ten,Cincinnati,2023,163,5,29,Chase Brown,Running Back,70.0,209.0,2022,328,1643,10,5.0,27.0,240.0,3.0,8.9,12,8,4,1,0,1,4.43,,40.0,127.0,,,Y
+Oklahoma,Big 12,New York,2023,172,5,38,Eric Gray,Running Back,70.0,207.0,2022,213,1364,11,6.4,33.0,229.0,0.0,6.9,12,6,6,1,0,1,,,37.5,118.0,,,Y
+Northwestern,Big Ten,Indianapolis,2023,176,5,42,Evan Hull,Running Back,70.0,209.0,2022,221,913,5,4.1,55.0,546.0,2.0,9.9,12,1,11,0,0,0,,,,,,,N
+Kentucky,SEC,Washington,2023,193,6,16,Chris Rodriguez Jr.,Running Back,72.0,217.0,2022,174,903,6,5.2,5.0,41.0,0.0,8.2,12,7,5,1,0,1,,,,,,,N
+Kansas State,Big 12,Dallas,2023,212,6,35,Deuce Vaughn,Running Back,65.0,179.0,2022,293,1558,9,5.3,42.0,378.0,3.0,9.0,13,10,3,1,0,1,,,35.5,116.0,,,Y
+Ole Miss,SEC,Los Angeles,2023,215,6,38,Zach Evans,Running Back,71.0,202.0,2022,144,936,9,6.5,12.0,119.0,1.0,9.9,12,8,4,1,0,1,,,,,,,Y
+UAB,Conference USA,Minnesota,2023,222,7,5,DeWayne McBride,Running Back,70.0,209.0,2022,233,1710,19,7.3,2.0,10.0,0.0,5.0,12,6,6,1,1,0,,,,,,,N
+Central Michigan,Mid-American,Green Bay,2023,235,7,18,Lew Nichols III,Running Back,,,2022,177,601,6,3.4,21.0,128.0,0.0,6.1,12,4,8,0,0,0,,,,,,,N
+Georgia,SEC,Seattle,2023,237,7,20,Kenny McIntosh,Running Back,72.0,204.0,2022,150,829,10,5.5,43.0,504.0,2.0,11.7,13,13,0,2,2,0,4.62,,,,,,Y
+Texas,Big 12,Carolina,2024,46,2,14,Jonathon Brooks,Running Back,72.0,216.0,2023,187,1139,10,6.1,25.0,286.0,1.0,11.4,13,12,1,1,0,1,,,,,,,Y
+Florida State,ACC,Arizona,2024,66,3,2,Trey Benson,Running Back,72.0,216.0,2023,156,905,14,5.8,20.0,227.0,1.0,11.4,13,13,0,1,0,1,4.39,,33.5,122.0,,,Y
+Michigan,Big Ten,Los Angeles,2024,83,3,19,Blake Corum,Running Back,68.0,205.0,2023,258,1245,27,4.8,16.0,117.0,1.0,7.3,13,13,0,2,2,0,4.53,27.0,35.5,,6.82,4.12,Y
+USC,Pac-12,Green Bay,2024,88,3,25,MarShawn Lloyd,Running Back,69.0,220.0,2023,116,820,9,7.1,13.0,232.0,0.0,17.8,12,7,5,1,1,0,4.46,25.0,36.0,118.0,,,Y
+Tennessee,SEC,Miami,2024,120,4,20,Jaylen Wright,Running Back,71.0,210.0,2023,137,1013,4,7.4,22.0,141.0,0.0,6.4,12,8,4,1,1,0,4.38,,38.0,134.0,,,Y
+Oregon,Pac-12,Tampa Bay,2024,125,4,25,Bucky Irving,Running Back,69.0,192.0,2023,186,1180,11,6.3,56.0,413.0,2.0,7.4,13,11,2,1,1,0,4.55,,29.5,115.0,,,Y
+Clemson,ACC,Philadelphia,2024,127,4,27,Will Shipley,Running Back,71.0,206.0,2023,167,827,5,5.0,31.0,244.0,2.0,7.9,12,8,4,1,1,0,,,,,,,Y
+Kentucky,SEC,Buffalo,2024,128,4,28,Ray Davis,Running Back,68.0,211.0,2023,199,1129,14,5.7,33.0,323.0,7.0,9.8,12,7,5,1,0,1,,,,,,,N
+Louisville,ACC,San Francisco,2024,129,4,29,Isaac Guerendo,Running Back,72.0,221.0,2023,132,810,11,6.1,22.0,234.0,0.0,10.6,13,10,3,1,0,1,4.33,,41.5,129.0,6.94,4.15,Y
+Wisconsin,Big Ten,New York,2024,134,4,34,Braelon Allen,Running Back,73.0,235.0,2023,181,984,12,5.4,28.0,131.0,0.0,4.7,12,7,5,1,0,1,,26.0,32.0,117.0,,,Y
+Notre Dame,FBS Independents,Denver,2024,147,5,12,Audric Estime,Running Back,71.0,221.0,2023,210,1341,18,6.4,17.0,142.0,0.0,8.4,12,9,3,1,1,0,4.71,23.0,38.0,125.0,,,Y
+Marshall,Sun Belt,Baltimore,2024,165,5,30,Rasheen Ali,Running Back,71.0,206.0,2023,212,1140,15,5.4,28.0,213.0,1.0,7.6,12,6,6,1,0,1,,,,,,,Y
+Purdue,Big Ten,New York,2024,166,5,31,Tyrone Tracy Jr.,Running Back,71.0,209.0,2023,113,716,8,6.3,19.0,132.0,0.0,6.9,12,4,8,0,0,0,4.48,,40.0,124.0,6.81,4.06,Y
+Texas,Big 12,Jacksonville,2024,167,5,32,Keilan Robinson,Running Back,68.0,191.0,2023,12,134,3,11.2,8.0,56.0,0.0,7.0,13,12,1,1,0,1,4.42,,33.0,125.0,,,Y
+South Dakota State,MVFC,New York,2024,173,5,38,Isaiah Davis,Running Back,72.0,218.0,2023,227,1529,17,6.7,22.0,190.0,1.0,8.6,11,11,0,4,4,0,,,,,,,N
+Troy,Sun Belt,Los Angeles,2024,181,6,5,Kimani Vidal,Running Back,68.0,213.0,2023,296,1662,14,5.6,18.0,201.0,1.0,11.2,13,11,2,1,0,1,4.46,18.0,37.5,120.0,7.01,4.15,Y
+Alabama,SEC,Atlanta,2024,186,6,10,Jase McClellan,Running Back,70.0,221.0,2023,180,890,8,4.9,15.0,137.0,0.0,9.1,13,12,1,1,0,1,,20.0,,,,,Y
+Louisville,ACC,Houston,2024,205,6,29,Jawhar Jordan,Running Back,70.0,193.0,2023,181,1128,13,6.2,21.0,246.0,1.0,11.7,13,10,3,1,0,1,4.56,,,,,,Y
+New Hampshire,CAA,Las Vegas,2024,208,6,32,Dylan Laube,Running Back,70.0,206.0,2023,158,715,9,4.5,68.0,699.0,7.0,10.3,11,6,5,0,0,0,,,,,,,N

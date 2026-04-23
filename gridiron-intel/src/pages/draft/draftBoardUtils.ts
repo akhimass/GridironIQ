@@ -75,6 +75,8 @@ export type AnalyticsSubTab =
   | "scheme_fit"
   | "combine_lab"
   | "trend_signals"
+  | "backtest_lab"
+  | "engine_intel"
   | "rmu_training"
   | "rmu_results"
   | "rmu_predictions";
@@ -85,6 +87,8 @@ export const ANALYTICS_SUB_TABS: AnalyticsSubTab[] = [
   "scheme_fit",
   "combine_lab",
   "trend_signals",
+  "backtest_lab",
+  "engine_intel",
   "rmu_training",
   "rmu_results",
   "rmu_predictions",

@@ -27,6 +27,10 @@ import type {
   ApiDraftProspect,
   ApiDraftRecommendResponse,
 } from "@/lib/api.ts";
+import type { RmuConfidence, RmuData, RmuPosition, RmuProspect } from "@/lib/rmu.ts";
+import { confidenceColor, matchRmu } from "@/lib/rmu.ts";
+import type { EngineData } from "@/lib/engine.ts";
+import { pct, topFeatures } from "@/lib/engine.ts";
 import DraftSimulator from "../DraftSimulator.tsx";
 import type { AnalyticsSubTab, BoardViewTab, DraftRoomTab, PosFilter } from "./draftBoardUtils.ts";
 import {
@@ -36,6 +40,79 @@ import {
   prospectPosPill,
 } from "./draftBoardUtils.ts";
 import type { TableSortKey } from "./draftBoardUtils.ts";
+
+/** Training window for the RMU / SAC first-round model (historical draft classes). */
+const RMU_TRAINING_YEARS = 14;
+
+function r1ChipClass(conf: RmuConfidence | null | undefined): string {
+  if (!conf) return "giq-r1-chip giq-r1-na";
+  switch (conf) {
+    case "LOCK":
+      return "giq-r1-chip giq-r1-lock";
+    case "HIGH":
+      return "giq-r1-chip giq-r1-high";
+    case "MEDIUM":
+      return "giq-r1-chip giq-r1-med";
+    case "LOW":
+      return "giq-r1-chip giq-r1-low";
+    default:
+      return "giq-r1-chip giq-r1-na";
+  }
+}
+
+function R1ProbCell({ rmu }: { rmu: RmuProspect | null }) {
+  if (!rmu) {
+    return <span className="giq-r1-chip giq-r1-na">—</span>;
+  }
+  const pct = Math.round(rmu.r1_probability * 100);
+  return (
+    <span className={r1ChipClass(rmu.confidence)} title={`${rmu.confidence} · ${pct}% P(R1)`}>
+      {pct}%
+    </span>
+  );
+}
+
+function Headshot({
+  rmu,
+  name,
+  size = "sm",
+}: {
+  rmu: RmuProspect | null;
+  name: string;
+  size?: "sm" | "lg";
+}) {
+  const cls = size === "lg" ? "giq-headshot-lg" : "giq-headshot";
+  const dim = size === "lg" ? 96 : 48;
+  if (rmu?.headshot_url) {
+    return (
+      <img
+        src={rmu.headshot_url}
+        alt={name}
+        className={cls}
+        loading="lazy"
+        onError={(e) => {
+          (e.currentTarget as HTMLImageElement).style.display = "none";
+          const holder = e.currentTarget.nextElementSibling as HTMLElement | null;
+          if (holder) holder.style.display = "inline-flex";
+        }}
+      />
+    );
+  }
+  const initials = name
+    .split(/\s+/)
+    .map((part) => part[0] ?? "")
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+  return (
+    <span
+      className={`giq-headshot-placeholder ${cls}`}
+      style={{ width: dim, height: dim, display: "inline-flex" }}
+    >
+      {initials || "?"}
+    </span>
+  );
+}
 
 function radarDataFor(p: ApiDraftProspect) {
   const r = p.radar;
@@ -150,6 +227,14 @@ export interface DraftPlatformViewProps {
   sendChat: () => void;
   consensusConfigured: boolean | undefined;
   refetchBoard: () => void;
+  /** RMU / SAC hackathon first-round model outputs (loaded from /rmu/*.json). */
+  rmuData: RmuData | undefined;
+  rmuLoading: boolean;
+  rmuError: Error | null;
+  /** GridironIQ game-prediction engine outputs (loaded from /engine/*). */
+  engineData: EngineData | undefined;
+  engineLoading: boolean;
+  engineError: Error | null;
 }
 
 const BOARD_TABS: { id: BoardViewTab; label: string }[] = [
@@ -162,6 +247,8 @@ const BOARD_TABS: { id: BoardViewTab; label: string }[] = [
 
 const ANALYTICS_PRIMARY: { id: AnalyticsSubTab; label: string }[] = [
   { id: "model_intel", label: "MODEL_INTEL" },
+  { id: "engine_intel", label: "ENGINE_INTEL" },
+  { id: "backtest_lab", label: "BACKTEST_LAB" },
   { id: "team_needs", label: "TEAM_NEEDS" },
   { id: "scheme_fit", label: "SCHEME_FIT" },
   { id: "combine_lab", label: "COMBINE_LAB" },
@@ -188,6 +275,11 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
 
   const tableRows = p.roomTab === "prospect_db" ? p.prospectDbRows : p.displayRows;
   const topScore = tableRows[0]?.final_draft_score ?? p.board?.prospects?.[0]?.final_draft_score;
+
+  const selectedRmu = p.selected ? matchRmu(p.rmuData, p.selected.player_name) : null;
+  const modelAccuracyPct = p.rmuData
+    ? Math.round(p.rmuData.ensembleAucMean * 100)
+    : null;
 
   const showBoardLayers = p.roomTab === "board" || p.roomTab === "prospect_db";
   const layoutMainClass = p.selected ? "giq-draft-layout giq-draft-layout-with-side" : "giq-draft-layout";
@@ -250,6 +342,33 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
               onClick={() => p.setPosFilter(id)}
             />
           ))}
+        </div>
+
+        <div className="giq-panel-section">
+          <div className="giq-panel-title">GAME_ENGINE</div>
+          <div className="flex flex-wrap items-center gap-2 px-4 py-2">
+            <span className="text-[#29b8e0]">◆</span>
+            <span className="font-mono text-[10px] font-bold tracking-wider text-[#dde4ef]">PREDICTION_STACK</span>
+            <span className="giq-nav-badge">LIVE</span>
+          </div>
+          <NavBtn
+            icon="◇"
+            label="ENGINE_INTEL"
+            active={p.roomTab === "analytics" && p.analyticsSub === "engine_intel"}
+            onClick={() => {
+              p.setRoomTab("analytics");
+              p.setAnalyticsSub("engine_intel");
+            }}
+          />
+          <NavBtn
+            icon="◈"
+            label="BACKTEST_LAB"
+            active={p.roomTab === "analytics" && p.analyticsSub === "backtest_lab"}
+            onClick={() => {
+              p.setRoomTab("analytics");
+              p.setAnalyticsSub("backtest_lab");
+            }}
+          />
         </div>
 
         <div className="giq-panel-section">
@@ -323,31 +442,43 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
           <>
             <div className="giq-kpi-bar">
               <div className="giq-kpi-item">
-                <div className="giq-kpi-label">PICK_SLOT</div>
-                <div className="giq-kpi-value text-[22px]">{p.pickNumber}</div>
-                <div className="giq-kpi-delta">{p.team} · 2026 BOARD</div>
-              </div>
-              <div className="giq-kpi-item">
-                <div className="giq-kpi-label">PROSPECTS</div>
-                <div className="giq-kpi-value text-[22px]">{p.board?.prospects?.length ?? "—"}</div>
-                <div className="giq-kpi-delta">nflverse combine</div>
-              </div>
-              <div className="giq-kpi-item">
-                <div className="giq-kpi-label">FILTERED</div>
-                <div className="giq-kpi-value text-[22px]">{tableRows.length}</div>
-                <div className="giq-kpi-delta">POS + TAB</div>
-              </div>
-              <div className="giq-kpi-item">
-                <div className="giq-kpi-label">TOP_FINAL</div>
-                <div className="giq-kpi-value text-[22px]">{topScore != null ? topScore.toFixed(1) : "—"}</div>
-                <div className="giq-kpi-delta">MODEL_LAYER</div>
-              </div>
-              <div className="giq-kpi-item">
-                <div className="giq-kpi-label">CONSENSUS</div>
-                <div className="giq-kpi-value text-[18px]" style={{ color: p.consensusConfigured ? "#3ecf7a" : "#e05252" }}>
-                  {p.consensusConfigured ? "LIVE" : "MODEL"}
+                <div className="giq-kpi-label">R1_PROJECTED</div>
+                <div className="giq-kpi-value text-[22px] text-[#d4a843]">
+                  {p.rmuData ? p.rmuData.r1Projected : "—"}
                 </div>
-                <div className="giq-kpi-delta">DIR_CHECK</div>
+                <div className="giq-kpi-delta">QB · WR · RB · SKILL</div>
+              </div>
+              <div className="giq-kpi-item">
+                <div className="giq-kpi-label">MODEL_ACCURACY</div>
+                <div className="giq-kpi-value text-[22px] text-[#d4a843]">
+                  {modelAccuracyPct != null ? `${modelAccuracyPct}%` : "—"}
+                </div>
+                <div className="giq-kpi-delta">HOLDOUT_SET_AUC</div>
+              </div>
+              <div className="giq-kpi-item">
+                <div className="giq-kpi-label">PROSPECTS_SCORED</div>
+                <div className="giq-kpi-value text-[22px] text-[#d4a843]">
+                  {p.rmuData ? p.rmuData.manifest.length : (p.board?.prospects?.length ?? "—")}
+                </div>
+                <div className="giq-kpi-delta">QB+WR+RB · RMU_SAC</div>
+              </div>
+              <div className="giq-kpi-item">
+                <div className="giq-kpi-label">TOP_SCORE</div>
+                <div className="giq-kpi-value text-[22px] text-[#d4a843]">
+                  {p.rmuData ? p.rmuData.topScore.toFixed(1) : topScore != null ? topScore.toFixed(1) : "—"}
+                </div>
+                <div className="giq-kpi-delta">P(R1) · MENDOZA</div>
+              </div>
+              <div className="giq-kpi-item">
+                <div className="giq-kpi-label">ENGINE_ACC</div>
+                <div className="giq-kpi-value text-[22px] text-[#d4a843]">
+                  {p.engineData ? pct(p.engineData.overall.accuracy, 1) : "—"}
+                </div>
+                <div className="giq-kpi-delta">
+                  {p.engineData
+                    ? `${p.engineData.overall.correct}/${p.engineData.overall.total} games · 2020-2025`
+                    : `${RMU_TRAINING_YEARS} train years`}
+                </div>
               </div>
             </div>
 
@@ -447,12 +578,36 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                     <th className={p.sortHeaderClass("reach_risk")} onClick={() => p.toggleTableSort("reach_risk")}>
                       REACH
                     </th>
+                    <th>R1_PROB</th>
+                    <th>TREND</th>
                   </tr>
                 </thead>
                 <tbody>
                   {tableRows.map((row, idx) => {
                     const rank = row.model_rank ?? idx + 1;
                     const active = p.selectedId === row.player_id;
+                    const rmu = matchRmu(p.rmuData, row.player_name);
+                    const reach = row.reach_risk;
+                    const trend =
+                      reach == null
+                        ? "—"
+                        : reach <= -3
+                          ? "LOCK"
+                          : reach < 0
+                            ? "HIGH"
+                            : reach > 3
+                              ? "LOW"
+                              : "MED";
+                    const trendColor =
+                      trend === "LOCK"
+                        ? "#d4a843"
+                        : trend === "HIGH"
+                          ? "#3ecf7a"
+                          : trend === "MED"
+                            ? "#29b8e0"
+                            : trend === "LOW"
+                              ? "#7d8fa8"
+                              : "#3d4f66";
                     return (
                       <tr
                         key={row.player_id}
@@ -465,9 +620,14 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                           </div>
                         </td>
                         <td>
-                          <div className="text-[13px] font-semibold text-[#dde4ef]">{row.player_name}</div>
-                          <div className="text-[9px] uppercase tracking-wider text-[#3d4f66]">
-                            {row.pos_bucket} · score breakdown
+                          <div className="flex items-center gap-2">
+                            <Headshot rmu={rmu} name={row.player_name} size="sm" />
+                            <div>
+                              <div className="text-[13px] font-semibold text-[#dde4ef]">{row.player_name}</div>
+                              <div className="text-[9px] uppercase tracking-wider text-[#3d4f66]">
+                                {row.pos_bucket} · score breakdown
+                              </div>
+                            </div>
                           </div>
                         </td>
                         <td>
@@ -479,6 +639,12 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                         <td>{row.model_rank ?? "—"}</td>
                         <td>{row.consensus_rank != null ? Number(row.consensus_rank).toFixed(1) : "—"}</td>
                         <td>{row.reach_risk != null ? Number(row.reach_risk).toFixed(2) : "—"}</td>
+                        <td>
+                          <R1ProbCell rmu={rmu} />
+                        </td>
+                        <td className="font-mono text-[10px]" style={{ color: trendColor }}>
+                          {trend}
+                        </td>
                       </tr>
                     );
                   })}
@@ -643,7 +809,14 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
             </div>
 
             {p.analyticsSub === "model_intel" && (
-              <div className="space-y-4">
+              <div className="space-y-6">
+                <EnginePane
+                  data={p.engineData}
+                  loading={p.engineLoading}
+                  error={p.engineError}
+                  rmuData={p.rmuData}
+                />
+
                 <div className="giq-module-header border-t-0">
                   <div className="giq-mh-title">
                     <span>//</span> MODEL_INTEL · ANALYST_CONSOLE
@@ -735,45 +908,40 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
             )}
 
             {p.analyticsSub === "rmu_training" && (
-              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">TRAINING_DATA</p>
-                <p className="mt-3 text-[#7d8fa8]">
-                  RMU / SAC training artifacts (features, labels, walk-forward splits) ship with the repo under{" "}
-                  <code className="text-[#f0c060]">data/rmu_sac/</code>. Export paths from the Python pipeline feed this
-                  view once the training console is wired to the API.
-                </p>
-              </div>
+              <RmuTrainingPane data={p.rmuData} loading={p.rmuLoading} error={p.rmuError} />
             )}
 
             {p.analyticsSub === "rmu_results" && (
-              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">MODEL_RESULTS</p>
-                <p className="mt-3 text-[#7d8fa8]">
-                  Calibration tables, confusion matrices, and lift curves from the first-round model will render here.
-                  Until the results endpoint is exposed, run <code className="text-[#f0c060]">pytest tests/test_rmu_model.py</code>{" "}
-                  locally for the latest metrics snapshot.
-                </p>
-              </div>
+              <RmuResultsPane data={p.rmuData} loading={p.rmuLoading} error={p.rmuError} />
             )}
 
             {p.analyticsSub === "rmu_predictions" && (
-              <div className="rounded border border-white/[0.06] bg-[#131928] p-5 font-mono text-xs leading-relaxed text-[#dde4ef]">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-[#d4a843]">PREDICTIONS</p>
-                <p className="mt-3 text-[#7d8fa8]">
-                  Live first-round probability layers surface on the big board under the{" "}
-                  <span className="text-[#f0c060]">RMU_PREDICTIONS</span> board tab. Select a prospect to open the radar
-                  map on the right — same signal stack as the PDF prospect card layout.
-                </p>
-                <Button
-                  className="mt-4 h-8 bg-[#d4a843] font-mono text-[10px] font-bold uppercase tracking-wider text-[#050709] hover:bg-[#f0c060]"
-                  onClick={() => {
-                    p.setRoomTab("board");
-                    p.setBoardViewTab("rmu_predictions");
-                  }}
-                >
-                  Open RMU board tab
-                </Button>
-              </div>
+              <RmuPredictionsPane
+                data={p.rmuData}
+                loading={p.rmuLoading}
+                error={p.rmuError}
+                onOpenBoard={() => {
+                  p.setRoomTab("board");
+                  p.setBoardViewTab("rmu_predictions");
+                }}
+              />
+            )}
+
+            {p.analyticsSub === "engine_intel" && (
+              <EnginePane
+                data={p.engineData}
+                loading={p.engineLoading}
+                error={p.engineError}
+                rmuData={p.rmuData}
+              />
+            )}
+
+            {p.analyticsSub === "backtest_lab" && (
+              <BacktestPane
+                data={p.engineData}
+                loading={p.engineLoading}
+                error={p.engineError}
+              />
             )}
           </div>
         )}
@@ -872,13 +1040,49 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
           <div>
             <div className="giq-rp-header">SELECTED_PROSPECT</div>
             <div className="px-4 py-3">
-              <div className="text-[22px] font-bold leading-none tracking-tight text-[#dde4ef]">{p.selected.player_name}</div>
-              <div className="mt-1 font-mono text-[10px] text-[#7d8fa8]">
-                {p.selected.pos} · {p.selected.school}
+              <div className="flex items-start gap-3">
+                <div className="shrink-0">
+                  <Headshot rmu={selectedRmu} name={p.selected.player_name} size="lg" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-[20px] font-bold leading-tight tracking-tight text-[#dde4ef]">
+                    {p.selected.player_name}
+                  </div>
+                  <div className="mt-1 font-mono text-[10px] text-[#7d8fa8]">
+                    {p.selected.pos} · {p.selected.school}
+                  </div>
+                  {selectedRmu && (
+                    <div className="mt-2">
+                      <span className={r1ChipClass(selectedRmu.confidence)}>
+                        P(R1) {Math.round(selectedRmu.r1_probability * 100)}% · {selectedRmu.confidence}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="mt-3 flex items-baseline gap-2">
                 <div className="text-3xl font-bold text-[#d4a843]">{p.selected.final_draft_score.toFixed(1)}</div>
                 <div className="font-mono text-[9px] uppercase tracking-wider text-[#3d4f66]">FINAL_SCORE</div>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {(
+                  [
+                    ["40 YD", p.selected.forty != null ? p.selected.forty.toFixed(2) : null],
+                    ["VERT", p.selected.vertical != null ? p.selected.vertical.toFixed(1) : null],
+                    ["BENCH", p.selected.bench != null ? String(p.selected.bench) : null],
+                    ["R1_PROB", selectedRmu ? `${Math.round(selectedRmu.r1_probability * 100)}%` : null],
+                  ] as const
+                ).map(([label, value]) => (
+                  <div key={label} className="giq-combine-chip">
+                    <span className="giq-combine-chip-label">{label}</span>
+                    <span
+                      className="giq-combine-chip-value"
+                      style={label === "R1_PROB" && selectedRmu ? { color: confidenceColor(selectedRmu.confidence) } : undefined}
+                    >
+                      {value ?? "DNP"}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -941,14 +1145,570 @@ export default function DraftPlatformView(p: DraftPlatformViewProps) {
                   {p.consensusConfigured ? "CONFIGURED" : "MODEL_ONLY"}
                 </span>
               </div>
-              <div className="flex justify-between py-2 text-[#7d8fa8]">
+              <div className="flex justify-between border-b border-white/[0.04] py-2 text-[#7d8fa8]">
                 <span>BOARD_ROWS</span>
                 <span className="text-[#dde4ef]">{p.board?.prospects?.length ?? 0}</span>
+              </div>
+              <div className="flex justify-between border-b border-white/[0.04] py-2 text-[#7d8fa8]">
+                <span>RMU_AUC</span>
+                <span className="text-[#d4a843]">
+                  {p.rmuData ? p.rmuData.ensembleAucMean.toFixed(3) : "—"}
+                </span>
+              </div>
+              <div className="flex justify-between py-2 text-[#7d8fa8]">
+                <span>CFBD_ID</span>
+                <span className="text-[#dde4ef]">{selectedRmu?.cfbd_id ?? "—"}</span>
               </div>
             </div>
           </div>
         </aside>
       )}
     </main>
+  );
+}
+
+function RmuPaneShell({
+  title,
+  loading,
+  error,
+  children,
+}: {
+  title: string;
+  loading: boolean;
+  error: Error | null;
+  children: ReactNode;
+}) {
+  return (
+    <div className="space-y-4">
+      <div className="giq-module-header border-t-0">
+        <div className="giq-mh-title">
+          <span>//</span> {title}
+        </div>
+        <div className="giq-mh-sub">RMU_SAC · HACKATHON</div>
+      </div>
+      {loading && (
+        <div className="flex items-center gap-2 font-mono text-xs text-[#7d8fa8]">
+          <Loader2 className="h-3.5 w-3.5 animate-spin" /> Loading model outputs…
+        </div>
+      )}
+      {error && <p className="font-mono text-xs text-red-400">{error.message}</p>}
+      {!loading && !error && children}
+    </div>
+  );
+}
+
+function RmuTrainingPane({
+  data,
+  loading,
+  error,
+}: {
+  data: RmuData | undefined;
+  loading: boolean;
+  error: Error | null;
+}) {
+  return (
+    <RmuPaneShell title="TRAINING_DATA · FEATURES + WALK_FORWARD" loading={loading} error={error}>
+      <div className="grid gap-3 md:grid-cols-3">
+        {(["QB", "WR", "RB"] as RmuPosition[]).map((pos) => {
+          const rows = data?.featureImportance[pos] ?? [];
+          const m = data?.metrics[pos];
+          return (
+            <div key={pos} className="rounded border border-white/[0.06] bg-[#131928] p-3">
+              <div className="flex items-baseline justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">{pos}</span>
+                <span className="font-mono text-[9px] text-[#7d8fa8]">
+                  LR {m ? m.lr_auc.toFixed(2) : "—"} · XGB {m ? m.xgb_auc.toFixed(2) : "—"}
+                </span>
+              </div>
+              <table className="mt-3 w-full font-mono text-[10px]">
+                <thead>
+                  <tr className="text-[#7d8fa8]">
+                    <th className="py-1 text-left font-normal">FEATURE</th>
+                    <th className="py-1 text-right font-normal">LR</th>
+                    <th className="py-1 text-right font-normal">XGB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.slice(0, 8).map((r) => (
+                    <tr key={r.feature} className="border-t border-white/[0.04] text-[#dde4ef]">
+                      <td className="py-1">{r.feature}</td>
+                      <td className="py-1 text-right text-[#f0c060]">{Number(r.lr_coef).toFixed(2)}</td>
+                      <td className="py-1 text-right text-[#29b8e0]">{Number(r.xgb_gain).toFixed(3)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
+      </div>
+      <p className="font-mono text-[10px] leading-relaxed text-[#7d8fa8]">
+        Training frames: 14 historical classes (2010 → 2024) · stratified K-fold CV · ensemble 0.4·LR + 0.6·XGBoost.
+        Combine metrics are median-imputed with an <code className="text-[#f0c060]">_attended</code> flag; conference
+        weighting rides on CFBD team strength.
+      </p>
+    </RmuPaneShell>
+  );
+}
+
+function RmuResultsPane({
+  data,
+  loading,
+  error,
+}: {
+  data: RmuData | undefined;
+  loading: boolean;
+  error: Error | null;
+}) {
+  const positions: RmuPosition[] = ["QB", "WR", "RB"];
+  return (
+    <RmuPaneShell title="MODEL_RESULTS · HOLDOUT_AUC" loading={loading} error={error}>
+      <div className="grid gap-3 md:grid-cols-3">
+        {positions.map((pos) => {
+          const m = data?.metrics[pos];
+          const ens = m ? 0.4 * m.lr_auc + 0.6 * m.xgb_auc : null;
+          return (
+            <div key={pos} className="rounded border border-white/[0.06] bg-[#131928] p-4">
+              <div className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">{pos}</div>
+              <div className="mt-2 text-3xl font-bold text-[#f0c060]">
+                {ens != null ? ens.toFixed(3) : "—"}
+              </div>
+              <div className="font-mono text-[9px] text-[#7d8fa8]">ENSEMBLE_AUC</div>
+              <div className="mt-3 space-y-2 font-mono text-[10px] text-[#dde4ef]">
+                <div className="flex justify-between">
+                  <span className="text-[#7d8fa8]">LR</span>
+                  <span>{m ? m.lr_auc.toFixed(3) : "—"}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-[#7d8fa8]">XGBoost</span>
+                  <span>{m ? m.xgb_auc.toFixed(3) : "—"}</span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <p className="font-mono text-[10px] leading-relaxed text-[#7d8fa8]">
+        Intuition for the judges: an ensemble AUC of{" "}
+        {data ? data.ensembleAucMean.toFixed(2) : "—"} means that if you pick a random Round-1 player and a random
+        non-first-rounder from the same position, the model ranks the first-rounder higher{" "}
+        {data ? Math.round(data.ensembleAucMean * 100) : "—"}% of the time.
+      </p>
+    </RmuPaneShell>
+  );
+}
+
+function RmuPredictionsPane({
+  data,
+  loading,
+  error,
+  onOpenBoard,
+}: {
+  data: RmuData | undefined;
+  loading: boolean;
+  error: Error | null;
+  onOpenBoard: () => void;
+}) {
+  const positions: RmuPosition[] = ["QB", "WR", "RB"];
+  return (
+    <RmuPaneShell title="PREDICTIONS · 2026 CLASS P(R1)" loading={loading} error={error}>
+      <div className="grid gap-3 md:grid-cols-3">
+        {positions.map((pos) => {
+          const rows = (data?.manifest ?? [])
+            .filter((r) => r.position === pos)
+            .sort((a, b) => b.r1_probability - a.r1_probability)
+            .slice(0, 6);
+          return (
+            <div key={pos} className="rounded border border-white/[0.06] bg-[#131928] p-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">{pos}</span>
+                <span className="font-mono text-[9px] text-[#7d8fa8]">TOP · P(R1)</span>
+              </div>
+              <ul className="mt-2 space-y-2">
+                {rows.map((r, i) => (
+                  <li key={r.name} className="flex items-center gap-2 font-mono text-[10px] text-[#dde4ef]">
+                    <span className="w-5 text-right text-[#7d8fa8]">{i + 1}.</span>
+                    {r.headshot_url ? (
+                      <img src={r.headshot_url} alt={r.name} className="h-7 w-7 rounded-full border border-white/[0.08] object-cover" />
+                    ) : (
+                      <span className="giq-headshot-placeholder h-7 w-7 text-[9px]">
+                        {r.name
+                          .split(/\s+/)
+                          .map((p) => p[0] ?? "")
+                          .join("")
+                          .slice(0, 2)
+                          .toUpperCase()}
+                      </span>
+                    )}
+                    <span className="min-w-0 flex-1 truncate">{r.name}</span>
+                    <span className="text-[#7d8fa8]">{r.college_team}</span>
+                    <span className={r1ChipClass(r.confidence)}>{Math.round(r.r1_probability * 100)}%</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+      <div className="flex items-center gap-3">
+        <Button
+          className="h-8 bg-[#d4a843] font-mono text-[10px] font-bold uppercase tracking-wider text-[#050709] hover:bg-[#f0c060]"
+          onClick={onOpenBoard}
+        >
+          Open RMU board tab
+        </Button>
+        <span className="font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">
+          {data?.r1Projected ?? 0} prospects projected in R1 · weighted by 0.4·LR + 0.6·XGB
+        </span>
+      </div>
+    </RmuPaneShell>
+  );
+}
+
+function MetricTile({
+  label,
+  value,
+  delta,
+  tone = "gold",
+}: {
+  label: string;
+  value: string;
+  delta?: string;
+  tone?: "gold" | "cyan" | "green" | "ink";
+}) {
+  const color =
+    tone === "cyan"
+      ? "#29b8e0"
+      : tone === "green"
+        ? "#3ecf7a"
+        : tone === "ink"
+          ? "#dde4ef"
+          : "#d4a843";
+  return (
+    <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
+      <div className="font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">{label}</div>
+      <div className="mt-1 text-2xl font-bold" style={{ color }}>
+        {value}
+      </div>
+      {delta && (
+        <div className="mt-1 font-mono text-[9px] uppercase tracking-wider text-[#3d4f66]">{delta}</div>
+      )}
+    </div>
+  );
+}
+
+function CoefTable({
+  rows,
+  unit,
+}: {
+  rows: Array<{ feature: string; coef: number; abs: number }>;
+  unit?: string;
+}) {
+  return (
+    <table className="w-full font-mono text-[10px]">
+      <thead>
+        <tr className="text-[#7d8fa8]">
+          <th className="py-1 text-left font-normal">FEATURE</th>
+          <th className="py-1 text-right font-normal">COEF{unit ? ` (${unit})` : ""}</th>
+          <th className="py-1 text-right font-normal">|x|</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr key={r.feature} className="border-t border-white/[0.04] text-[#dde4ef]">
+            <td className="py-1">{r.feature}</td>
+            <td className="py-1 text-right text-[#f0c060]">{r.coef.toFixed(3)}</td>
+            <td className="py-1 text-right text-[#7d8fa8]">{r.abs.toFixed(3)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function EnginePane({
+  data,
+  loading,
+  error,
+  rmuData,
+}: {
+  data: EngineData | undefined;
+  loading: boolean;
+  error: Error | null;
+  rmuData: RmuData | undefined;
+}) {
+  return (
+    <div className="space-y-4">
+      <div className="giq-module-header border-t-0">
+        <div className="giq-mh-title">
+          <span>//</span> ENGINE_INTEL · MODEL_CARD
+        </div>
+        <div className="giq-mh-sub">GAME_PRED + DRAFT_PRED · STATIC_BUNDLE</div>
+      </div>
+
+      {loading && (
+        <div className="flex items-center gap-2 font-mono text-xs text-[#7d8fa8]">
+          <Loader2 className="h-3.5 w-3.5 animate-spin" /> Loading engine artifacts…
+        </div>
+      )}
+      {error && <p className="font-mono text-xs text-red-400">{error.message}</p>}
+
+      {data && (
+        <>
+          <div className="grid gap-3 md:grid-cols-4">
+            <MetricTile
+              label="GAME_ACC"
+              value={pct(data.overall.accuracy)}
+              delta={`${data.overall.correct}/${data.overall.total} · 2020-2025`}
+            />
+            <MetricTile
+              label="WIN_PROB_LL"
+              value={data.winProb.metrics.log_loss.toFixed(3)}
+              delta={`brier ${data.winProb.metrics.brier.toFixed(3)} · ${data.winProb.metrics.calibrated ? "calibrated" : "raw"}`}
+              tone="cyan"
+            />
+            <MetricTile
+              label="MARGIN_MAE"
+              value={data.margin.metrics.mae.toFixed(2)}
+              delta={`rmse ${data.margin.metrics.rmse.toFixed(2)} · n=${data.margin.metrics.n_rows}`}
+              tone="green"
+            />
+            <MetricTile
+              label="TOTAL_MAE"
+              value={data.total.metrics.mae.toFixed(2)}
+              delta={`rmse ${data.total.metrics.rmse.toFixed(2)} · σ=${data.score.total_std.toFixed(1)}`}
+              tone="green"
+            />
+          </div>
+
+          {rmuData && (
+            <div className="grid gap-3 md:grid-cols-3">
+              {(["QB", "WR", "RB"] as RmuPosition[]).map((pos) => {
+                const m = rmuData.metrics[pos];
+                const ens = 0.4 * m.lr_auc + 0.6 * m.xgb_auc;
+                return (
+                  <MetricTile
+                    key={pos}
+                    label={`DRAFT_AUC · ${pos}`}
+                    value={ens.toFixed(3)}
+                    delta={`LR ${m.lr_auc.toFixed(2)} · XGB ${m.xgb_auc.toFixed(2)}`}
+                    tone="cyan"
+                  />
+                );
+              })}
+            </div>
+          )}
+
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="rounded border border-white/[0.06] bg-[#131928] p-3">
+              <div className="flex items-baseline justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+                  WIN_PROB · LOGISTIC
+                </span>
+                <span className="font-mono text-[9px] text-[#7d8fa8]">
+                  acc {pct(data.winProb.metrics.accuracy)}
+                </span>
+              </div>
+              <div className="mt-2">
+                <CoefTable rows={topFeatures(data.winProb, 6)} unit="logit" />
+              </div>
+              <p className="mt-3 font-mono text-[9px] leading-relaxed text-[#7d8fa8]">
+                Intercept {data.winProb.intercept.toFixed(3)} · n={data.winProb.metrics.n_rows} · isotonic
+                calibrated.
+              </p>
+            </div>
+            <div className="rounded border border-white/[0.06] bg-[#131928] p-3">
+              <div className="flex items-baseline justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+                  MARGIN · LINEAR
+                </span>
+                <span className="font-mono text-[9px] text-[#7d8fa8]">
+                  σ {data.score.margin_std.toFixed(2)}
+                </span>
+              </div>
+              <div className="mt-2">
+                <CoefTable rows={topFeatures(data.margin, 6)} unit="pts" />
+              </div>
+              <p className="mt-3 font-mono text-[9px] leading-relaxed text-[#7d8fa8]">
+                Intercept {data.margin.intercept.toFixed(2)} · MAE {data.margin.metrics.mae.toFixed(2)} pts.
+              </p>
+            </div>
+            <div className="rounded border border-white/[0.06] bg-[#131928] p-3">
+              <div className="flex items-baseline justify-between">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+                  TOTAL · LINEAR
+                </span>
+                <span className="font-mono text-[9px] text-[#7d8fa8]">
+                  σ {data.score.total_std.toFixed(2)}
+                </span>
+              </div>
+              <div className="mt-2">
+                <CoefTable rows={topFeatures(data.total, 6)} unit="pts" />
+              </div>
+              <p className="mt-3 font-mono text-[9px] leading-relaxed text-[#7d8fa8]">
+                Intercept {data.total.intercept.toFixed(2)} · MAE {data.total.metrics.mae.toFixed(2)} pts.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
+            <div className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+              SAMPLE_PREDICTION · {data.sample.predicted_winner} ↑
+            </div>
+            <div className="mt-2 grid gap-3 md:grid-cols-3">
+              <div>
+                <div className="font-mono text-[9px] text-[#7d8fa8]">WIN_PROB</div>
+                <div className="text-2xl font-bold text-[#f0c060]">
+                  {pct(data.sample.p_team_a_win)}
+                </div>
+              </div>
+              <div>
+                <div className="font-mono text-[9px] text-[#7d8fa8]">MARGIN</div>
+                <div className="text-2xl font-bold text-[#dde4ef]">
+                  {data.sample.predicted_margin.toFixed(1)} pts
+                </div>
+                <div className="font-mono text-[9px] text-[#3d4f66]">
+                  ±{data.sample.score_ci.margin_sd.toFixed(2)}
+                </div>
+              </div>
+              <div>
+                <div className="font-mono text-[9px] text-[#7d8fa8]">TOTAL</div>
+                <div className="text-2xl font-bold text-[#dde4ef]">
+                  {data.sample.predicted_total.toFixed(1)}
+                </div>
+                <div className="font-mono text-[9px] text-[#3d4f66]">
+                  ±{data.sample.score_ci.total_sd.toFixed(2)}
+                </div>
+              </div>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-1 font-mono text-[9px] uppercase tracking-wider text-[#7d8fa8]">
+              {data.sample.top_3_drivers.map(([key, val]) => (
+                <span
+                  key={key}
+                  className="rounded border border-white/[0.06] bg-[#0a0d14] px-2 py-1 text-[#dde4ef]"
+                >
+                  {key} · {Number(val).toFixed(2)}
+                </span>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+function BacktestPane({
+  data,
+  loading,
+  error,
+}: {
+  data: EngineData | undefined;
+  loading: boolean;
+  error: Error | null;
+}) {
+  return (
+    <div className="space-y-4">
+      <div className="giq-module-header border-t-0">
+        <div className="giq-mh-title">
+          <span>//</span> BACKTEST_LAB · 2020 → 2025
+        </div>
+        <div className="giq-mh-sub">PER_SEASON_ACCURACY · DEFENSIVE_RANKINGS</div>
+      </div>
+
+      {loading && (
+        <div className="flex items-center gap-2 font-mono text-xs text-[#7d8fa8]">
+          <Loader2 className="h-3.5 w-3.5 animate-spin" /> Loading backtest…
+        </div>
+      )}
+      {error && <p className="font-mono text-xs text-red-400">{error.message}</p>}
+
+      {data && (
+        <>
+          <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-6">
+            {data.perSeason.map((s) => (
+              <div key={s.season} className="rounded border border-white/[0.06] bg-[#131928] p-3">
+                <div className="font-mono text-[10px] uppercase tracking-wider text-[#7d8fa8]">
+                  {s.season}
+                </div>
+                <div className="mt-1 text-xl font-bold text-[#f0c060]">{pct(s.accuracy)}</div>
+                <div className="font-mono text-[9px] text-[#3d4f66]">
+                  {s.correct} / {s.total} games
+                </div>
+                <div className="giq-signal-track mt-2">
+                  <div
+                    className="giq-signal-fill-gold"
+                    style={{ width: `${s.accuracy * 100}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-2">
+            <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
+              <div className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+                DEFENSIVE_STRENGTH · 2025 (top 10)
+              </div>
+              <table className="mt-3 w-full font-mono text-[10px]">
+                <thead>
+                  <tr className="text-[#7d8fa8]">
+                    <th className="py-1 text-left font-normal">#</th>
+                    <th className="py-1 text-left font-normal">TEAM</th>
+                    <th className="py-1 text-right font-normal">DEF_Z</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[...data.defStrength]
+                    .sort((a, b) => b.def_z - a.def_z)
+                    .slice(0, 10)
+                    .map((row, i) => (
+                      <tr key={row.defteam} className="border-t border-white/[0.04] text-[#dde4ef]">
+                        <td className="py-1 text-[#7d8fa8]">{i + 1}</td>
+                        <td className="py-1">{row.defteam}</td>
+                        <td className="py-1 text-right text-[#f0c060]">{Number(row.def_z).toFixed(3)}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="rounded border border-white/[0.06] bg-[#131928] p-4">
+              <div className="font-mono text-[10px] uppercase tracking-wider text-[#d4a843]">
+                R1_BOARD · COMBINED (top 10)
+              </div>
+              <table className="mt-3 w-full font-mono text-[10px]">
+                <thead>
+                  <tr className="text-[#7d8fa8]">
+                    <th className="py-1 text-left font-normal">#</th>
+                    <th className="py-1 text-left font-normal">PLAYER</th>
+                    <th className="py-1 text-left font-normal">POS</th>
+                    <th className="py-1 text-right font-normal">P(R1)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.r1Board.slice(0, 10).map((row) => (
+                    <tr key={row.name} className="border-t border-white/[0.04] text-[#dde4ef]">
+                      <td className="py-1 text-[#7d8fa8]">{row.overall_rank}</td>
+                      <td className="py-1">{row.name}</td>
+                      <td className="py-1 text-[#7d8fa8]">{row.position}</td>
+                      <td className="py-1 text-right text-[#f0c060]">{pct(row.r1_probability, 0)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p className="font-mono text-[10px] leading-relaxed text-[#7d8fa8]">
+            Game-prediction backtest covers {data.overall.total.toLocaleString()} regular + postseason
+            games across six seasons. Overall accuracy of {pct(data.overall.accuracy)} comfortably beats
+            the home-team-always baseline (~57%). Margin model MAE is{" "}
+            {data.margin.metrics.mae.toFixed(2)} pts; total points MAE is{" "}
+            {data.total.metrics.mae.toFixed(2)} pts.
+          </p>
+        </>
+      )}
+    </div>
   );
 }

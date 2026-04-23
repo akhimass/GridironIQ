@@ -1,0 +1,4847 @@
+[
+  {
+    "game_id": "2023_01_DET_KC",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "DET",
+    "home_score": 20,
+    "away_score": 21,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "KC": 8,
+      "DET": 35
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_CAR_ATL",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "CAR",
+    "home_score": 24,
+    "away_score": 10,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 32,
+      "CAR": 33
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_HOU_BAL",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "HOU",
+    "home_score": 25,
+    "away_score": 9,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 17,
+      "HOU": 28
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_CIN_CLE",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "CIN",
+    "home_score": 24,
+    "away_score": 3,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CLE": 4,
+      "CIN": 49
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_01_JAX_IND",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "JAX",
+    "home_score": 21,
+    "away_score": 31,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "IND": 46,
+      "JAX": 5
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_TB_MIN",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "TB",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "MIN": 6,
+      "TB": 48
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_TEN_NO",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "TEN",
+    "home_score": 16,
+    "away_score": 15,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 32,
+      "TEN": 17
+    },
+    "win_probability": 0.994,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_SF_PIT",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "SF",
+    "home_score": 7,
+    "away_score": 30,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "PIT": 0,
+      "SF": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_ARI_WAS",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "ARI",
+    "home_score": 20,
+    "away_score": 16,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "WAS": 1,
+      "ARI": 46
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_01_GB_CHI",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "GB",
+    "home_score": 20,
+    "away_score": 38,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 18,
+      "GB": 26
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_01_LV_DEN",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LV",
+    "home_score": 16,
+    "away_score": 17,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 45,
+      "LV": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_01_MIA_LAC",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "MIA",
+    "home_score": 34,
+    "away_score": 36,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "LAC": 0,
+      "MIA": 33
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_PHI_NE",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "PHI",
+    "home_score": 20,
+    "away_score": 25,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NE": 0,
+      "PHI": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_LA_SEA",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "LA",
+    "home_score": 13,
+    "away_score": 30,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "SEA": 23,
+      "LA": 33
+    },
+    "win_probability": 0.007,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_DAL_NYG",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "DAL",
+    "home_score": 0,
+    "away_score": 40,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "NYG": 0,
+      "DAL": 44
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_01_BUF_NYJ",
+    "season": 2023,
+    "week": 1,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "BUF",
+    "home_score": 22,
+    "away_score": 16,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NYJ": 0,
+      "BUF": 56
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_MIN_PHI",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "MIN",
+    "home_score": 34,
+    "away_score": 28,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 35,
+      "MIN": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_GB_ATL",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "GB",
+    "home_score": 25,
+    "away_score": 24,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "ATL": 7,
+      "GB": 43
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_LV_BUF",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "LV",
+    "home_score": 38,
+    "away_score": 10,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 57,
+      "LV": 2
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_BAL_CIN",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "BAL",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "CIN": 10,
+      "BAL": 24
+    },
+    "win_probability": 0.002,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_SEA_DET",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "SEA",
+    "home_score": 31,
+    "away_score": 37,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 25,
+      "SEA": 18
+    },
+    "win_probability": 0.793,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_IND_HOU",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "IND",
+    "home_score": 20,
+    "away_score": 31,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 47,
+      "IND": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_KC_JAX",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "KC",
+    "home_score": 9,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "JAX": 10,
+      "KC": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_CHI_TB",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CHI",
+    "home_score": 27,
+    "away_score": 17,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "TB": 25,
+      "CHI": 23
+    },
+    "win_probability": 0.356,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_LAC_TEN",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "LAC",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "TEN": 32,
+      "LAC": 12
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_NYG_ARI",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "NYG",
+    "home_score": 28,
+    "away_score": 31,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 40,
+      "NYG": 18
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_02_SF_LA",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SF",
+    "home_score": 23,
+    "away_score": 30,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "LA": 5,
+      "SF": 29
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_NYJ_DAL",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "NYJ",
+    "home_score": 30,
+    "away_score": 10,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 90,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_WAS_DEN",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "WAS",
+    "home_score": 33,
+    "away_score": 35,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "DEN": 35,
+      "WAS": 9
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_MIA_NE",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "MIA",
+    "home_score": 17,
+    "away_score": 24,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "NE": 0,
+      "MIA": 56
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_NO_CAR",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "NO",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "CAR": 6,
+      "NO": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_02_CLE_PIT",
+    "season": 2023,
+    "week": 2,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CLE",
+    "home_score": 26,
+    "away_score": 22,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "PIT": 48,
+      "CLE": 0
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_NYG_SF",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "NYG",
+    "home_score": 30,
+    "away_score": 12,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 66,
+      "NYG": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_IND_BAL",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "IND",
+    "home_score": 19,
+    "away_score": 22,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 39,
+      "IND": 15
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_TEN_CLE",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "TEN",
+    "home_score": 27,
+    "away_score": 3,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 3,
+      "TEN": 46
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_ATL_DET",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "ATL",
+    "home_score": 20,
+    "away_score": 6,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 43,
+      "ATL": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_NO_GB",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "NO",
+    "home_score": 18,
+    "away_score": 17,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 30,
+      "NO": 24
+    },
+    "win_probability": 0.863,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_HOU_JAX",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "HOU",
+    "home_score": 17,
+    "away_score": 37,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 0,
+      "HOU": 52
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_DEN_MIA",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "DEN",
+    "home_score": 70,
+    "away_score": 20,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 54,
+      "DEN": 13
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_LAC_MIN",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "LAC",
+    "home_score": 24,
+    "away_score": 28,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "MIN": 17,
+      "LAC": 38
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_NE_NYJ",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "NE",
+    "home_score": 10,
+    "away_score": 15,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NYJ": 20,
+      "NE": 25
+    },
+    "win_probability": 0.021,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_BUF_WAS",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "BUF",
+    "home_score": 3,
+    "away_score": 37,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "WAS": 3,
+      "BUF": 43
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_CAR_SEA",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "CAR",
+    "home_score": 37,
+    "away_score": 27,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 50,
+      "CAR": 18
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_DAL_ARI",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "DAL",
+    "home_score": 28,
+    "away_score": 16,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "ARI": 10,
+      "DAL": 39
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_CHI_KC",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "CHI",
+    "home_score": 41,
+    "away_score": 10,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "KC": 15,
+      "CHI": 33
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_03_PIT_LV",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "PIT",
+    "home_score": 18,
+    "away_score": 23,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "LV": 1,
+      "PIT": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_PHI_TB",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "PHI",
+    "home_score": 11,
+    "away_score": 25,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "TB": 35,
+      "PHI": 12
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_03_LA_CIN",
+    "season": 2023,
+    "week": 3,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "LA",
+    "home_score": 19,
+    "away_score": 16,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "CIN": 10,
+      "LA": 28
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_DET_GB",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "DET",
+    "home_score": 20,
+    "away_score": 34,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "GB": 25,
+      "DET": 21
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_ATL_JAX",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "ATL",
+    "home_score": 23,
+    "away_score": 7,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "JAX": 11,
+      "ATL": 26
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_MIA_BUF",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "MIA",
+    "home_score": 48,
+    "away_score": 20,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "BUF": 9,
+      "MIA": 25
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_MIN_CAR",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "MIN",
+    "home_score": 13,
+    "away_score": 21,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "CAR": 28,
+      "MIN": 2
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_DEN_CHI",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "DEN",
+    "home_score": 28,
+    "away_score": 31,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 35,
+      "DEN": 13
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_BAL_CLE",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "BAL",
+    "home_score": 3,
+    "away_score": 28,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "CLE": 0,
+      "BAL": 50
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_PIT_HOU",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "PIT",
+    "home_score": 30,
+    "away_score": 6,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 48,
+      "PIT": 15
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_LA_IND",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "LA",
+    "home_score": 23,
+    "away_score": 29,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "IND": 11,
+      "LA": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_TB_NO",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "TB",
+    "home_score": 9,
+    "away_score": 26,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 28,
+      "TB": 16
+    },
+    "win_probability": 0.978,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_WAS_PHI",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "WAS",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 35,
+      "WAS": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_CIN_TEN",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "CIN",
+    "home_score": 27,
+    "away_score": 3,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "TEN": 26,
+      "CIN": 25
+    },
+    "win_probability": 0.231,
+    "correct": false
+  },
+  {
+    "game_id": "2023_04_LV_LAC",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "LV",
+    "home_score": 24,
+    "away_score": 17,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 43,
+      "LV": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_NE_DAL",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "NE",
+    "home_score": 38,
+    "away_score": 3,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 85,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_ARI_SF",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "ARI",
+    "home_score": 35,
+    "away_score": 16,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 51,
+      "ARI": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_KC_NYJ",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "KC",
+    "home_score": 20,
+    "away_score": 23,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "NYJ": 0,
+      "KC": 48
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_04_SEA_NYG",
+    "season": 2023,
+    "week": 4,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "SEA",
+    "home_score": 3,
+    "away_score": 24,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "NYG": 7,
+      "SEA": 25
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_CHI_WAS",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "CHI",
+    "home_score": 20,
+    "away_score": 40,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "WAS": 5,
+      "CHI": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_JAX_BUF",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "JAX",
+    "home_score": 20,
+    "away_score": 25,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 52,
+      "JAX": 4
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_05_HOU_ATL",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "HOU",
+    "home_score": 21,
+    "away_score": 19,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "ATL": 0,
+      "HOU": 48
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_05_CAR_DET",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "CAR",
+    "home_score": 42,
+    "away_score": 24,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 50,
+      "CAR": 14
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_TEN_IND",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "TEN",
+    "home_score": 23,
+    "away_score": 16,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 26,
+      "TEN": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_NYG_MIA",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NYG",
+    "home_score": 31,
+    "away_score": 16,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 55,
+      "NYG": 18
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_NO_NE",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "NO",
+    "home_score": 0,
+    "away_score": 34,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NE": 0,
+      "NO": 61
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_BAL_PIT",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "BAL",
+    "home_score": 17,
+    "away_score": 10,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "PIT": 11,
+      "BAL": 25
+    },
+    "win_probability": 0.002,
+    "correct": false
+  },
+  {
+    "game_id": "2023_05_CIN_ARI",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "CIN",
+    "home_score": 20,
+    "away_score": 34,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "ARI": 36,
+      "CIN": 25
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_PHI_LA",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "PHI",
+    "home_score": 14,
+    "away_score": 23,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "LA": 45,
+      "PHI": 2
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_NYJ_DEN",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "NYJ",
+    "home_score": 21,
+    "away_score": 31,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 61,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_05_KC_MIN",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "KC",
+    "home_score": 20,
+    "away_score": 27,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "MIN": 15,
+      "KC": 38
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_05_DAL_SF",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "DAL",
+    "home_score": 42,
+    "away_score": 10,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "SF": 36,
+      "DAL": 24
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_05_GB_LV",
+    "season": 2023,
+    "week": 5,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "GB",
+    "home_score": 17,
+    "away_score": 13,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "LV": 0,
+      "GB": 49
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_DEN_KC",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "DEN",
+    "home_score": 19,
+    "away_score": 8,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 25,
+      "DEN": 23
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_BAL_TEN",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "BAL",
+    "home_score": 16,
+    "away_score": 24,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "TEN": 11,
+      "BAL": 27
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_WAS_ATL",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "WAS",
+    "home_score": 16,
+    "away_score": 24,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "ATL": 35,
+      "WAS": 16
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_MIN_CHI",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "MIN",
+    "home_score": 13,
+    "away_score": 19,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 45,
+      "MIN": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_SEA_CIN",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "SEA",
+    "home_score": 17,
+    "away_score": 13,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 12,
+      "SEA": 18
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_SF_CLE",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "SF",
+    "home_score": 19,
+    "away_score": 17,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "CLE": 0,
+      "SF": 61
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_NO_HOU",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "NO",
+    "home_score": 20,
+    "away_score": 13,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "HOU": 41,
+      "NO": 18
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_IND_JAX",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "IND",
+    "home_score": 37,
+    "away_score": 20,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 4,
+      "IND": 40
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_CAR_MIA",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "CAR",
+    "home_score": 42,
+    "away_score": 21,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 61,
+      "CAR": 16
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_NE_LV",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "NE",
+    "home_score": 21,
+    "away_score": 17,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 36,
+      "NE": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_ARI_LA",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "ARI",
+    "home_score": 26,
+    "away_score": 9,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 31,
+      "ARI": 15
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_PHI_NYJ",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "PHI",
+    "home_score": 20,
+    "away_score": 14,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NYJ": 0,
+      "PHI": 47
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_06_DET_TB",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "DET",
+    "home_score": 6,
+    "away_score": 20,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "TB": 17,
+      "DET": 26
+    },
+    "win_probability": 0.013,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_NYG_BUF",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NYG",
+    "home_score": 14,
+    "away_score": 9,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 38,
+      "NYG": 20
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2023_06_DAL_LAC",
+    "season": 2023,
+    "week": 6,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DAL",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "LAC": 0,
+      "DAL": 50
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_07_JAX_NO",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "JAX",
+    "home_score": 24,
+    "away_score": 31,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 52,
+      "JAX": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_DET_BAL",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "DET",
+    "home_score": 38,
+    "away_score": 6,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "BAL": 27,
+      "DET": 21
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_LV_CHI",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "LV",
+    "home_score": 30,
+    "away_score": 12,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 55,
+      "LV": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_07_CLE_IND",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "CLE",
+    "home_score": 38,
+    "away_score": 39,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "IND": 49,
+      "CLE": 2
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_07_BUF_NE",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "BUF",
+    "home_score": 29,
+    "away_score": 25,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "NE": 0,
+      "BUF": 54
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_WAS_NYG",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "WAS",
+    "home_score": 14,
+    "away_score": 7,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "NYG": 34,
+      "WAS": 4
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_ATL_TB",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "ATL",
+    "home_score": 13,
+    "away_score": 16,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 35,
+      "ATL": 7
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_PIT_LA",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "PIT",
+    "home_score": 17,
+    "away_score": 24,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 40,
+      "PIT": 16
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_ARI_SEA",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "ARI",
+    "home_score": 20,
+    "away_score": 10,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "SEA": 29,
+      "ARI": 25
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_GB_DEN",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "GB",
+    "home_score": 19,
+    "away_score": 17,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "DEN": 8,
+      "GB": 36
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_LAC_KC",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LAC",
+    "home_score": 31,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 27,
+      "LAC": 22
+    },
+    "win_probability": 0.665,
+    "correct": true
+  },
+  {
+    "game_id": "2023_07_MIA_PHI",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "MIA",
+    "home_score": 31,
+    "away_score": 17,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "PHI": 0,
+      "MIA": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_07_SF_MIN",
+    "season": 2023,
+    "week": 7,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "SF",
+    "home_score": 22,
+    "away_score": 17,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "MIN": 0,
+      "SF": 64
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_TB_BUF",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "TB",
+    "home_score": 24,
+    "away_score": 18,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 28,
+      "TB": 24
+    },
+    "win_probability": 0.596,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_HOU_CAR",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "HOU",
+    "home_score": 15,
+    "away_score": 13,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "CAR": 0,
+      "HOU": 38
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_LA_DAL",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "LA",
+    "home_score": 43,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 35,
+      "LA": 14
+    },
+    "win_probability": 0.999,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_MIN_GB",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "MIN",
+    "home_score": 10,
+    "away_score": 24,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 53,
+      "MIN": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_NO_IND",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "NO",
+    "home_score": 27,
+    "away_score": 38,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "IND": 19,
+      "NO": 31
+    },
+    "win_probability": 0.002,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_NE_MIA",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NE",
+    "home_score": 31,
+    "away_score": 17,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 84,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_NYJ_NYG",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "NYJ",
+    "home_score": 10,
+    "away_score": 13,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 60,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_JAX_PIT",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "JAX",
+    "home_score": 10,
+    "away_score": 20,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "PIT": 45,
+      "JAX": 1
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_ATL_TEN",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "ATL",
+    "home_score": 28,
+    "away_score": 23,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "TEN": 31,
+      "ATL": 6
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_PHI_WAS",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "PHI",
+    "home_score": 31,
+    "away_score": 38,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "WAS": 15,
+      "PHI": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_CLE_SEA",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "CLE",
+    "home_score": 24,
+    "away_score": 20,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 60,
+      "CLE": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_BAL_ARI",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "BAL",
+    "home_score": 24,
+    "away_score": 31,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "ARI": 20,
+      "BAL": 26
+    },
+    "win_probability": 0.035,
+    "correct": true
+  },
+  {
+    "game_id": "2023_08_KC_DEN",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "KC",
+    "home_score": 24,
+    "away_score": 9,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "DEN": 25,
+      "KC": 22
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_CIN_SF",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "CIN",
+    "home_score": 17,
+    "away_score": 31,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 62,
+      "CIN": 10
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_CHI_LAC",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "CHI",
+    "home_score": 30,
+    "away_score": 13,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "LAC": 14,
+      "CHI": 33
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_08_LV_DET",
+    "season": 2023,
+    "week": 8,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "LV",
+    "home_score": 26,
+    "away_score": 14,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 62,
+      "LV": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_TEN_PIT",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "TEN",
+    "home_score": 20,
+    "away_score": 16,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 25,
+      "TEN": 21
+    },
+    "win_probability": 0.762,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_MIA_KC",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "MIA",
+    "home_score": 21,
+    "away_score": 14,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "KC": 0,
+      "MIA": 33
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_MIN_ATL",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "MIN",
+    "home_score": 28,
+    "away_score": 31,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "ATL": 35,
+      "MIN": 13
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_SEA_BAL",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "SEA",
+    "home_score": 37,
+    "away_score": 3,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 27,
+      "SEA": 17
+    },
+    "win_probability": 0.94,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_ARI_CLE",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "ARI",
+    "home_score": 27,
+    "away_score": 0,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "CLE": 0,
+      "ARI": 46
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_LA_GB",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "LA",
+    "home_score": 20,
+    "away_score": 3,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "GB": 23,
+      "LA": 27
+    },
+    "win_probability": 0.046,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_TB_HOU",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "TB",
+    "home_score": 39,
+    "away_score": 37,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 43,
+      "TB": 12
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_WAS_NE",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "WAS",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "NE": 5,
+      "WAS": 33
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_CHI_NO",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "CHI",
+    "home_score": 24,
+    "away_score": 17,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "NO": 27,
+      "CHI": 17
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_IND_CAR",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "IND",
+    "home_score": 13,
+    "away_score": 27,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "CAR": 12,
+      "IND": 25
+    },
+    "win_probability": 0.001,
+    "correct": true
+  },
+  {
+    "game_id": "2023_09_NYG_LV",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "NYG",
+    "home_score": 30,
+    "away_score": 6,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "LV": 7,
+      "NYG": 40
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_DAL_PHI",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "DAL",
+    "home_score": 28,
+    "away_score": 23,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "PHI": 0,
+      "DAL": 51
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_BUF_CIN",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "BUF",
+    "home_score": 24,
+    "away_score": 18,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "CIN": 17,
+      "BUF": 18
+    },
+    "win_probability": 0.292,
+    "correct": false
+  },
+  {
+    "game_id": "2023_09_LAC_NYJ",
+    "season": 2023,
+    "week": 9,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "LAC",
+    "home_score": 6,
+    "away_score": 27,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "NYJ": 0,
+      "LAC": 47
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_CAR_CHI",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "CAR",
+    "home_score": 16,
+    "away_score": 13,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 43,
+      "CAR": 16
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_IND_NE",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "IND",
+    "home_score": 6,
+    "away_score": 10,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "NE": 0,
+      "IND": 52
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_CLE_BAL",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CLE",
+    "home_score": 31,
+    "away_score": 33,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 62,
+      "CLE": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_10_HOU_CIN",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "HOU",
+    "home_score": 27,
+    "away_score": 30,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "CIN": 2,
+      "HOU": 29
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_SF_JAX",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "SF",
+    "home_score": 3,
+    "away_score": 34,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "JAX": 0,
+      "SF": 58
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_NO_MIN",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "NO",
+    "home_score": 27,
+    "away_score": 19,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "MIN": 3,
+      "NO": 54
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_10_GB_PIT",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "GB",
+    "home_score": 23,
+    "away_score": 19,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "PIT": 13,
+      "GB": 25
+    },
+    "win_probability": 0.003,
+    "correct": false
+  },
+  {
+    "game_id": "2023_10_TEN_TB",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "TEN",
+    "home_score": 20,
+    "away_score": 6,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 29,
+      "TEN": 23
+    },
+    "win_probability": 0.845,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_ATL_ARI",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "ATL",
+    "home_score": 25,
+    "away_score": 23,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 40,
+      "ATL": 5
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_DET_LAC",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DET",
+    "home_score": 38,
+    "away_score": 41,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "LAC": 6,
+      "DET": 36
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_NYG_DAL",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "NYG",
+    "home_score": 49,
+    "away_score": 17,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 56,
+      "NYG": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_WAS_SEA",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "WAS",
+    "home_score": 29,
+    "away_score": 26,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "SEA": 53,
+      "WAS": 1
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_NYJ_LV",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "NYJ",
+    "home_score": 16,
+    "away_score": 12,
+    "predicted_winner": "LV",
+    "predicted_score": {
+      "LV": 41,
+      "NYJ": 9
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_10_DEN_BUF",
+    "season": 2023,
+    "week": 10,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "DEN",
+    "home_score": 22,
+    "away_score": 24,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 37,
+      "DEN": 15
+    },
+    "win_probability": 0.999,
+    "correct": false
+  },
+  {
+    "game_id": "2023_11_CIN_BAL",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "CIN",
+    "home_score": 34,
+    "away_score": 20,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 40,
+      "CIN": 21
+    },
+    "win_probability": 0.998,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_DAL_CAR",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "DAL",
+    "home_score": 10,
+    "away_score": 33,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "CAR": 0,
+      "DAL": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_PIT_CLE",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "PIT",
+    "home_score": 13,
+    "away_score": 10,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 3,
+      "PIT": 47
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_CHI_DET",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "CHI",
+    "home_score": 31,
+    "away_score": 26,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 32,
+      "CHI": 20
+    },
+    "win_probability": 0.984,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_LAC_GB",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "LAC",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 44,
+      "LAC": 7
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_ARI_HOU",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "ARI",
+    "home_score": 21,
+    "away_score": 16,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 38,
+      "ARI": 14
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_TEN_JAX",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "TEN",
+    "home_score": 34,
+    "away_score": 14,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 5,
+      "TEN": 43
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_LV_MIA",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "LV",
+    "home_score": 20,
+    "away_score": 13,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 73,
+      "LV": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_NYG_WAS",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "NYG",
+    "home_score": 19,
+    "away_score": 31,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "WAS": 16,
+      "NYG": 41
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_11_TB_SF",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "TB",
+    "home_score": 27,
+    "away_score": 14,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 56,
+      "TB": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_NYJ_BUF",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NYJ",
+    "home_score": 32,
+    "away_score": 6,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 72,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_SEA_LA",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "SEA",
+    "home_score": 17,
+    "away_score": 16,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 27,
+      "SEA": 12
+    },
+    "win_probability": 0.993,
+    "correct": true
+  },
+  {
+    "game_id": "2023_11_MIN_DEN",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "MIN",
+    "home_score": 21,
+    "away_score": 20,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "DEN": 35,
+      "MIN": 6
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_11_PHI_KC",
+    "season": 2023,
+    "week": 11,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "PHI",
+    "home_score": 17,
+    "away_score": 21,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "KC": 25,
+      "PHI": 21
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_GB_DET",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "GB",
+    "home_score": 22,
+    "away_score": 29,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 25,
+      "GB": 24
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_WAS_DAL",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "WAS",
+    "home_score": 45,
+    "away_score": 10,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 65,
+      "WAS": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_SF_SEA",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "SF",
+    "home_score": 13,
+    "away_score": 31,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SEA": 2,
+      "SF": 39
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_MIA_NYJ",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "MIA",
+    "home_score": 13,
+    "away_score": 34,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "NYJ": 0,
+      "MIA": 58
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_NO_ATL",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "NO",
+    "home_score": 24,
+    "away_score": 15,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "ATL": 12,
+      "NO": 44
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_PIT_CIN",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "PIT",
+    "home_score": 10,
+    "away_score": 16,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 24,
+      "PIT": 21
+    },
+    "win_probability": 0.608,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_JAX_HOU",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "JAX",
+    "home_score": 21,
+    "away_score": 24,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "HOU": 68,
+      "JAX": 0
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_TB_IND",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "TB",
+    "home_score": 27,
+    "away_score": 20,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "IND": 22,
+      "TB": 25
+    },
+    "win_probability": 0.064,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_NE_NYG",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "NE",
+    "home_score": 10,
+    "away_score": 7,
+    "predicted_winner": "NYG",
+    "predicted_score": {
+      "NYG": 55,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_CAR_TEN",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "CAR",
+    "home_score": 17,
+    "away_score": 10,
+    "predicted_winner": "TEN",
+    "predicted_score": {
+      "TEN": 38,
+      "CAR": 17
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_LA_ARI",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "LA",
+    "home_score": 14,
+    "away_score": 37,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "ARI": 20,
+      "LA": 30
+    },
+    "win_probability": 0.004,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_CLE_DEN",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "CLE",
+    "home_score": 29,
+    "away_score": 12,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "DEN": 43,
+      "CLE": 9
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_KC_LV",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "KC",
+    "home_score": 17,
+    "away_score": 31,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "LV": 6,
+      "KC": 34
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_BUF_PHI",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "BUF",
+    "home_score": 37,
+    "away_score": 34,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "PHI": 13,
+      "BUF": 32
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_12_BAL_LAC",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "BAL",
+    "home_score": 10,
+    "away_score": 20,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "LAC": 4,
+      "BAL": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_12_CHI_MIN",
+    "season": 2023,
+    "week": 12,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "CHI",
+    "home_score": 10,
+    "away_score": 12,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "MIN": 5,
+      "CHI": 49
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_SEA_DAL",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "SEA",
+    "home_score": 41,
+    "away_score": 35,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 37,
+      "SEA": 4
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_DEN_HOU",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "DEN",
+    "home_score": 22,
+    "away_score": 17,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 53,
+      "DEN": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_LAC_NE",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "LAC",
+    "home_score": 0,
+    "away_score": 6,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "NE": 0,
+      "LAC": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_DET_NO",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "DET",
+    "home_score": 28,
+    "away_score": 33,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "NO": 20,
+      "DET": 19
+    },
+    "win_probability": 0.286,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_ATL_NYJ",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "ATL",
+    "home_score": 8,
+    "away_score": 13,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "NYJ": 0,
+      "ATL": 42
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_ARI_PIT",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "ARI",
+    "home_score": 10,
+    "away_score": 24,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "PIT": 16,
+      "ARI": 21
+    },
+    "win_probability": 0.034,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_IND_TEN",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "IND",
+    "home_score": 28,
+    "away_score": 31,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "TEN": 25,
+      "IND": 19
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_MIA_WAS",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "MIA",
+    "home_score": 15,
+    "away_score": 45,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "WAS": 0,
+      "MIA": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_CAR_TB",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "CAR",
+    "home_score": 21,
+    "away_score": 18,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 42,
+      "CAR": 17
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_CLE_LA",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "CLE",
+    "home_score": 36,
+    "away_score": 19,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 62,
+      "CLE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_SF_PHI",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "SF",
+    "home_score": 19,
+    "away_score": 42,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "PHI": 0,
+      "SF": 49
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_KC_GB",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "KC",
+    "home_score": 27,
+    "away_score": 19,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 43,
+      "KC": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_13_CIN_JAX",
+    "season": 2023,
+    "week": 13,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "CIN",
+    "home_score": 31,
+    "away_score": 34,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "JAX": 6,
+      "CIN": 46
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_NE_PIT",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "NE",
+    "home_score": 18,
+    "away_score": 21,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "PIT": 61,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_14_TB_ATL",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "TB",
+    "home_score": 25,
+    "away_score": 29,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "ATL": 15,
+      "TB": 38
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_LA_BAL",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "LA",
+    "home_score": 37,
+    "away_score": 31,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 25,
+      "LA": 27
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_DET_CHI",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "DET",
+    "home_score": 28,
+    "away_score": 13,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "CHI": 18,
+      "DET": 25
+    },
+    "win_probability": 0.016,
+    "correct": false
+  },
+  {
+    "game_id": "2023_14_IND_CIN",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "IND",
+    "home_score": 34,
+    "away_score": 14,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 23,
+      "IND": 16
+    },
+    "win_probability": 0.898,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_JAX_CLE",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "JAX",
+    "home_score": 31,
+    "away_score": 27,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 23,
+      "JAX": 26
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_CAR_NO",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "CAR",
+    "home_score": 28,
+    "away_score": 6,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 45,
+      "CAR": 11
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_HOU_NYJ",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "HOU",
+    "home_score": 30,
+    "away_score": 6,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "NYJ": 0,
+      "HOU": 68
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_14_MIN_LV",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "MIN",
+    "home_score": 0,
+    "away_score": 3,
+    "predicted_winner": "MIN",
+    "predicted_score": {
+      "LV": 16,
+      "MIN": 18
+    },
+    "win_probability": 0.139,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_SEA_SF",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "SEA",
+    "home_score": 28,
+    "away_score": 16,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 48,
+      "SEA": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_BUF_KC",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "BUF",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "KC": 13,
+      "BUF": 31
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_DEN_LAC",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "DEN",
+    "home_score": 7,
+    "away_score": 24,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LAC": 24,
+      "DEN": 23
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_14_PHI_DAL",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "PHI",
+    "home_score": 33,
+    "away_score": 13,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 55,
+      "PHI": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_14_TEN_MIA",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "TEN",
+    "home_score": 27,
+    "away_score": 28,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 49,
+      "TEN": 22
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_14_GB_NYG",
+    "season": 2023,
+    "week": 14,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "GB",
+    "home_score": 24,
+    "away_score": 22,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "NYG": 7,
+      "GB": 31
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_LAC_LV",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "LAC",
+    "home_score": 63,
+    "away_score": 21,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "LV": 7,
+      "LAC": 34
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_MIN_CIN",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "MIN",
+    "home_score": 27,
+    "away_score": 24,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 39,
+      "MIN": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_PIT_IND",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "PIT",
+    "home_score": 30,
+    "away_score": 13,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "IND": 26,
+      "PIT": 27
+    },
+    "win_probability": 0.105,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_DEN_DET",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "DEN",
+    "home_score": 42,
+    "away_score": 17,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 42,
+      "DEN": 10
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_ATL_CAR",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "ATL",
+    "home_score": 9,
+    "away_score": 7,
+    "predicted_winner": "ATL",
+    "predicted_score": {
+      "CAR": 18,
+      "ATL": 12
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_CHI_CLE",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "CHI",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CLE": 0,
+      "CHI": 46
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_TB_GB",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "TB",
+    "home_score": 20,
+    "away_score": 34,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "GB": 33,
+      "TB": 17
+    },
+    "win_probability": 0.995,
+    "correct": false
+  },
+  {
+    "game_id": "2023_15_NYJ_MIA",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "NYJ",
+    "home_score": 30,
+    "away_score": 0,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 89,
+      "NYJ": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_KC_NE",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "KC",
+    "home_score": 17,
+    "away_score": 27,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "NE": 0,
+      "KC": 45
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_NYG_NO",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "NYG",
+    "home_score": 24,
+    "away_score": 6,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 38,
+      "NYG": 13
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_HOU_TEN",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "HOU",
+    "home_score": 16,
+    "away_score": 19,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "TEN": 3,
+      "HOU": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_SF_ARI",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SF",
+    "home_score": 29,
+    "away_score": 45,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "ARI": 0,
+      "SF": 37
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_WAS_LA",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "WAS",
+    "home_score": 28,
+    "away_score": 20,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 55,
+      "WAS": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_DAL_BUF",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "DAL",
+    "home_score": 31,
+    "away_score": 10,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 8,
+      "DAL": 42
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_BAL_JAX",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "BAL",
+    "home_score": 7,
+    "away_score": 23,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "JAX": 0,
+      "BAL": 47
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_15_PHI_SEA",
+    "season": 2023,
+    "week": 15,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "PHI",
+    "home_score": 20,
+    "away_score": 17,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "SEA": 43,
+      "PHI": 13
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_NO_LA",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "LA",
+    "away_team": "NO",
+    "home_score": 30,
+    "away_score": 22,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "LA": 33,
+      "NO": 19
+    },
+    "win_probability": 0.989,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_CIN_PIT",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "PIT",
+    "away_team": "CIN",
+    "home_score": 34,
+    "away_score": 11,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "PIT": 26,
+      "CIN": 24
+    },
+    "win_probability": 0.392,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_BUF_LAC",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "BUF",
+    "home_score": 22,
+    "away_score": 24,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "LAC": 12,
+      "BUF": 31
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_IND_ATL",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "ATL",
+    "away_team": "IND",
+    "home_score": 29,
+    "away_score": 10,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "ATL": 19,
+      "IND": 36
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_GB_CAR",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "GB",
+    "home_score": 30,
+    "away_score": 33,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "CAR": 1,
+      "GB": 32
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_CLE_HOU",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "CLE",
+    "home_score": 22,
+    "away_score": 36,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 70,
+      "CLE": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_DET_MIN",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "DET",
+    "home_score": 24,
+    "away_score": 30,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "MIN": 0,
+      "DET": 51
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_WAS_NYJ",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "NYJ",
+    "away_team": "WAS",
+    "home_score": 30,
+    "away_score": 28,
+    "predicted_winner": "WAS",
+    "predicted_score": {
+      "NYJ": 0,
+      "WAS": 35
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_SEA_TEN",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "SEA",
+    "home_score": 17,
+    "away_score": 20,
+    "predicted_winner": "SEA",
+    "predicted_score": {
+      "TEN": 13,
+      "SEA": 21
+    },
+    "win_probability": 0.009,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_JAX_TB",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "JAX",
+    "home_score": 30,
+    "away_score": 12,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 50,
+      "JAX": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_ARI_CHI",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "ARI",
+    "home_score": 27,
+    "away_score": 16,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 21,
+      "ARI": 23
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_DAL_MIA",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "DAL",
+    "home_score": 22,
+    "away_score": 20,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "MIA": 24,
+      "DAL": 39
+    },
+    "win_probability": 0.001,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_NE_DEN",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "NE",
+    "home_score": 23,
+    "away_score": 26,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "DEN": 55,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_LV_KC",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "LV",
+    "home_score": 14,
+    "away_score": 20,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 44,
+      "LV": 11
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_16_NYG_PHI",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "NYG",
+    "home_score": 33,
+    "away_score": 25,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 26,
+      "NYG": 30
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_16_BAL_SF",
+    "season": 2023,
+    "week": 16,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "BAL",
+    "home_score": 19,
+    "away_score": 33,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 46,
+      "BAL": 11
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_17_NYJ_CLE",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "CLE",
+    "away_team": "NYJ",
+    "home_score": 37,
+    "away_score": 20,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "CLE": 43,
+      "NYJ": 10
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_DET_DAL",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "DAL",
+    "away_team": "DET",
+    "home_score": 20,
+    "away_score": 19,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 38,
+      "DET": 8
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_MIA_BAL",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "MIA",
+    "home_score": 56,
+    "away_score": 19,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "BAL": 16,
+      "MIA": 19
+    },
+    "win_probability": 0.089,
+    "correct": false
+  },
+  {
+    "game_id": "2023_17_NE_BUF",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "BUF",
+    "away_team": "NE",
+    "home_score": 27,
+    "away_score": 21,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 67,
+      "NE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_ATL_CHI",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "CHI",
+    "away_team": "ATL",
+    "home_score": 37,
+    "away_score": 17,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "CHI": 36,
+      "ATL": 6
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_TEN_HOU",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "HOU",
+    "away_team": "TEN",
+    "home_score": 26,
+    "away_score": 3,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "HOU": 48,
+      "TEN": 13
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_LV_IND",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "LV",
+    "home_score": 23,
+    "away_score": 20,
+    "predicted_winner": "IND",
+    "predicted_score": {
+      "IND": 51,
+      "LV": 3
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_CAR_JAX",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "JAX",
+    "away_team": "CAR",
+    "home_score": 26,
+    "away_score": 0,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "JAX": 18,
+      "CAR": 37
+    },
+    "win_probability": 0.5,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_LA_NYG",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "LA",
+    "home_score": 25,
+    "away_score": 26,
+    "predicted_winner": "LA",
+    "predicted_score": {
+      "NYG": 5,
+      "LA": 35
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_ARI_PHI",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "PHI",
+    "away_team": "ARI",
+    "home_score": 31,
+    "away_score": 35,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "PHI": 11,
+      "ARI": 35
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_17_NO_TB",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "TB",
+    "away_team": "NO",
+    "home_score": 13,
+    "away_score": 23,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "TB": 22,
+      "NO": 29
+    },
+    "win_probability": 0.022,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_SF_WAS",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "SF",
+    "home_score": 10,
+    "away_score": 27,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "WAS": 0,
+      "SF": 61
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_PIT_SEA",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "SEA",
+    "away_team": "PIT",
+    "home_score": 23,
+    "away_score": 30,
+    "predicted_winner": "PIT",
+    "predicted_score": {
+      "SEA": 38,
+      "PIT": 26
+    },
+    "win_probability": 0.498,
+    "correct": true
+  },
+  {
+    "game_id": "2023_17_LAC_DEN",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "DEN",
+    "away_team": "LAC",
+    "home_score": 16,
+    "away_score": 9,
+    "predicted_winner": "LAC",
+    "predicted_score": {
+      "DEN": 27,
+      "LAC": 21
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_17_CIN_KC",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "KC",
+    "away_team": "CIN",
+    "home_score": 25,
+    "away_score": 17,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "KC": 21,
+      "CIN": 36
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_17_GB_MIN",
+    "season": 2023,
+    "week": 17,
+    "season_type": "REG",
+    "home_team": "MIN",
+    "away_team": "GB",
+    "home_score": 10,
+    "away_score": 33,
+    "predicted_winner": "GB",
+    "predicted_score": {
+      "MIN": 0,
+      "GB": 53
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_PIT_BAL",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "BAL",
+    "away_team": "PIT",
+    "home_score": 10,
+    "away_score": 17,
+    "predicted_winner": "BAL",
+    "predicted_score": {
+      "BAL": 39,
+      "PIT": 20
+    },
+    "win_probability": 0.998,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_HOU_IND",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "IND",
+    "away_team": "HOU",
+    "home_score": 19,
+    "away_score": 23,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "IND": 3,
+      "HOU": 35
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_TB_CAR",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "CAR",
+    "away_team": "TB",
+    "home_score": 0,
+    "away_score": 9,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "CAR": 8,
+      "TB": 27
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_CLE_CIN",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "CIN",
+    "away_team": "CLE",
+    "home_score": 31,
+    "away_score": 14,
+    "predicted_winner": "CIN",
+    "predicted_score": {
+      "CIN": 47,
+      "CLE": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_MIN_DET",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "DET",
+    "away_team": "MIN",
+    "home_score": 30,
+    "away_score": 20,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 52,
+      "MIN": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_NYJ_NE",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "NE",
+    "away_team": "NYJ",
+    "home_score": 3,
+    "away_score": 17,
+    "predicted_winner": "NE",
+    "predicted_score": {
+      "NE": 30,
+      "NYJ": 20
+    },
+    "win_probability": 0.979,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_ATL_NO",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "NO",
+    "away_team": "ATL",
+    "home_score": 48,
+    "away_score": 17,
+    "predicted_winner": "NO",
+    "predicted_score": {
+      "NO": 38,
+      "ATL": 0
+    },
+    "win_probability": 1.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_JAX_TEN",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "TEN",
+    "away_team": "JAX",
+    "home_score": 28,
+    "away_score": 20,
+    "predicted_winner": "JAX",
+    "predicted_score": {
+      "TEN": 46,
+      "JAX": 2
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_SEA_ARI",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "ARI",
+    "away_team": "SEA",
+    "home_score": 20,
+    "away_score": 21,
+    "predicted_winner": "ARI",
+    "predicted_score": {
+      "ARI": 22,
+      "SEA": 20
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_CHI_GB",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "GB",
+    "away_team": "CHI",
+    "home_score": 17,
+    "away_score": 9,
+    "predicted_winner": "CHI",
+    "predicted_score": {
+      "GB": 33,
+      "CHI": 18
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_KC_LAC",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "LAC",
+    "away_team": "KC",
+    "home_score": 12,
+    "away_score": 13,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "LAC": 24,
+      "KC": 23
+    },
+    "win_probability": 0.335,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_DEN_LV",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "LV",
+    "away_team": "DEN",
+    "home_score": 27,
+    "away_score": 14,
+    "predicted_winner": "DEN",
+    "predicted_score": {
+      "LV": 6,
+      "DEN": 35
+    },
+    "win_probability": 0.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_PHI_NYG",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "NYG",
+    "away_team": "PHI",
+    "home_score": 27,
+    "away_score": 10,
+    "predicted_winner": "PHI",
+    "predicted_score": {
+      "NYG": 24,
+      "PHI": 15
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_LA_SF",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "SF",
+    "away_team": "LA",
+    "home_score": 20,
+    "away_score": 21,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 46,
+      "LA": 16
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_18_DAL_WAS",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "WAS",
+    "away_team": "DAL",
+    "home_score": 10,
+    "away_score": 38,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "WAS": 0,
+      "DAL": 62
+    },
+    "win_probability": 0.0,
+    "correct": true
+  },
+  {
+    "game_id": "2023_18_BUF_MIA",
+    "season": 2023,
+    "week": 18,
+    "season_type": "REG",
+    "home_team": "MIA",
+    "away_team": "BUF",
+    "home_score": 14,
+    "away_score": 21,
+    "predicted_winner": "MIA",
+    "predicted_score": {
+      "MIA": 42,
+      "BUF": 20
+    },
+    "win_probability": 1.0,
+    "correct": false
+  },
+  {
+    "game_id": "2023_19_CLE_HOU",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "HOU",
+    "away_team": "CLE",
+    "home_score": 45,
+    "away_score": 14,
+    "predicted_winner": "CLE",
+    "predicted_score": {
+      "HOU": 25,
+      "CLE": 23
+    },
+    "win_probability": 0.254,
+    "correct": false
+  },
+  {
+    "game_id": "2023_19_MIA_KC",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "KC",
+    "away_team": "MIA",
+    "home_score": 26,
+    "away_score": 7,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "KC": 29,
+      "MIA": 21
+    },
+    "win_probability": 0.805,
+    "correct": true
+  },
+  {
+    "game_id": "2023_19_GB_DAL",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "DAL",
+    "away_team": "GB",
+    "home_score": 32,
+    "away_score": 48,
+    "predicted_winner": "DAL",
+    "predicted_score": {
+      "DAL": 25,
+      "GB": 23
+    },
+    "win_probability": 0.5,
+    "correct": false
+  },
+  {
+    "game_id": "2023_19_LA_DET",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "DET",
+    "away_team": "LA",
+    "home_score": 24,
+    "away_score": 23,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "DET": 28,
+      "LA": 21
+    },
+    "win_probability": 0.901,
+    "correct": true
+  },
+  {
+    "game_id": "2023_19_PIT_BUF",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "BUF",
+    "away_team": "PIT",
+    "home_score": 31,
+    "away_score": 17,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 28,
+      "PIT": 17
+    },
+    "win_probability": 0.965,
+    "correct": true
+  },
+  {
+    "game_id": "2023_19_PHI_TB",
+    "season": 2023,
+    "week": 19,
+    "season_type": "WC",
+    "home_team": "TB",
+    "away_team": "PHI",
+    "home_score": 32,
+    "away_score": 9,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "TB": 34,
+      "PHI": 19
+    },
+    "win_probability": 0.996,
+    "correct": true
+  },
+  {
+    "game_id": "2023_20_HOU_BAL",
+    "season": 2023,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "BAL",
+    "away_team": "HOU",
+    "home_score": 34,
+    "away_score": 10,
+    "predicted_winner": "HOU",
+    "predicted_score": {
+      "BAL": 23,
+      "HOU": 24
+    },
+    "win_probability": 0.135,
+    "correct": false
+  },
+  {
+    "game_id": "2023_20_GB_SF",
+    "season": 2023,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "SF",
+    "away_team": "GB",
+    "home_score": 24,
+    "away_score": 21,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "SF": 25,
+      "GB": 22
+    },
+    "win_probability": 0.744,
+    "correct": true
+  },
+  {
+    "game_id": "2023_20_TB_DET",
+    "season": 2023,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "DET",
+    "away_team": "TB",
+    "home_score": 31,
+    "away_score": 23,
+    "predicted_winner": "TB",
+    "predicted_score": {
+      "DET": 27,
+      "TB": 21
+    },
+    "win_probability": 0.498,
+    "correct": false
+  },
+  {
+    "game_id": "2023_20_KC_BUF",
+    "season": 2023,
+    "week": 20,
+    "season_type": "DIV",
+    "home_team": "BUF",
+    "away_team": "KC",
+    "home_score": 24,
+    "away_score": 27,
+    "predicted_winner": "BUF",
+    "predicted_score": {
+      "BUF": 28,
+      "KC": 19
+    },
+    "win_probability": 0.953,
+    "correct": false
+  },
+  {
+    "game_id": "2023_21_KC_BAL",
+    "season": 2023,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "BAL",
+    "away_team": "KC",
+    "home_score": 10,
+    "away_score": 17,
+    "predicted_winner": "KC",
+    "predicted_score": {
+      "BAL": 23,
+      "KC": 24
+    },
+    "win_probability": 0.217,
+    "correct": true
+  },
+  {
+    "game_id": "2023_21_DET_SF",
+    "season": 2023,
+    "week": 21,
+    "season_type": "CON",
+    "home_team": "SF",
+    "away_team": "DET",
+    "home_score": 34,
+    "away_score": 31,
+    "predicted_winner": "DET",
+    "predicted_score": {
+      "SF": 23,
+      "DET": 24
+    },
+    "win_probability": 0.165,
+    "correct": false
+  },
+  {
+    "game_id": "2023_22_SF_KC",
+    "season": 2023,
+    "week": 22,
+    "season_type": "SB",
+    "home_team": "KC",
+    "away_team": "SF",
+    "home_score": 25,
+    "away_score": 22,
+    "predicted_winner": "SF",
+    "predicted_score": {
+      "KC": 23,
+      "SF": 24
+    },
+    "win_probability": 0.062,
+    "correct": false
+  }
+]
